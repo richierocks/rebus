@@ -9,3 +9,8 @@
 
 # RStudio files
 .Rproj.user/
+.Rproj.user
+
+# Roxygen generated files
+NAMESPACE
+man/*
