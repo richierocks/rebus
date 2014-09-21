@@ -171,7 +171,7 @@ not_word <- function()
 
 #' @rdname alnum
 #' @export
-not_space <- function()
+not_whitespace <- function()
 {
   "\\S"
 }
