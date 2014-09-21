@@ -10,6 +10,8 @@ Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
 Description: Build regular expressions piece by piece using human readable code.
 Depends:
     R (>= 2.15.0)
+Imports:
+    assertive
 Suggests:
     magrittr
 License: Unlimited

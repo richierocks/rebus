@@ -14,6 +14,7 @@
 #' 
 #' # Same again, using magrittr piping.
 #' \dontrun{
+#' library(magrittr)
 #' "#" %c% 
 #'   (hex_digit() %>% group) %>%
 #'   repeated(lo = 6)
@@ -34,6 +35,7 @@
 #'   
 #' # Same again, using magrittr piping.
 #' \dontrun{
+#' library(magrittr)
 #' start() %c% 
 #'   (((ascii_alnum() %c% "._%+-") %>% group) %>% one_or_more) %c%
 #'   "@@" %c%
