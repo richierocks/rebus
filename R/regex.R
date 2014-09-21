@@ -419,6 +419,7 @@ negate_and_group <- function(x)
 }
 
 #' @rdname group
+#' @importFrom assertive assert_all_are_true
 #' @export
 range <- function(lo, hi)
 {
