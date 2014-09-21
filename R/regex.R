@@ -44,6 +44,11 @@
 #' ascii_digit()
 #' ascii_lower()
 #' ascii_upper()
+#' 
+#' # ISO 8601 date-time classes
+#' iso_date()
+#' iso_time()
+#' iso_datetime()
 #' @export
 alnum <- function()
 {
@@ -209,6 +214,38 @@ ascii_alpha <- function()
 ascii_alnum <- function()
 {
   ascii_alpha() %c% ascii_digit()
+}
+
+#' @rdname alnum
+#' @export
+iso_date <- function()
+{
+  repeated(group(ascii_digit()), 4) %c% 
+    "-" %c%
+    group(range(0, 1)) %c%
+    group(ascii_digit()) %c% 
+    "-" %c%
+    group(range(0, 3)) %c%
+    group(ascii_digit())
+}
+
+#' @rdname alnum
+#' @export
+iso_time <- function()
+{
+  group(range(0, 1)) %c%
+    group(ascii_digit()) %c% 
+    ":" %c%
+    group(range(0, 5)) %c%
+      group(ascii_digit()) %c% 
+    ":" %c%
+    group(range(0, 6)) %c% # 6 allowed for leap seconds
+    group(ascii_digit())
+}
+
+iso_datetime <- function()
+{
+  iso_date() %c% group(" T") %c% iso_time()
 }
 
 #' Special characters
