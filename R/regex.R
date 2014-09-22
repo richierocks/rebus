@@ -378,12 +378,17 @@ repeated <- function(x, lo, hi)
     }
     if(lo == 1)
     {
-      return(zero_or_more(x))
+      return(one_or_more(x))
     }
     return(paste0(x, "{", lo, "}"))
   }
   hi <- as.integer(hi)
   assert_all_are_true(hi > lo)
+  if(hi == 1)
+  {
+    # Implicitly lo == 0
+    return(optional(x))
+  }
   paste0(x, "{", lo, ",", hi, "}")
 }
 
