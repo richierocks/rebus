@@ -16,3 +16,5 @@ BuildType: Package
 PackageInstallArgs: --no-multiarch --with-keep.source --no-site-file --no-init-file
 PackageBuildArgs: --no-site-file --no-init-file
 PackageBuildBinaryArgs: --no-site-file --no-init-file
+PackageCheckArgs: --no-site-file --no-init-file
+PackageRoxygenize: rd,collate,namespace
