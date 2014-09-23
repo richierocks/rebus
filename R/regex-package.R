@@ -32,7 +32,7 @@
 #' # five.  Or match two then a number between zero and four then a digit. Or 
 #' # match an optional zero or one followed by an optional digit folowed by a
 #' # compulsory digit.  Make this a single token, but don't capture it.
-#' ip_element <- noncapture(
+#' ip_element <- token(
 #'   "25" %c% range(0, 5) %|%
 #'   "2" %c% range(0, 4) %c% ascii_digit() %|%
 #'   optional(group("01")) %c% optional(ascii_digit()) %c% ascii_digit()
@@ -43,7 +43,7 @@
 #' # followed by a dot, and repeat it three times.Then match another ip_element
 #' # followed by a word boundary."
 #' boundary() %c% 
-#'     repeated(noncapture(ip_element %c% DOT), 3) %c% 
+#'     repeated(token(ip_element %c% DOT), 3) %c% 
 #'     ip_element %c%
 #'     boundary()
 #' @author Richard Cotton \email{richierocks@@gmail.com}

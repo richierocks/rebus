@@ -7,7 +7,7 @@
 #' @examples
 #' x <- "foo"
 #' capture(x)
-#' noncapture(x)
+#' token(x)
 #' @export
 capture <- function(x)
 {
@@ -16,7 +16,7 @@ capture <- function(x)
 
 #' @rdname capture
 #' @export
-noncapture <- function(x)
+token <- function(x)
 {
   paste0("(?:", x, ")")
 }
