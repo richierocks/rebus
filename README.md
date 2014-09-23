@@ -1,7 +1,7 @@
 regex
 =====
 
-# Build regular expression in a human readable way
+# Build regular expressions in a human readable way
 
 Regular expressions are a very powerful tool, but the syntax is terse enough 
 to be difficult to read.  This makes bugs easy to introduce, and hard to 
@@ -10,33 +10,45 @@ easier.
 
 # Examples
 
-    # Match a hex colour, like "#99af01".  This reads "Match a hash, followed by 
-    six hexadecimal values."
-    "#" %c% repeated(group(hex_digit()), 6)
+Match a hex colour, like \code{"#99af01"}.  This reads "Match a hash, 
+followed by six hexadecimal values.
+
+    "#" %c% hex_digit(6)
+
+To match only a hex colour and nothing else, you can add anchors to the 
+start and end of the expression.
+
+    START %c% "#" %c% hex_digit(6) %c% END
     
-    # Same again, using magrittr piping.
-    "#" %c% 
-      (hex_digit() %>% group) %>%
-      repeated(lo = 6)
+Simple email address matching. This reads "Match one or more 
+letters, numbers, dots, underscores, percents, plusses or hyphens. Then 
+match an 'at' symbol. Then match one or more letters, numbers, dots, or 
+hyphens. Then match a dot. Then match two to four letters."
+
+    one_or_more(group(ASCII_ALNUM %c% "._%+-")) %c%
+      "@@" %c%
+      one_or_more(group(ASCII_ALNUM %c% ".-")) %c%
+      DOT %c%
+      ascii_alpha(2, 4)
+      
+IP address matching. First we need an expression to match numbers between 0 
+and 255.  This reads "Match two then five then a number between zero and 
+five.  Or match two then a number between zero and four then a digit. Or 
+match an optional zero or one followed by an optional digit folowed by a
+compulsory digit.  Make this a single token, but don't capture it.
+
+    ip_element <- token(
+      "25" %c% range(0, 5) %|%
+      "2" %c% range(0, 4) %c% ascii_digit() %|%
+      optional(group("01")) %c% optional(ascii_digit()) %c% ascii_digit()
+    )
     
-    # Simple email address matching.  This reads "Immediately match one or more 
-    letters, numbers, dots, underscores, percents, plusses or hyphens. Then match 
-    an at symbol. Then match one or more letters, numbers, dots, or hyphens.
-    then match a dot. Then match two to four letters.  Then the string must end
-    or there is no match."
-    start() %c% 
-      one_or_more(group(ascii_alnum() %c% "._%+-")) %c%
-      "@" %c%
-      one_or_more(group(ascii_alnum() %c% ".-")) %c%
-      dot() %c%
-      repeated(ascii_alpha(), lo = 2, hi = 4) %c%
-      end()
-    
-    # Same again, using magrittr piping.
-    start() %c% 
-      (((ascii_alnum() %c% "._%+-") %>% group) %>% one_or_more) %c%
-      "@" %c%
-      (((ascii_alnum() %c% ".-") %>% group) %>% one_or_more) %c%
-      dot() %c%
-      (ascii_alpha() %>% repeated(lo = 2, hi = 4)) %c%
-      end()
+Now an IP address consists of 4 of these numbers separated by dots. This 
+reads "Match a word boundary. Then create a token from an ip_element 
+followed by a dot, and repeat it three times.Then match another ip_element
+followed by a word boundary."
+
+    BOUNDARY %c% 
+        repeated(token(ip_element %c% DOT), 3) %c% 
+        ip_element %c%
+        BOUNDARY
