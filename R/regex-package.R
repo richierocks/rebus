@@ -13,8 +13,8 @@
 #' # followed by six hexadecimal values.
 #' "#" %c% hex_digit(6)
 #' 
-#' To match only a hex colour and nothing else, you can add anchors to the start
-#' and end of the expression.
+#' # To match only a hex colour and nothing else, you can add anchors to the 
+#' # start and end of the expression.
 #' START %c% "#" %c% hex_digit(6) %c% END
 #' 
 #' # Simple email address matching. This reads "Match one or more 
@@ -42,10 +42,10 @@
 #' # reads "Match a word boundary. Then create a token from an ip_element 
 #' # followed by a dot, and repeat it three times.Then match another ip_element
 #' # followed by a word boundary."
-#' boundary() %c% 
+#' BOUNDARY %c% 
 #'     repeated(token(ip_element %c% DOT), 3) %c% 
 #'     ip_element %c%
-#'     boundary()
+#'     BOUNDARY
 #' @author Richard Cotton \email{richierocks@@gmail.com}
 #' @include constants.R
 #' @include class-groups.R
