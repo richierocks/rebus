@@ -2,7 +2,7 @@ Package: regex
 Type: Package
 Title: Build regular expressions in a human readable way
 Version: 0.0-1
-Date: 2014-09-21
+Date: 2014-09-23
 Author: Richard Cotton
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
@@ -10,11 +10,21 @@ Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
 Description: Build regular expressions piece by piece using human readable code.
 Depends:
     R (>= 2.15.0)
-Imports:
-    assertive
-Suggests:
-    magrittr
 License: Unlimited
 LazyLoad: yes
 LazyData: yes
 Roxygen: list(wrap = FALSE)
+Acknowledgments: Development of this package was partially funded by the
+    Proteomics Core at Weill Cornell Medical College in Qatar
+    <http://qatar-weill.cornell.edu>.  The Core is supported by 'Biomedical
+    Research Program' funds, a program funded by Qatar Foundation.
+Collate:
+    'alternation.R'
+    'capture.R'
+    'grouping-and-repetition.R'
+    'constants.R'
+    'class-groups.R'
+    'concatenation.R'
+    'compound-constants.R'
+    'lookaround.R'
+    'regex-package.R'
