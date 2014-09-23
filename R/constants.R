@@ -2,7 +2,7 @@
 #' 
 #' Constants to match special characters
 #' @references \url{http://www.regular-expressions.info/characters.html}
-#' @seealso \code{\link{ALNUM}}, \code{\link{START}}, \code{\link{BOUNDARY}}
+#' @seealso \code{\link{ALPHA}}, \code{\link{START}}, \code{\link{BOUNDARY}}
 #' @examples
 #' BACKSLASH
 #' CARET
@@ -16,51 +16,54 @@
 #' CLOSE_PAREN
 #' OPEN_BRACKET
 #' OPEN_BRACE
-#' @aliases SpecialChars
+#' @name SpecialCharacters
+NULL
+
+#' @rdname SpecialCharacters
 #' @export
 BACKSLASH <- "\\\\"
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 CARET <- "\\^"
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 DOLLAR <- "\\$"
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 DOT <- "\\."
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 PIPE <- "\\|"
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 QUESTION <- "\\?"
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 STAR <- "\\*"
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 PLUS <- "\\+"
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 OPEN_PAREN <- "\\("
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 CLOSE_PAREN <- "\\)"
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 OPEN_BRACKET <- "\\["
 
-#' @rdname BACKSLASH
+#' @rdname SpecialCharacters
 #' @export
 OPEN_BRACE <- "\\{"
 
@@ -72,11 +75,14 @@ OPEN_BRACE <- "\\{"
 #' @examples
 #' START
 #' END
-#' @aliases Anchors
+#' @name Anchors
+NULL
+
+#' @rdname Anchors
 #' @export
 START <- "^"
 
-#' @rdname START
+#' @rdname Anchors
 #' @export
 END <- "$"
 
@@ -109,97 +115,97 @@ END <- "$"
 #' ASCII_UPPER
 #' ASCII_ALPHA
 #' ASCII_ALNUM
-#' ISO_DATE
-#' ISO_TIME
-#' ISO_DATETIME
-#' @aliases CharacterClasses
+#' @name CharacterClasses
+NULL
+
+#' @rdname CharacterClasses
 #' @export
 ALPHA <- "[:alpha:]"
 
 # roxygen documentation is attached to ALPHA rather than ALNUM to avoid clashes
 # with class group documentation on alnum().
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 ALNUM <- "[:alnum:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 BLANK <- "[:blank:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 CNTRL <- "[:cntrl:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 DIGIT <- "[:digit:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 GRAPH <- "[:graph:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 LOWER <- "[:lower:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 PRINT <- "[:print:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 PUNCT <- "[:punct:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 SPACE <- "[:space:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 UPPER <- "[:upper:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 HEX_DIGIT <- "[:xdigit:]"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 ANY_CHAR <- "."
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 DIGIT2 <- "\\d"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 WORD <- "\\w"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 WHITESPACE <- "\\s"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 NOT_DIGIT2 <- "\\D"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 NOT_WORD <- "\\W"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 NOT_WHITESPACE <- "\\S"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 ASCII_DIGIT <- "0-9"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 ASCII_LOWER <- "a-z"
 
-#' @rdname ALPHA
+#' @rdname CharacterClasses
 #' @export
 ASCII_UPPER <- "A-Z"
 
@@ -207,14 +213,17 @@ ASCII_UPPER <- "A-Z"
 #' 
 #' Match a word boundary.
 #' @references \url{http://www.regular-expressions.info/wordboundaries.html}
-#' @seealso \code{\link{ALNUM}}, \code{\link{BACKSLASH}}, \code{\link{START}}
+#' @seealso \code{\link{ALPHA}}, \code{\link{BACKSLASH}}, \code{\link{START}}
 #' @examples
 #' BOUNDARY
 #' NOT_BOUNDARY
-#' @aliases WordBoundaries
+#' @name WordBoundaries
+NULL
+
+#' @rdname WordBoundaries
 #' @export
 BOUNDARY <- "\\b"
 
-#' @rdname BOUNDARY
+#' @rdname WordBoundaries
 #' @export
 NOT_BOUNDARY <- "\\B"

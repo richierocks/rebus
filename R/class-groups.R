@@ -61,195 +61,199 @@
 #' digit(0, 1)
 #' @include constants.R
 #' @include grouping-and-repetition.R
+#' @name ClassGroups
+NULL
+
+#' @rdname ClassGroups
 #' @export
 alnum <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(ALNUM, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 alpha <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(ALPHA, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 blank <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(BLANK, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 cntrl <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(CNTRL, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 digit <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(DIGIT, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 graph <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(GRAPH, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 lower <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(LOWER, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 printable <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(PRINT, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 punct <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(PUNCT, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 space <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(SPACE, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 upper <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(UPPER, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 hex_digit <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(HEX_DIGIT, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 any_char <- function(lo, hi)
 {
   group_and_repeat_class(ANY_CHAR, lo, hi, group = FALSE)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 digit2 <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(DIGIT2, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 word <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(WORD, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 whitespace <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(WHITESPACE, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 not_digit2 <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(NOT_DIGIT2, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 not_word <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class("\\W", lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 not_whitespace <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(NOT_WHITESPACE, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 ascii_digit <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(ASCII_DIGIT, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 ascii_lower <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(ASCII_LOWER, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 ascii_upper <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(ASCII_UPPER, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 ascii_alpha <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(ASCII_LOWER %c% ASCII_UPPER, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 ascii_alnum <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(ASCII_ALPHA %c% ASCII_DIGIT, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 iso_date <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(ISO_DATE, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 iso_time <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(ISO_TIME, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 iso_datetime <- function(lo, hi, group = TRUE)
 {
   group_and_repeat_class(ISO_DATETIME, lo, hi, group)
 }
 
-#' @rdname alnum
+#' @rdname ClassGroups
 #' @export
 range <- function(lo, hi, group = TRUE)
 {
