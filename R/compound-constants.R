@@ -25,15 +25,17 @@ ISO_DATE <- ascii_digit(4) %c%
 
 #' @rdname ALPHA
 #' @export
-ISO_TIME <- range(0, 1) %c%
-  ascii_digit() %c% 
+ISO_TIME <- token(
+  group("01") %c% ascii_digit() %|% "2" %c% range("0", "3") 
+) %c% 
   ":" %c%
-  range(0, 5) %c%
-  ascii_digit() %c% 
+  range(0, 5) %c% ascii_digit() %c% 
   ":" %c%
-  range(0, 6) %c% # 6 allowed for leap seconds
-  ascii_digit()
+  token(
+    range(0, 5) %c% ascii_digit() %|%
+      "6" %c% group("01") #leap seconds
+  )
 
 #' @rdname ALPHA
 #' @export
-ISO_DATETIME <- iso_date() %c% group(" T") %c% iso_time()
+ISO_DATETIME <- token(iso_date() %c% group(" T") %c% iso_time())
