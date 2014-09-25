@@ -4,26 +4,40 @@ regex
 ## Build regular expressions in a human readable way
 
 Regular expressions are a very powerful tool, but the syntax is terse enough 
-to be difficult to read.  This makes bugs easy to introduce, and hard to 
+to be difficult to read.  This makes bugs easy to introduce and hard to 
 find.  This package contains functions to make building regular expressions
-easier."
+easier.
+
+## Package contents
+
+The package contains constants for character classes (R-specific ones like 
+`ALNUM` and `GRAPH`, generic ones like `WORD`, and compound ones like 
+`ISO_DATE`), special characters (`DOT`, `BACKSLASH`), anchors (`START`, `END`).
+
+There are functions for grouping, repetition, tokenising, capturing and all the
+basic regex functionality (`group`, `repeated`, `token`, `capture`).
+
+Each of the class constants has a corresponding function that groups the class
+and allows repetition (`alnum(3, 5)`).
+
+There are operators for concatenation (`%c%`) and alternation (`%|%`).
 
 ## Examples
 
-Match a hex colour, like `"#99af01"`.  This reads *Match a hash, 
-followed by six hexadecimal values.*
+### Match a hex colour, like `"#99af01"`
+This reads *Match a hash, followed by six hexadecimal values.*
 
-    "#" %c% hex_digit(6)
+    "#" %c% hex_digit(6)    
 
 To match only a hex colour and nothing else, you can add anchors to the 
 start and end of the expression.
 
     START %c% "#" %c% hex_digit(6) %c% END
     
-Simple email address matching. This reads *Match one or more 
-letters, numbers, dots, underscores, percents, plusses or hyphens. Then 
-match an 'at' symbol. Then match one or more letters, numbers, dots, or 
-hyphens. Then match a dot. Then match two to four letters.*
+### Simple email address matching. 
+This reads *Match one or more letters, numbers, dots, underscores, percents, 
+plusses or hyphens. Then match an 'at' symbol. Then match one or more letters, 
+numbers, dots, or hyphens. Then match a dot. Then match two to four letters.*
 
     one_or_more(group(ASCII_ALNUM %c% "._%+-")) %c%
       "@" %c%
