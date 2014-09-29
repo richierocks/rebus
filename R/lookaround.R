@@ -20,14 +20,14 @@ lookahead <- function(x)
 #' @export
 negative_lookahead <- function(x)
 {
-  paste0("(?<=", x, ")")  
+  paste0("(?!", x, ")")  
 }
 
 #' @rdname lookahead
 #' @export
 lookbehind <- function(x)
 {
-  paste0("(?!", x, ")")  
+  paste0("(?<=", x, ")")  
 }
 
 #' @rdname lookahead
