@@ -14,6 +14,15 @@
 #' @export
 or <- function(...)
 {
+  if(nargs() < 2)
+  {
+    warning(
+      "or is intended to be called with at least 2 arguments. ",
+      nargs(),
+      ngettext(nargs(), " was", " were"),
+      " passed."
+    )
+  }
   paste(..., sep = "|", collapse = NULL)  
 }
 
