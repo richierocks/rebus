@@ -255,7 +255,7 @@ iso_datetime <- function(lo, hi, group = TRUE)
 
 #' @rdname ClassGroups
 #' @export
-range <- function(lo, hi, group = TRUE)
+char_range <- function(lo, hi, group = TRUE)
 {
   lo <- get_first_char(lo)
   hi <- get_first_char(hi)

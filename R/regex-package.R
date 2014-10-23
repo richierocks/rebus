@@ -33,8 +33,8 @@
 #' # match an optional zero or one followed by an optional digit folowed by a
 #' # compulsory digit.  Make this a single token, but don't capture it.
 #' ip_element <- token(
-#'   "25" %c% range(0, 5) %|%
-#'   "2" %c% range(0, 4) %c% ascii_digit() %|%
+#'   "25" %c% char_range(0, 5) %|%
+#'   "2" %c% char_range(0, 4) %c% ascii_digit() %|%
 #'   optional(group("01")) %c% optional(ascii_digit()) %c% ascii_digit()
 #' )
 #' 

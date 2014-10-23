@@ -5,8 +5,8 @@
 #' @return A character vector representing part or all of a regular expression.
 #' @references \url{http://www.regular-expressions.info/charclass.html}
 #' @examples
-#' range("e", "t")
-#' range(3, 5)
+#' char_range("e", "t")
+#' char_range(3, 5)
 #' group(lower())
 #' negate_and_group(lower())
 #' @export
