@@ -28,3 +28,5 @@ Collate:
     'compound-constants.R'
     'lookaround.R'
     'regex-package.R'
+    'unicode-groups.R'
+    'unicode.R'
