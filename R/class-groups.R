@@ -33,14 +33,14 @@
 #' 
 #' # Generic classes
 #' any_char()
-#' digit2()
-#' word()
-#' whitespace()
+#' dgt()
+#' wrd()
+#' spc()
 #' 
 #' # Generic negated classes
-#' not_digit2()
-#' not_word()
-#' not_whitespace()
+#' not_dgt()
+#' not_wrd()
+#' not_spc()
 #' 
 #' # Non-locale-specific classes
 #' ascii_digit()
@@ -157,44 +157,44 @@ any_char <- function(lo, hi)
 
 #' @rdname ClassGroups
 #' @export
-digit2 <- function(lo, hi, group = TRUE)
+dgt <- function(lo, hi, group = TRUE)
 {
-  group_and_repeat_class(DIGIT2, lo, hi, group)
+  group_and_repeat_class(DGT, lo, hi, group)
 }
 
 #' @rdname ClassGroups
 #' @export
-word <- function(lo, hi, group = TRUE)
+wrd <- function(lo, hi, group = TRUE)
 {
-  group_and_repeat_class(WORD, lo, hi, group)
+  group_and_repeat_class(WRD, lo, hi, group)
 }
 
 #' @rdname ClassGroups
 #' @export
-whitespace <- function(lo, hi, group = TRUE)
+spc <- function(lo, hi, group = TRUE)
 {
-  group_and_repeat_class(WHITESPACE, lo, hi, group)
+  group_and_repeat_class(SPC, lo, hi, group)
 }
 
 #' @rdname ClassGroups
 #' @export
-not_digit2 <- function(lo, hi, group = TRUE)
+not_dgt <- function(lo, hi, group = TRUE)
 {
-  group_and_repeat_class(NOT_DIGIT2, lo, hi, group)
+  group_and_repeat_class(NOT_DGT, lo, hi, group)
 }
 
 #' @rdname ClassGroups
 #' @export
-not_word <- function(lo, hi, group = TRUE)
+not_wrd <- function(lo, hi, group = TRUE)
 {
-  group_and_repeat_class("\\W", lo, hi, group)
+  group_and_repeat_class(NOT_WRD, lo, hi, group)
 }
 
 #' @rdname ClassGroups
 #' @export
-not_whitespace <- function(lo, hi, group = TRUE)
+not_spc <- function(lo, hi, group = TRUE)
 {
-  group_and_repeat_class(NOT_WHITESPACE, lo, hi, group)
+  group_and_repeat_class(NOT_SPC, lo, hi, group)
 }
 
 #' @rdname ClassGroups

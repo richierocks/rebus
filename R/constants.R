@@ -183,19 +183,19 @@ WORD <- "\\w"
 
 #' @rdname CharacterClasses
 #' @export
-WHITESPACE <- "\\s"
+SPC <- "\\s"
 
 #' @rdname CharacterClasses
 #' @export
-NOT_DIGIT2 <- "\\D"
+NOT_DGT <- "\\D"
 
 #' @rdname CharacterClasses
 #' @export
-NOT_WORD <- "\\W"
+NOT_WRD <- "\\W"
 
 #' @rdname CharacterClasses
 #' @export
-NOT_WHITESPACE <- "\\S"
+NOT_SPC <- "\\S"
 
 #' @rdname CharacterClasses
 #' @export
