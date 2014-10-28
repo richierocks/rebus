@@ -15,7 +15,7 @@
 #' I suggest reading the \code{\link[base]{regex}} help page and doing lots of
 #' testing.
 #' @references \url{http://www.regular-expressions.info/shorthand.html}
-#' @seealso \code{\link[base]{regex}}
+#' @seealso \code{\link[base]{regex}}, \code{\link{Unicode}}
 #' @examples
 #' # R character classes
 #' alnum()
