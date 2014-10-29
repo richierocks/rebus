@@ -39,7 +39,7 @@ get_weekdays <- function(abbreviate = FALSE, locale = NULL)
   {
     get_weekdays_posix(abbreviate, locale)
   }  
-  regex::token(Reduce(regex::or, weekday_names))
+  token(or1(weekday_names))
 }
 
 get_weekdays_windows <- function(abbreviate = FALSE, locale = NULL)
@@ -83,7 +83,7 @@ get_months <- function(abbreviate = FALSE, locale = NULL)
   {
     get_months_posix(abbreviate, locale)
   }
-  regex::token(Reduce(regex::or, month_names))
+  token(or1(month_names))
 }
 
 get_months_windows <- function(abbreviate = FALSE, locale = NULL)
@@ -175,7 +175,7 @@ YEAR4 <- ascii_digit(1, 4)
 
 TIMEZONE_OFFSET <- optional(group("-+")) %c% ascii_digit(4)
 
-TIMEZONE <- token(Reduce(or, OlsonNames()))
+TIMEZONE <- token(or1(OlsonNames()))
 
 MDY <- MONTH %c% "/" %c% DAY %c% "/" %c% YEAR2
 
