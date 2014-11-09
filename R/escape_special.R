@@ -13,7 +13,9 @@
 #' or not the special character is inside a character class or not.  It simply
 #' escapes every value.
 #' @examples
-#' escape_special("\\ ^ $ . | ? * + ( ) [ {")
+#' \dontrun{
+#' escape_special("\\ ^ $ . | ? * + ( ) { } [ ]")
+#' }
 #' @export
 escape_special <- function(x, escape_brace = TRUE)
 {
