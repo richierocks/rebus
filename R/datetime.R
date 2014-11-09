@@ -115,6 +115,7 @@ NULL
 #'   get_weekdays(TRUE, locale = "ar_QA.utf8")
 #' }
 #' }
+#' @export
 get_weekdays <- function(abbreviate = FALSE, locale = NULL)
 {
   weekday_names <- if(.Platform$OS.type == "windows")
@@ -162,6 +163,8 @@ get_weekdays_linux <- function(abbreviate = FALSE, locale = NULL)
   unique(weekdays(days, abbreviate))
 }
 
+#' @rdname get_weekdays
+#' @export
 get_months <- function(abbreviate = FALSE, locale = NULL)
 {
   month_names <- if(.Platform$OS.type == "windows")
@@ -320,6 +323,7 @@ AM_PM <- token("am" %|% "AM" %|% "pm" %|% "PM")
 TIMEZONE_OFFSET <- optional(group("-+")) %c% ascii_digit(4)
 
 #' @rdname DateTime
+#' @include escape_special.R
 #' @export
 TIMEZONE <- token(escape_special(or1(OlsonNames())))
 
