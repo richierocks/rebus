@@ -104,12 +104,12 @@ END <- "$"
 #' UPPER
 #' HEX_DIGIT
 #' ANY_CHAR
-#' DIGIT2
-#' WORD
-#' WHITESPACE
-#' NOT_DIGIT2
-#' NOT_WORD
-#' NOT_WHITESPACE
+#' DGT
+#' WRD
+#' SPC
+#' NOT_DGT
+#' NOT_WRD
+#' NOT_SPC
 #' ASCII_DIGIT
 #' ASCII_LOWER
 #' ASCII_UPPER
@@ -175,11 +175,11 @@ ANY_CHAR <- "."
 
 #' @rdname CharacterClasses
 #' @export
-DIGIT2 <- "\\d"
+DGT <- "\\d"
 
 #' @rdname CharacterClasses
 #' @export
-WORD <- "\\w"
+WRD <- "\\w"
 
 #' @rdname CharacterClasses
 #' @export
