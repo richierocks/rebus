@@ -6,7 +6,7 @@
 #' @seealso \code{\link{ClassGroups}}, \code{\link[base]{Sys.setlocale}}
 #' @examples 
 #' datetime("%m/%d/%Y")             # match US style dates
-#' datetime(token("%H" %|% "%I%p")) # match hours in 24h or 12h format
+#' datetime(group("%H" %|% "%I%p")) # match hours in 24h or 12h format
 #' 
 #' \dontrun{
 #' # week days and months are can be matched in any locale
@@ -125,7 +125,7 @@ get_weekdays <- function(abbreviate = FALSE, locale = NULL)
   {
     get_weekdays_posix(abbreviate, locale)
   }  
-  token(or1(weekday_names))
+  or1(weekday_names)
 }
 
 get_weekdays_windows <- function(abbreviate = FALSE, locale = NULL)
@@ -174,7 +174,7 @@ get_months <- function(abbreviate = FALSE, locale = NULL)
   {
     get_months_posix(abbreviate, locale)
   }
-  token(or1(month_names))
+  or1(month_names)
 }
 
 get_months_windows <- function(abbreviate = FALSE, locale = NULL)
@@ -211,7 +211,7 @@ get_months_posix <- function(abbreviate = FALSE, locale = NULL)
 
 #' @rdname DateTime
 #' @export
-DTSEP <- optional(group("-/.:,\\ "))
+DTSEP <- optional(char_class("-/.:,\\ "))
 
 #' @rdname DateTime
 #' @export
@@ -231,37 +231,37 @@ YEAR4 <- ascii_digit(4)
 
 #' @rdname DateTime
 #' @export
-MONTH <- token(
+MONTH <- group(
   "1" %c% char_range(0, 2) %|% 
     optional("0") %c% char_range(1, 9)
 )
 
 #' @rdname DateTime
 #' @export
-WEEK_OF_YEAR <- token(
+WEEK_OF_YEAR <- group(
   "5" %c% char_range(0, 3) %|%
     char_range(0, 4) %c% ascii_digit()
 )
 
 #' @rdname DateTime
 #' @export
-DAY <- token(
+DAY <- group(
   "0" %c% char_range(1, 9) %|% 
-    group("12") %c% ascii_digit() %|% 
-    "3" %c% group("01")
+    char_class("12") %c% ascii_digit() %|% 
+    "3" %c% char_class("01")
 )
 
 #' @rdname DateTime
 #' @export
-DAY_SINGLE <- token(
+DAY_SINGLE <- group(
   " " %c% char_range(1, 9) %|% 
-    group("12") %c% ascii_digit() %|% 
-    "3" %c% group("01")
+    char_class("12") %c% ascii_digit() %|% 
+    "3" %c% char_class("01")
 )
 
 #' @rdname DateTime
 #' @export
-DAY_OF_YEAR <- token(
+DAY_OF_YEAR <- group(
   "36" %c% char_range(0, 6) %|%
     "3" %c% char_range(0, 5) %c% ascii_digit() %|%
     optional(char_range(0, 2)) %c% optional(ascii_digit()) %c% ascii_digit()
@@ -277,25 +277,25 @@ WEEKDAY0 <- char_range(0, 6)
 
 #' @rdname DateTime
 #' @export
-HOUR24 <- token(
-  group("01") %c% ascii_digit() %|% "2" %c% char_range("0", "3") 
+HOUR24 <- group(
+  char_class("01") %c% ascii_digit() %|% "2" %c% char_range("0", "3") 
 )
 
 #' @rdname DateTime
 #' @export
-HOUR12 <- token(
+HOUR12 <- group(
   "0" %c% ascii_digit() %|% "1" %c% char_range("0", "2") 
 )
 
 #' @rdname DateTime
 #' @export
-HOUR24_SINGLE <- token(
-  optional(group(" 1")) %c% ascii_digit() %|% "2" %c% char_range("0", "3") 
+HOUR24_SINGLE <- group(
+  optional(char_class(" 1")) %c% ascii_digit() %|% "2" %c% char_range("0", "3") 
 )
 
 #' @rdname DateTime
 #' @export
-HOUR12_SINGLE <- token(
+HOUR12_SINGLE <- group(
   optional(" ") %c% ascii_digit() %|% "1" %c% char_range("0", "2") 
 )
 
@@ -305,27 +305,28 @@ MINUTE <- char_range(0, 5) %c% ascii_digit()
 
 #' @rdname DateTime
 #' @export
-SECOND <- token(
+SECOND <- group(
   char_range(0, 5) %c% ascii_digit() %|%
-    "6" %c% group("01") #leap seconds
+  "6" %c% char_class("01") #leap seconds
 )
 
 #' @rdname DateTime
 #' @export
-FRACTIONAL_SECOND <- SECOND %c% optional(token(group(".,") %c% ascii_digit(1, 6)))
+FRACTIONAL_SECOND <- SECOND %c% 
+  optional(group(char_class(".,") %c% ascii_digit(1, 6)))
 
 #' @rdname DateTime
 #' @export
-AM_PM <- token("am" %|% "AM" %|% "pm" %|% "PM")
+AM_PM <- group("am" %|% "AM" %|% "pm" %|% "PM")
 
 #' @rdname DateTime
 #' @export
-TIMEZONE_OFFSET <- optional(group("-+")) %c% ascii_digit(4)
+TIMEZONE_OFFSET <- optional(char_class("-+")) %c% ascii_digit(4)
 
 #' @rdname DateTime
 #' @include escape_special.R
 #' @export
-TIMEZONE <- token(escape_special(or1(OlsonNames())))
+TIMEZONE <- or1(escape_special(OlsonNames()))
 
 
 #' @rdname DateTime
@@ -338,7 +339,7 @@ ISO_TIME <- HOUR24 %c%  ":" %c% MINUTE %c%  ":" %c% SECOND
 
 #' @rdname DateTime
 #' @export
-ISO_DATETIME <- ISO_DATE %c% group(" T") %c% ISO_TIME
+ISO_DATETIME <- ISO_DATE %c% char_class(" T") %c% ISO_TIME
 
 
 #' @rdname DateTime
@@ -414,6 +415,6 @@ datetime <- function(x, locale = NULL)
   x <- gsub("%O?y", YEAR2, x)
   x <- gsub("%Y", YEAR4, x)
   x <- gsub("%z", TIMEZONE_OFFSET, x)
-  x <- gsub("%Z", TIMEZONE, x)
+#   x <- gsub("%Z", TIMEZONE, x)
   x
 }
