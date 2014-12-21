@@ -122,9 +122,6 @@ NULL
 #' @export
 ALPHA <- "[:alpha:]"
 
-# roxygen documentation is attached to ALPHA rather than ALNUM to avoid clashes
-# with class group documentation on alnum().
-
 #' @rdname CharacterClasses
 #' @export
 ALNUM <- "[:alnum:]"
