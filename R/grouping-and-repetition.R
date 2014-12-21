@@ -1,25 +1,33 @@
-#' A range or group of characters.
+#' A range or char_class of characters.
 #' 
-#' Match a range or group of characters.
+#' Match a range or char_class of characters.
 #' @param x A character vector.
 #' @return A character vector representing part or all of a regular expression.
 #' @references \url{http://www.regular-expressions.info/charclass.html}
 #' @examples
 #' char_range("e", "t")
 #' char_range(3, 5)
-#' group(lower())
-#' negate_and_group(lower())
+#' char_class(LOWER)
+#' negated_char_class(LOWER)
 #' @export
-group <- function(x)
+char_class <- function(x)
 {
   paste0("[", x, "]")
 }
 
-#' @rdname group
+#' @rdname char_class
+#' @export
+negated_char_class <- function(x)
+{
+  paste0("[^", x, "]")
+}
+
+#' @rdname char_class
 #' @export
 negate_and_group <- function(x)
 {
-  paste0("[^", x, "]")
+  .Deprecated("negated_char_class")
+  negated_char_class(x)
 }
 
 #' Repeat values
@@ -31,7 +39,7 @@ negate_and_group <- function(x)
 #' @return A character vector representing part or all of a regular expression.
 #' @references \url{http://www.regular-expressions.info/repeat.html}
 #' @examples
-#' x <- group(graph())
+#' x <- char_class(graph())
 #' optional(x)
 #' zero_or_more(x)
 #' one_or_more(x)
@@ -98,18 +106,18 @@ one_or_more <- function(x)
 
 #' Engine for grouping and repeating classes
 #' 
-#' An engine for the class functions that implicited calls \code{group} and
+#' An engine for the class functions that implicited calls \code{char_class} and
 #' \code{repeated} for certain input combinations.
 #' @param x A string.
 #' @param lo A non-negative integer. Minimum number of repeats, when grouped.
 #' @param hi positive integer. Maximum number of repeats, when grouped.
-#' @param group \code{TRUE} or \code{FALSE}. Should the class be grouped?
+#' @param char_class \code{TRUE} or \code{FALSE}. Should the class be grouped?
 #' @return A character vector representing part or all of a regular expression.
-group_and_repeat_class <- function(x, lo, hi, group)
+repeat_in_class <- function(x, lo, hi, char_class)
 {
-  if(group)
+  if(char_class)
   {
-    x <- group(x)
+    x <- char_class(x)
     if(!missing(lo))
     {
       x <- repeated(x, lo, hi)
