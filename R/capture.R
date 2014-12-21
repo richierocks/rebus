@@ -7,7 +7,7 @@
 #' @examples
 #' x <- "foo"
 #' capture(x)
-#' token(x)
+#' group(x)
 #' @export
 capture <- function(x)
 {
@@ -16,7 +16,25 @@ capture <- function(x)
 
 #' @rdname capture
 #' @export
-token <- function(x)
+group <- function(x)
 {
   paste0("(?:", x, ")")
+}
+
+#' @rdname capture
+#' @export
+token <- function(x)
+{
+  .Deprecated("group")
+  group(x)
+}
+
+engroup <- function(x, capture)
+{
+  switch(
+    as.character(capture),
+    "TRUE"  = capture(x),
+    "FALSE" = group(x),
+    x
+  )
 }
