@@ -151,7 +151,7 @@ get_weekdays_windows <- function(abbreviate = FALSE, locale = NULL)
   )
 }
 
-get_weekdays_linux <- function(abbreviate = FALSE, locale = NULL)
+get_weekdays_posix <- function(abbreviate = FALSE, locale = NULL)
 {
   if(!is.null(locale))
   {
@@ -197,7 +197,7 @@ get_months_windows <- function(abbreviate = FALSE, locale = NULL)
   )
 }
 
-get_months_linux <- function(abbreviate = FALSE, locale = NULL)
+get_months_posix <- function(abbreviate = FALSE, locale = NULL)
 {
   if(!is.null(locale))
   {
