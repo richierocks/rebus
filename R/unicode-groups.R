@@ -6,6 +6,9 @@
 #' @param char_class \code{TRUE} or \code{FALSE}. Should the values be wrapped
 #' into a character class?
 #' @return A character vector representing part or all of a regular expression.
+#' @note Windows currently doesn't handle Unicode points with more than four
+#' digits correctly. See 
+#' \url{https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=16098}
 #' @references \url{http://www.unicode.org/charts} 
 #' @seealso \code{\link{ClassGroups}} 
 #' @name Unicode

@@ -10,11 +10,11 @@ ARMENIAN_LIGATURES <- "\uFB00-\uFB4F"
 
 #' @rdname Unicode
 #' @export
-CAUCASIAN_ALBANIAN <- "\u10530-\U1056F"
+CAUCASIAN_ALBANIAN <- "\U10530-\U1056F"
 
 #' @rdname Unicode
 #' @export
-CYPRIOT_SYLLABARY <- "\u10800-\u1083F"
+CYPRIOT_SYLLABARY <- "\U10800-\U1083F"
 
 #' @rdname Unicode
 #' @export
@@ -34,7 +34,7 @@ CYRILLIC_EXTENDED_B <- "\uA640-\uA69F"
 
 #' @rdname Unicode
 #' @export
-ELBASAN <- "\u10500-\u1052F"
+ELBASAN <- "\U10500-\U1052F"
 
 #' @rdname Unicode
 #' @export
@@ -50,7 +50,7 @@ GLAGOLITIC <- "\u2C00-\u2C5F"
 
 #' @rdname Unicode
 #' @export
-GOTHIC <- "\u10330-\u1034F"
+GOTHIC <- "\U10330-\U1034F"
 
 #' @rdname Unicode
 #' @export
@@ -98,15 +98,15 @@ LATIN_LIGATURES <- "\uFB00-\uFB4F"
 
 #' @rdname Unicode
 #' @export
-LINEAR_A <- "\u10600-\u1077F"
+LINEAR_A <- "\U10600-\U1077F"
 
 #' @rdname Unicode
 #' @export
-LINEAR_B_SYLLABARY <- "\u10000-\u1007F"
+LINEAR_B_SYLLABARY <- "\U10000-\U1007F"
 
 #' @rdname Unicode
 #' @export
-LINEAR_B_IDEOGRAMS <- "\u10080-\u100FF"
+LINEAR_B_IDEOGRAMS <- "\U10080-\U100FF"
 
 #' @rdname Unicode
 #' @export
@@ -114,15 +114,15 @@ OGHAM <- "\u1680-\u169F"
 
 #' @rdname Unicode
 #' @export
-OLD_ITALIC <- "\u10300-\u1032F"
+OLD_ITALIC <- "\U10300-\U1032F"
 
 #' @rdname Unicode
 #' @export
-OLD_PERMIC <- "\u10350-\u1037F"
+OLD_PERMIC <- "\U10350-\U1037F"
 
 #' @rdname Unicode
 #' @export
-PHAISTOS_DISC <- "\u101D0-\u101FF"
+PHAISTOS_DISC <- "\U101D0-\U101FF"
 
 #' @rdname Unicode
 #' @export
@@ -130,17 +130,17 @@ RUNIC <- "\u16A0-\u16FF"
 
 #' @rdname Unicode
 #' @export
-SHAVIAN <- "\u10450-\u1047F"
+SHAVIAN <- "\U10450-\U1047F"
 
 
 # Phonetic & Shorthand Symbols
 #' @rdname Unicode
 #' @export
-DUPLOYAN <- "\u1BC00-\u1BC9F"
+DUPLOYAN <- "\U1BC00-\U1BC9F"
 
 #' @rdname Unicode
 #' @export
-SHORTHAND_FORMAT_CONTROLS <- "\u1BCA0-\u1BCAF"
+SHORTHAND_FORMAT_CONTROLS <- "\U1BCA0-\U1BCAF"
 
 #' @rdname Unicode
 #' @export
@@ -192,11 +192,11 @@ BAMUN <- "\uA6A0-\uA6FF"
 
 #' @rdname Unicode
 #' @export
-BAMUN_SUPPLEMENT <- "\u16800-\u16A3F"
+BAMUN_SUPPLEMENT <- "\U16800-\U16A3F"
 
 #' @rdname Unicode
 #' @export
-BASSA_VAH <- "\u16AD0-\u16AFF"
+BASSA_VAH <- "\U16AD0-\U16AFF"
 
 #' @rdname Unicode
 #' @export
@@ -204,11 +204,11 @@ COPTIC <- "\u2C80-\u2CFF"
 
 #' @rdname Unicode
 #' @export
-COPTIC_EPACT_NUMBERS <- "\u102E0-\u102FF"
+COPTIC_EPACT_NUMBERS <- "\U102E0-\U102FF"
 
 #' @rdname Unicode
 #' @export
-EGYPTIAN_HIEROGLYPHS <- "\u13000-\u1342F"
+EGYPTIAN_HIEROGLYPHS <- "\U13000-\U1342F"
 
 #' @rdname Unicode
 #' @export
@@ -228,15 +228,15 @@ ETHIOPIC_EXTENDED_A <- "\uAB00-\uAB2F"
 
 #' @rdname Unicode
 #' @export
-MENDE_KIKAKUI <- "\u1E800-\u1E8DF"
+MENDE_KIKAKUI <- "\U1E800-\U1E8DF"
 
 #' @rdname Unicode
 #' @export
-MEROITIC_CURSIVE <- "\u109A0-\u109FF"
+MEROITIC_CURSIVE <- "\U109A0-\U109FF"
 
 #' @rdname Unicode
 #' @export
-MEROITIC_HIEROGLYPHS <- "\u10980-\u1099F"
+MEROITIC_HIEROGLYPHS <- "\U10980-\U1099F"
 
 #' @rdname Unicode
 #' @export
@@ -244,7 +244,7 @@ NKO <- "\u07C0-\u07FF"
 
 #' @rdname Unicode
 #' @export
-OSMANYA <- "\u10480-\u104AF"
+OSMANYA <- "\U10480-\U104AF"
 
 #' @rdname Unicode
 #' @export
@@ -278,31 +278,31 @@ ARABIC_PRESENTATION_FORMS_B <- "\uFE70-\uFEFF"
 
 #' @rdname Unicode
 #' @export
-IMPERIAL_ARAMAIC <- "\u10840-\u1085F"
+IMPERIAL_ARAMAIC <- "\U10840-\U1085F"
 
 #' @rdname Unicode
 #' @export
-AVESTAN <- "\u10B00-\u10B3F"
+AVESTAN <- "\U10B00-\U10B3F"
 
 #' @rdname Unicode
 #' @export
-CARIAN <- "\u102A0-\u102DF"
+CARIAN <- "\U102A0-\U102DF"
 
 #' @rdname Unicode
 #' @export
-CUNEIFORM <- "\u12000-\u123FF"
+CUNEIFORM <- "\U12000-\U123FF"
 
 #' @rdname Unicode
 #' @export
-CUNEIFORM_NUMBERS_AND_PUNCTUATION <- "\u12400-\u1247F"
+CUNEIFORM_NUMBERS_AND_PUNCTUATION <- "\U12400-\U1247F"
 
 #' @rdname Unicode
 #' @export
-OLD_PERSIAN <- "\u103A0-\u103DF"
+OLD_PERSIAN <- "\U103A0-\U103DF"
 
 #' @rdname Unicode
 #' @export
-UGARITIC <- "\u10380-\u1039F"
+UGARITIC <- "\U10380-\U1039F"
 
 #' @rdname Unicode
 #' @export
@@ -310,11 +310,11 @@ HEBREW <- "\u0590-\u05FF"
 
 #' @rdname Unicode
 #' @export
-LYCIAN <- "\u10280-\u1029F"
+LYCIAN <- "\U10280-\U1029F"
 
 #' @rdname Unicode
 #' @export
-LYDIAN <- "\u10920-\u1093F"
+LYDIAN <- "\U10920-\U1093F"
 
 #' @rdname Unicode
 #' @export
@@ -322,31 +322,31 @@ MANDAIC <- "\u0840-\u085F"
 
 #' @rdname Unicode
 #' @export
-NABATAEAN <- "\u10880-\u108AF"
+NABATAEAN <- "\U10880-\U108AF"
 
 #' @rdname Unicode
 #' @export
-OLD_NORTH_ARABIAN <- "\u10A80-\u10A9F"
+OLD_NORTH_ARABIAN <- "\U10A80-\U10A9F"
 
 #' @rdname Unicode
 #' @export
-OLD_SOUTH_ARABIAN <- "\u10A60-\u10A7F"
+OLD_SOUTH_ARABIAN <- "\U10A60-\U10A7F"
 
 #' @rdname Unicode
 #' @export
-PAHLAVI_INSCRIPTIONAL <- "\u10B60-\u10B7F"
+PAHLAVI_INSCRIPTIONAL <- "\U10B60-\U10B7F"
 
 #' @rdname Unicode
 #' @export
-PAHLAVI_PSALTER <- "\u10B80-\u10BAF"
+PAHLAVI_PSALTER <- "\U10B80-\U10BAF"
 
 #' @rdname Unicode
 #' @export
-PALMYRENE <- "\u10860-\u1087F"
+PALMYRENE <- "\U10860-\U1087F"
 
 #' @rdname Unicode
 #' @export
-PHOENICIAN <- "\u10900-\u1091F"
+PHOENICIAN <- "\U10900-\U1091F"
 
 #' @rdname Unicode
 #' @export
@@ -360,7 +360,7 @@ SYRIAC <- "\u0700-\u074F"
 # Central Asian Scripts
 #' @rdname Unicode
 #' @export
-MANICHAEAN <- "\u10AC0-\u10AFF"
+MANICHAEAN <- "\U10AC0-\U10AFF"
 
 #' @rdname Unicode
 #' @export
@@ -368,7 +368,7 @@ MONGOLIAN <- "\u1800-\u18AF"
 
 #' @rdname Unicode
 #' @export
-OLD_TURKIC <- "\u10C00-\u10C4F"
+OLD_TURKIC <- "\U10C00-\U10C4F"
 
 #' @rdname Unicode
 #' @export
@@ -386,11 +386,11 @@ BENGALI_AND_ASSAMESE <- "\u0980-\u09FF"
 
 #' @rdname Unicode
 #' @export
-BRAHMI <- "\u11000-\u1107F"
+BRAHMI <- "\U11000-\U1107F"
 
 #' @rdname Unicode
 #' @export
-CHAKMA <- "\u11100-\u1114F"
+CHAKMA <- "\U11100-\U1114F"
 
 #' @rdname Unicode
 #' @export
@@ -402,7 +402,7 @@ DEVANAGARI_EXTENDED <- "\uA8E0-\uA8FF"
 
 #' @rdname Unicode
 #' @export
-GRANTHA <- "\u11300-\u1137F"
+GRANTHA <- "\U11300-\U1137F"
 
 #' @rdname Unicode
 #' @export
@@ -414,7 +414,7 @@ GURMUKHI <- "\u0A00-\u0A7F"
 
 #' @rdname Unicode
 #' @export
-KAITHI <- "\u11080-\u110CF"
+KAITHI <- "\U11080-\U110CF"
 
 #' @rdname Unicode
 #' @export
@@ -422,15 +422,15 @@ KANNADA <- "\u0C80-\u0CFF"
 
 #' @rdname Unicode
 #' @export
-KHAROSHTHI <- "\u10A00-\u10A5F"
+KHAROSHTHI <- "\U10A00-\U10A5F"
 
 #' @rdname Unicode
 #' @export
-KHOJKI <- "\u11200-\u1124F"
+KHOJKI <- "\U11200-\U1124F"
 
 #' @rdname Unicode
 #' @export
-KHUDAWADI <- "\u112B0-\u112FF"
+KHUDAWADI <- "\U112B0-\U112FF"
 
 #' @rdname Unicode
 #' @export
@@ -442,7 +442,7 @@ LIMBU <- "\u1900-\u194F"
 
 #' @rdname Unicode
 #' @export
-MAHAJANI <- "\u11150-\u1117F"
+MAHAJANI <- "\U11150-\U1117F"
 
 #' @rdname Unicode
 #' @export
@@ -458,11 +458,11 @@ MEETEI_MAYEK_EXTENSIONS <- "\uAAE0-\uAAFF"
 
 #' @rdname Unicode
 #' @export
-MODI <- "\u11600-\u1165F"
+MODI <- "\U11600-\U1165F"
 
 #' @rdname Unicode
 #' @export
-MRO <- "\u16A40-\u16A6F"
+MRO <- "\U16A40-\U16A6F"
 
 #' @rdname Unicode
 #' @export
@@ -478,11 +478,11 @@ SAURASHTRA <- "\uA880-\uA8DF"
 
 #' @rdname Unicode
 #' @export
-SHARADA <- "\u11180-\u111DF"
+SHARADA <- "\U11180-\U111DF"
 
 #' @rdname Unicode
 #' @export
-SIDDHAM <- "\u11580-\u115FF"
+SIDDHAM <- "\U11580-\U115FF"
 
 #' @rdname Unicode
 #' @export
@@ -490,11 +490,11 @@ SINHALA <- "\u0D80-\u0DFF"
 
 #' @rdname Unicode
 #' @export
-SINHALA_ARCHAIC_NUMBERS <- "\u111E0-\u111FF"
+SINHALA_ARCHAIC_NUMBERS <- "\U111E0-\U111FF"
 
 #' @rdname Unicode
 #' @export
-SORA_SOMPENG <- "\u110D0-\u110FF"
+SORA_SOMPENG <- "\U110D0-\U110FF"
 
 #' @rdname Unicode
 #' @export
@@ -502,7 +502,7 @@ SYLOTI_NAGRI <- "\uA800-\uA82F"
 
 #' @rdname Unicode
 #' @export
-TAKRI <- "\u11680-\u116CF"
+TAKRI <- "\U11680-\U116CF"
 
 #' @rdname Unicode
 #' @export
@@ -518,7 +518,7 @@ THAANA <- "\u0780-\u07BF"
 
 #' @rdname Unicode
 #' @export
-TIRHUTA <- "\u11480-\u114DF"
+TIRHUTA <- "\U11480-\U114DF"
 
 #' @rdname Unicode
 #' @export
@@ -526,7 +526,7 @@ VEDIC_EXTENSIONS <- "\u1CD0-\u1CFF"
 
 #' @rdname Unicode
 #' @export
-WARANG_CITI <- "\u118A0-\u118FF"
+WARANG_CITI <- "\U118A0-\U118FF"
 
 
 # Southeast Asian Scripts
@@ -568,11 +568,11 @@ NEW_TAI_LUE <- "\u1980-\u19DF"
 
 #' @rdname Unicode
 #' @export
-PAHAWH_HMONG <- "\u16B00-\u16B8F"
+PAHAWH_HMONG <- "\U16B00-\U16B8F"
 
 #' @rdname Unicode
 #' @export
-PAU_CIN_HAU <- "\u11AC0-\u11AFF"
+PAU_CIN_HAU <- "\U11AC0-\U11AFF"
 
 #' @rdname Unicode
 #' @export
@@ -656,15 +656,15 @@ CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A <- "\u3400-\u4DB5"
 
 #' @rdname Unicode
 #' @export
-CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B <- "\u20000-\u2A6D6"
+CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B <- "\U20000-\U2A6D6"
 
 #' @rdname Unicode
 #' @export
-CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C <- "\u2A700-\u2B734"
+CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C <- "\U2A700-\U2B734"
 
 #' @rdname Unicode
 #' @export
-CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D <- "\u2B740-\u2B81D"
+CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D <- "\U2B740-\U2B81D"
 
 #' @rdname Unicode
 #' @export
@@ -672,7 +672,7 @@ CJK_COMPATIBILITY_IDEOGRAPHS <- "\uF900-\uFAFF"
 
 #' @rdname Unicode
 #' @export
-CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT <- "\u2F800-\u2FA1F"
+CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT <- "\U2F800-\U2FA1F"
 
 #' @rdname Unicode
 #' @export
@@ -724,7 +724,7 @@ KATAKANA_PHONETIC_EXTENSIONS <- "\u31F0-\u31FF"
 
 #' @rdname Unicode
 #' @export
-KANA_SUPPLEMENT <- "\u1B000-\u1B0FF"
+KANA_SUPPLEMENT <- "\U1B000-\U1B0FF"
 
 #' @rdname Unicode
 #' @export
@@ -736,7 +736,7 @@ LISU <- "\uA4D0-\uA4FF"
 
 #' @rdname Unicode
 #' @export
-MIAO <- "\u16F00-\u16F9F"
+MIAO <- "\U16F00-\U16F9F"
 
 #' @rdname Unicode
 #' @export
@@ -754,7 +754,7 @@ CHEROKEE <- "\u13A0-\u13FF"
 
 #' @rdname Unicode
 #' @export
-DESERET <- "\u10400-\u1044F"
+DESERET <- "\U10400-\U1044F"
 
 #' @rdname Unicode
 #' @export
@@ -816,15 +816,15 @@ LETTERLIKE_SYMBOLS <- "\u2100-\u214F"
 
 #' @rdname Unicode
 #' @export
-ANCIENT_SYMBOLS <- "\u10190-\u101CF"
+ANCIENT_SYMBOLS <- "\U10190-\U101CF"
 
 #' @rdname Unicode
 #' @export
-MATHEMATICAL_ALPHANUMERIC_SYMBOLS <- "\u1D400-\u1D7FF"
+MATHEMATICAL_ALPHANUMERIC_SYMBOLS <- "\U1D400-\U1D7FF"
 
 #' @rdname Unicode
 #' @export
-ARABIC_MATHEMATICAL_ALPHANUMERIC_SYMBOLS <- "\u1EE00-\u1EEFF"
+ARABIC_MATHEMATICAL_ALPHANUMERIC_SYMBOLS <- "\U1EE00-\U1EEFF"
 
 #' @rdname Unicode
 #' @export
@@ -832,7 +832,7 @@ ENCLOSED_ALPHANUMERICS <- "\u2460-\u24FF"
 
 #' @rdname Unicode
 #' @export
-ENCLOSED_ALPHANUMERIC_SUPPLEMENT <- "\u1F100-\u1F1FF"
+ENCLOSED_ALPHANUMERIC_SUPPLEMENT <- "\U1F100-\U1F1FF"
 
 #' @rdname Unicode
 #' @export
@@ -840,7 +840,7 @@ ENCLOSED_CJK_LETTERS_AND_MONTHS <- "\u3200-\u32FF"
 
 #' @rdname Unicode
 #' @export
-ENCLOSED_IDEOGRAPHIC_SUPPLEMENT <- "\u1F200-\u1F2FF"
+ENCLOSED_IDEOGRAPHIC_SUPPLEMENT <- "\U1F200-\U1F2FF"
 
 #' @rdname Unicode
 #' @export
@@ -870,11 +870,11 @@ COMBINING_DIACRITIC_MARKS_FOR_SYMBOLS <- "\u20D0-\u20FF"
 # Numbers and Digits
 #' @rdname Unicode
 #' @export
-AEGEAN_NUMBERS <- "\u10100-\u1013F"
+AEGEAN_NUMBERS <- "\U10100-\U1013F"
 
 #' @rdname Unicode
 #' @export
-ANCIENT_GREEK_NUMBERS <- "\u10140-\u1018F"
+ANCIENT_GREEK_NUMBERS <- "\U10140-\U1018F"
 
 #' @rdname Unicode
 #' @export
@@ -886,11 +886,11 @@ COMMON_INDIC_NUMBER_FORMS <- "\uA830-\uA83F"
 
 #' @rdname Unicode
 #' @export
-COPTIC_EPACT_NUMBERS <- "\u102E0-\u102FF"
+COPTIC_EPACT_NUMBERS <- "\U102E0-\U102FF"
 
 #' @rdname Unicode
 #' @export
-COUNTING_ROD_NUMERALS <- "\u1D360-\u1D37F"
+COUNTING_ROD_NUMERALS <- "\U1D360-\U1D37F"
 
 #' @rdname Unicode
 #' @export
@@ -898,11 +898,11 @@ NUMBER_FORMS <- "\u2150-\u218F"
 
 #' @rdname Unicode
 #' @export
-RUMI_NUMERAL_SYMBOLS <- "\u10E60-\u10E7F"
+RUMI_NUMERAL_SYMBOLS <- "\U10E60-\U10E7F"
 
 #' @rdname Unicode
 #' @export
-SINHALA_ARCHAIC_NUMBERS <- "\u111E0-\u111FF"
+SINHALA_ARCHAIC_NUMBERS <- "\U111E0-\U111FF"
 
 
 # Mathematical Symbols
@@ -920,7 +920,7 @@ SUPPLEMENTAL_ARROWS_A <- "\u2900-\u297F"
 
 #' @rdname Unicode
 #' @export
-SUPPLEMENTAL_ARROWS_A <- "\u1F800-\u1F8FF"
+SUPPLEMENTAL_ARROWS_A <- "\U1F800-\U1F8FF"
 
 #' @rdname Unicode
 #' @export
@@ -962,13 +962,13 @@ BLOCK_ELEMENTS <- "\u2580-\u259F"
 
 #' @rdname Unicode
 #' @export
-GEOMETRIC_SHAPES_EXTENDED <- "\u1F780-\u1F7FF"
+GEOMETRIC_SHAPES_EXTENDED <- "\U1F780-\U1F7FF"
 
 
 # Other Symbols
 #' @rdname Unicode
 #' @export
-ALCHEMICAL_SYMBOLS <- "\u1F700-\u1F77F"
+ALCHEMICAL_SYMBOLS <- "\U1F700-\U1F77F"
 
 #' @rdname Unicode
 #' @export
@@ -986,13 +986,13 @@ DINGBATS <- "\u2700-\u27BF"
 
 #' @rdname Unicode
 #' @export
-ORNAMENTAL_DINGBATS <- "\u1F650-\u1F67"
+ORNAMENTAL_DINGBATS <- "\U1F650-\u1F67"
 
 
 # Emoticons
 #' @rdname Unicode
 #' @export
-EMOTICONS <- "\u1F600-\u1F64F"
+EMOTICONS <- "\U1F600-\U1F64F"
 
 
 # Game Symbols
@@ -1002,7 +1002,7 @@ CHESS_CHECKERS_DRAUGHTS <- "\u2654-\u265F\u26C0-\u26C3"
 
 #' @rdname Unicode
 #' @export
-DOMINO_TILES <- "\u1F030-\u1F09F"
+DOMINO_TILES <- "\U1F030-\U1F09F"
 
 #' @rdname Unicode
 #' @export
@@ -1010,11 +1010,11 @@ JAPANESE_CHESS <- "\u2616-\u2617"
 
 #' @rdname Unicode
 #' @export
-MAHJONG_TILES <- "\u1F000-\u1F02F"
+MAHJONG_TILES <- "\U1F000-\U1F02F"
 
 #' @rdname Unicode
 #' @export
-PLAYING_CARDS <- "\u1F0A0-\u1F0FF"
+PLAYING_CARDS <- "\U1F0A0-\U1F0FF"
 
 #' @rdname Unicode
 #' @export
@@ -1024,27 +1024,27 @@ CARD_SUITS <- "\u2660-\u2667"
 # Miscellanous Symbols
 #' @rdname Unicode
 #' @export
-MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS <- "\u1F300-\u1F5FF"
+MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS <- "\U1F300-\U1F5FF"
 
 
 # Musical Symbols
 #' @rdname Unicode
 #' @export
-MUSICAL_SYMBOLS <- "\u1D100-\u1D1FF"
+MUSICAL_SYMBOLS <- "\U1D100-\U1D1FF"
 
 #' @rdname Unicode
 #' @export
-ANCIENT_GREEK_MUSICAL_NOTATION <- "\u1D200-\u1D24F"
+ANCIENT_GREEK_MUSICAL_NOTATION <- "\U1D200-\U1D24F"
 
 #' @rdname Unicode
 #' @export
-BYZANTINE_MUSICAL_SYMBOLS <- "\u1D000-\u1D0FF"
+BYZANTINE_MUSICAL_SYMBOLS <- "\U1D000-\U1D0FF"
 
 
 # Transport and Map Symbols
 #' @rdname Unicode
 #' @export
-TRANSPORT_AND_MAP_SYMBOLS <- "\u1F680-\u1F6FF"
+TRANSPORT_AND_MAP_SYMBOLS <- "\U1F680-\U1F6FF"
 
 
 # Yijing Symbols
@@ -1058,7 +1058,7 @@ YIJING_HEXAGRAM_SYMBOLS <- "\u4DC0-\u4DFF"
 
 #' @rdname Unicode
 #' @export
-TAI_XUAN_JING_SYMBOLS <- "\u1D300-\u1D35F"
+TAI_XUAN_JING_SYMBOLS <- "\U1D300-\U1D35F"
 
 
 # Specials
@@ -1070,7 +1070,7 @@ SPECIALS <- "\uFFF0-\uFFFD"  #roxygen chokes on the non-characters \uFFFE and \u
 # Tags
 #' @rdname Unicode
 #' @export
-TAGS <- "\uE0000-\uE007F"
+TAGS <- "\UE0000-\UE007F"
 
 
 # Variation Selectors
@@ -1080,7 +1080,7 @@ VARIATION_SELECTORS <- "\uFE00-\uFE0F"
 
 #' @rdname Unicode
 #' @export
-VARIATION_SELECTORS_SUPPLEMENT <- "\uE0100-\uE01EF"
+VARIATION_SELECTORS_SUPPLEMENT <- "\UE0100-\UE01EF"
 
 
 # Private Use
@@ -1090,8 +1090,8 @@ PRIVATE_USE_AREA <- "\uE000-\uF8FF"
 
 #' @rdname Unicode
 #' @export
-SUPPLEMENTARY_PRIVATE_USE_AREA_A <- "\uF0000-\uFFFFF"
+SUPPLEMENTARY_PRIVATE_USE_AREA_A <- "\UF0000-\UFFFFF"
 
 #' @rdname Unicode
 #' @export
-SUPPLEMENTARY_PRIVATE_USE_AREA_B <- "\u100000-\u10FFFD"
+SUPPLEMENTARY_PRIVATE_USE_AREA_B <- "\U100000-\U10FFFD"
