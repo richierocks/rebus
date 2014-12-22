@@ -1,4 +1,5 @@
 #' @rdname CharacterClasses
+#' @include regex-methods.R
 #' @include concatenation.R
 #' @include class-groups.R
 #' @export
