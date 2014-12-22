@@ -1541,7 +1541,7 @@ sinhala_archaic_numbers <- function(lo, hi, char_class = TRUE)
 #' @export
 math_arrows <- function(lo, hi, char_class = TRUE)
 {
-  repeat_in_class(ARROWS, lo, hi, char_class)
+  repeat_in_class(MATH_ARROWS, lo, hi, char_class)
 }
 
 #' @rdname Unicode
