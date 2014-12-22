@@ -8,8 +8,9 @@ ASCII_ALPHA <- ASCII_LOWER %c% ASCII_UPPER
 #' @export
 ASCII_ALNUM <- ASCII_ALPHA %c% ASCII_DIGIT
 
-
-# TODO: Roman numerals
-# test on as.roman(1:3899)
-ROMAN <- one_or_more(group("[IVXLCDM]"))
-# token(optional("V") %c% repeated("I", 1, 3) %|% optional("I") %c% group("VX"))
+#' @rdname CharacterClasses
+#' @export
+ROMAN <- repeated("M", 0, 3) %c% 
+  optional(or1(as.character(as.roman(seq.int(100, 900, 100))))) %c% 
+  optional(or1(as.character(as.roman(seq.int(10, 90, 10))))) %c% 
+  optional(or1(as.character(as.roman(1:9))))

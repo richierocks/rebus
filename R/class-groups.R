@@ -53,6 +53,9 @@
 #' iso_time()
 #' iso_datetime()
 #' 
+#' # Roman numerals
+#' roman()
+#' 
 #' #Grouping and repetition
 #' digit(char_class = FALSE)
 #' digit(3)
@@ -252,6 +255,13 @@ iso_time <- function(lo, hi, char_class = TRUE)
 iso_datetime <- function(lo, hi, char_class = TRUE)
 {
   repeat_in_class(ISO_DATETIME, lo, hi, char_class)
+}
+
+#' @rdname ClassGroups
+#' @export
+roman <- function(lo, hi, char_class = TRUE)
+{
+  repeat_in_class(ROMAN, lo, hi, char_class)
 }
 
 #' @rdname ClassGroups
