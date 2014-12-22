@@ -908,7 +908,7 @@ SINHALA_ARCHAIC_NUMBERS <- "\u111E0-\u111FF"
 # Mathematical Symbols
 #' @rdname Unicode
 #' @export
-ARROWS <- "\u2190-\u21FF"
+MATH_ARROWS <- "\u2190-\u21FF"
 
 #' @rdname Unicode
 #' @export
