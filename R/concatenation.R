@@ -11,5 +11,5 @@
 #' @export
 `%c%` <- function(x, y)
 {
-  paste0(x, y)
+  regex(x, y)
 }

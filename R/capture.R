@@ -11,14 +11,14 @@
 #' @export
 capture <- function(x)
 {
-  paste0("(", x, ")")
+  regex("(", x, ")")
 }
 
 #' @rdname capture
 #' @export
 group <- function(x)
 {
-  paste0("(?:", x, ")")
+  regex("(?:", x, ")")
 }
 
 #' @rdname capture
@@ -35,6 +35,6 @@ engroup <- function(x, capture)
     as.character(capture),
     "TRUE"  = capture(x),
     "FALSE" = group(x),
-    x
+    regex(x)
   )
 }

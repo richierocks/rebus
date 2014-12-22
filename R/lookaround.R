@@ -13,26 +13,26 @@
 #' @export
 lookahead <- function(x)
 {
-  paste0("(?=", x, ")")  
+  regex("(?=", x, ")")  
 }
 
 #' @rdname lookahead
 #' @export
 negative_lookahead <- function(x)
 {
-  paste0("(?!", x, ")")  
+  regex("(?!", x, ")")  
 }
 
 #' @rdname lookahead
 #' @export
 lookbehind <- function(x)
 {
-  paste0("(?<=", x, ")")  
+  regex("(?<=", x, ")")  
 }
 
 #' @rdname lookahead
 #' @export
 negative_lookbehind <- function(x)
 {
-  paste0("(<!", x, ")")  
+  regex("(<!", x, ")")  
 }

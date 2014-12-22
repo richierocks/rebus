@@ -270,7 +270,7 @@ char_range <- function(lo, hi, char_class = TRUE)
 {
   lo <- get_first_char(lo)
   hi <- get_first_char(hi)
-  x <- paste0(lo, "-", hi)
+  x <- regex(lo, "-", hi)
   if(char_class)
   {
     x <- char_class(x)

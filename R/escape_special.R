@@ -24,5 +24,5 @@ escape_special <- function(x, escape_brace = TRUE)
   {
     x <- gsub(char, paste0("\\", char), x, fixed = TRUE)
   }
-  x
+  regex(x)
 }

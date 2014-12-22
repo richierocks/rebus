@@ -12,14 +12,14 @@
 #' @export
 char_class <- function(x)
 {
-  paste0("[", x, "]")
+  regex("[", x, "]")
 }
 
 #' @rdname char_class
 #' @export
 negated_char_class <- function(x)
 {
-  paste0("[^", x, "]")
+  regex("[^", x, "]")
 }
 
 #' @rdname char_class
@@ -69,7 +69,7 @@ repeated <- function(x, lo, hi)
     {
       return(one_or_more(x))
     }
-    return(paste0(x, "{", lo, "}"))
+    return(regex(x, "{", lo, "}"))
   }
   hi <- as.integer(hi)
   
@@ -86,14 +86,14 @@ repeated <- function(x, lo, hi)
     # Implicitly lo == 0
     return(optional(x))
   }
-  paste0(x, "{", lo, ",", hi, "}")
+  regex(x, "{", lo, ",", hi, "}")
 }
 
 #' @rdname repeated
 #' @export
 optional <- function(x)
 {
-  paste0(x, "?")
+  regex(x, "?")
 }
 
 #' @rdname repeated
@@ -104,14 +104,14 @@ lazy <- optional
 #' @export
 zero_or_more <- function(x)
 {
-  paste0(x, "*")
+  regex(x, "*")
 }
 
 #' @rdname repeated
 #' @export
 one_or_more <- function(x)
 {
-  paste0(x, "+")
+  regex(x, "+")
 }
 
 #' Engine for grouping and repeating classes
