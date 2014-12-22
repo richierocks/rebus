@@ -42,18 +42,24 @@ negate_and_group <- function(x)
 #' x <- char_class(graph())
 #' optional(x)
 #' zero_or_more(x)
+#' repeated(x, 0, Inf) # same
 #' one_or_more(x)
+#' repeated(x, 1, Inf) # same
 #' repeated(x, 3)
 #' repeated(x, 3, 5)
 #' @export
 repeated <- function(x, lo, hi)
 {
   lo <- as.integer(lo)
+  if(is.na(lo))
+  {
+    stop("lo is missing.")
+  }
   if(lo < 0)
   {
     stop("lo must be non-negative.")
   }
-  if(missing(hi))
+  if(missing(hi) || !is.finite(hi))
   {
     if(lo == 0)
     {
@@ -67,6 +73,10 @@ repeated <- function(x, lo, hi)
   }
   hi <- as.integer(hi)
   
+  if(is.na(hi))
+  {
+    stop("hi is missing.")
+  }
   if(hi <= lo)
   {
     stop("hi must be greater than lo.")
