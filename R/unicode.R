@@ -1064,7 +1064,7 @@ TAI_XUAN_JING_SYMBOLS <- "\u1D300-\u1D35F"
 # Specials
 #' @rdname Unicode
 #' @export
-SPECIALS <- "\uFFF0-\uFFFF"
+SPECIALS <- "\uFFF0-\uFFFD"  #roxygen chokes on the non-characters \uFFFE and \uFFFF
 
 
 # Tags
