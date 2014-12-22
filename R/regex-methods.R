@@ -21,6 +21,20 @@ is.regex <- function(x)
   inherits(x, "regex")
 }
 
+#' Create a regex
+#' 
+#' Creates a regex object.
+#' @param ... Passed to \code{paste0}.
+#' @return An object of class \code{regex}.
+#' @note This works like \code{paste0}, but the returns value has class
+#' \code{c("regex", "character")}.
+#' @seealso \code{\link[base]{paste0}}, \code{\link{as.regex}}
+#' @export
+regex <- function(...)
+{
+  as.regex(paste0(...))
+}
+
 #' Print or format regex objects
 #' 
 #' Prints/formats objects of class \code{regex}.
