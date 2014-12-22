@@ -1095,13 +1095,3 @@ SUPPLEMENTARY_PRIVATE_USE_AREA_A <- "\uF0000-\uFFFFF"
 #' @rdname Unicode
 #' @export
 SUPPLEMENTARY_PRIVATE_USE_AREA_B <- "\u100000-\u10FFFD"
-
-
-# Surrogates
-#' @rdname Unicode
-#' @export
-HIGH_SURROGATES <- "\uD800-\uDBFF"
-
-#' @rdname Unicode
-#' @export
-LOW_SURROGATES <- "\uDC00-\uDFFF"

@@ -1823,17 +1823,3 @@ supplementary_private_use_area_b <- function(lo, hi, char_class = TRUE)
 {
   repeat_in_class(SUPPLEMENTARY_PRIVATE_USE_AREA_B, lo, hi, char_class)
 }
-
-#' @rdname Unicode
-#' @export
-high_surrogates <- function(lo, hi, char_class = TRUE)
-{
-  repeat_in_class(HIGH_SURROGATES, lo, hi, char_class)
-}
-
-#' @rdname Unicode
-#' @export
-low_surrogates <- function(lo, hi, char_class = TRUE)
-{
-  repeat_in_class(LOW_SURROGATES, lo, hi, char_class)
-}
