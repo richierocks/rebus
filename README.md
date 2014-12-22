@@ -76,3 +76,15 @@ followed by a word boundary.*
       repeated(group(ip_element %c% DOT), 3) %c% 
       ip_element %c%
       BOUNDARY
+
+## See also
+
+The `stringr` and `stringi` packages provide tools for matching regular 
+expressions and nicely complement this package.
+
+http://www.regular-expressions.info has good advice on using
+regular expression in R.  In particular, see 
+http://www.regular-expressions.info/rlanguage.html and
+http://www.regular-expressions.info/examples.html.
+
+https://www.debuggex.com is a visual regex debugging and testing site.

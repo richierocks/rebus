@@ -7,7 +7,14 @@
 #' @docType package
 #' @name regex
 #' @aliases regex regex-package
-#' @references \url{http://www.regular-expressions.info/examples.html}
+#' @seealso \code{\link[base]{regex}} and \code{\link[base]{regexpr}}
+#' The `stringr` and `stringi` packages provide tools for matching 
+#' regular expressions and nicely complement this package.
+#' \url{http://www.regular-expressions.info} has good advice on using
+#' regular expression in R.  In particular, see
+#' \url{http://www.regular-expressions.info/rlanguage.html} and
+#' \url{http://www.regular-expressions.info/examples.html}
+#' \url{https://www.debuggex.com} is a visual regex debugging and testing site.
 #' @examples
 #' ### Match a hex colour, like `"#99af01"`
 #' # This reads *Match a hash, followed by six hexadecimal values.*
@@ -59,7 +66,7 @@
 #'     BOUNDARY %c% 
 #'       repeated(group(ip_element %c% DOT), 3) %c% 
 #'       ip_element %c%
-#'       BOUNDARY
+#'       BOUNDARY    
 #' @author Richard Cotton \email{richierocks@@gmail.com}
 #' @include constants.R
 #' @include class-groups.R
