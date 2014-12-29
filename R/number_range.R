@@ -44,7 +44,7 @@ number_range <- function(lo, hi, capture = FALSE)
     stringsAsFactors = FALSE
   )
   alternates <- get_alternate_ranges(d)
-  or1(alternates, capture = capture)
+  simplify_repeated_digits(or1(alternates, capture = capture))
 }
 
 get_alternate_ranges <- function(d)
@@ -84,8 +84,14 @@ get_alternate_ranges <- function(d)
       {
         NULL
       },
-      char_range(middle[1, 1], middle[nrow(middle), 1]) %c% 
-        ascii_digit(ncol(d) - 1, ncol(d) - 1),
+      if(nrow(middle) > 0)
+      {
+        char_range(middle[1, 1], middle[nrow(middle), 1]) %c% 
+          ascii_digit(ncol(d) - 1, ncol(d) - 1)
+      } else 
+      {
+        NULL
+      },
       if(nrow(max) > 0)
       {
         max[1, 1] %c% get_alternate_ranges(max[, -1, drop = FALSE])
@@ -96,3 +102,27 @@ get_alternate_ranges <- function(d)
     )
   )
 }
+
+simplify_repeated_digits <- function(x)
+{
+  if(length(x) > 1)
+  {
+    warning("Only using the first element of x.")
+    x <- x[1]
+  }
+  rx <- "(\\[0-9\\]){2,}"
+  repeat
+  {   
+    m <- regexpr(rx, x, perl = TRUE)
+    if(m == -1) break
+    match_len <- attr(m, "match.length")
+    n <- match_len / 5
+    x <- paste0(substring(x, 1, m - 1), ascii_digit(n), substring(x, m + match_len))
+  }
+  x
+}
+
+# x <- "x[0-9]x[0-9][0-9]x[0-9][0-9][0-9]x"
+# debugonce(simplify_repeated_digits)
+# simplify_repeated_digits(x)
+
