@@ -116,6 +116,7 @@ END <- "$"
 #' ASCII_ALPHA
 #' ASCII_ALNUM
 #' ROMAN
+#' UNMATCHABLE
 #' @name CharacterClasses
 NULL
 

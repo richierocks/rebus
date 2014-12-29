@@ -15,3 +15,7 @@ ROMAN <- repeated("M", 0, 3) %c%
   optional(or1(as.character(as.roman(seq.int(100, 900, 100))))) %c% 
   optional(or1(as.character(as.roman(seq.int(10, 90, 10))))) %c% 
   optional(or1(as.character(as.roman(1:9))))
+
+#' @rdname CharacterClasses
+#' @export
+UNMATCHABLE <- END %c%  "a"
