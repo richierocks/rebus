@@ -6,7 +6,7 @@
 #' @param capture A logical value. See \code{\link{or}} for details.
 #' @return A character vector representing part or all of a regular expression.
 #' @examples
-#' number_range(1, 255)
+#' number_range(0, 255)
 #' number_range(6, 54321)
 #' number_range(-77, 77)
 #' number_range(-77, 77, capture = TRUE)
