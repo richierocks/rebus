@@ -7,6 +7,7 @@
 #' @return A character vector representing part or all of a regular expression.
 #' @examples
 #' number_range(0, 255)
+#' number_range(100, 199)
 #' number_range(6, 54321)
 #' number_range(-77, 77)
 #' number_range(-77, 77, capture = TRUE)
@@ -55,6 +56,10 @@ get_alternate_ranges <- function(d)
   if(ncol(d) == 1)
   {
     return(char_range(d[1, 1], d[nrow(d), 1]))
+  }
+  if(max(d[, 1]) == min(d[, 1]))
+  {
+    return(max(d[, 1]) %c% get_alternate_ranges(d[, -1, drop = FALSE]))
   }
   grp <- factor(
     ifelse(
