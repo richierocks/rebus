@@ -3,17 +3,20 @@
 #' Generates a regular expression that matches a sequence of numbers.
 #' @param lo An integer.
 #' @param hi An integer greater than or equal to \code{lo}.
+#' @param allow_leading_zeroes A logical value. Are leading zeroes allowed to
+#' bulk the match up to the length of the number with the most digits?
 #' @param capture A logical value. See \code{\link{or}} for details.
 #' @return A character vector representing part or all of a regular expression.
 #' @examples
 #' number_range(0, 255)
-#' number_range(100, 199)
+#' number_range(0, 255, allow_leading_zeroes = TRUE)
+#' number_range(10000, 19999)
 #' number_range(6, 54321)
 #' number_range(-77, 77)
 #' number_range(-77, 77, capture = TRUE)
 #' number_range(-77, 77, capture = NA)
 #' @export
-number_range <- function(lo, hi, capture = FALSE)
+number_range <- function(lo, hi, allow_leading_zeroes = FALSE, capture = FALSE)
 {
   lo <- as.integer(lo[1])
   hi <- as.integer(hi[1])
@@ -27,13 +30,14 @@ number_range <- function(lo, hi, capture = FALSE)
   }
   if(lo < 0L && hi < 0L)
   {
-    return("-" %c% number_range(-hi, -lo, capture = capture))
+    return("-" %c% number_range(-hi, -lo, allow_leading_zeroes, capture))
   }
   if(lo < 0L && hi > 0L)
   {
     return(
       engroup(
-        number_range(lo, -1) %|% number_range(0, hi),
+        number_range(lo, -1, allow_leading_zeroes) %|% 
+          number_range(0, hi, allow_leading_zeroes),
         capture = capture
       )
     )
@@ -43,11 +47,16 @@ number_range <- function(lo, hi, capture = FALSE)
     do.call(rbind, strsplit(x, " ?")),
     stringsAsFactors = FALSE
   )
-  alternates <- get_alternate_ranges(d)
-  simplify_repeated_digits(or1(alternates, capture = capture))
+  alternates <- get_alternate_ranges(d, allow_leading_zeroes)
+  rx <- simplify_repeated_digits(
+    simplify_leading_zeroes(
+      or1(alternates, capture = capture)
+    )
+  )
+  regex(rx)
 }
 
-get_alternate_ranges <- function(d)
+get_alternate_ranges <- function(d, allow_leading_zeroes)
 {  
   if(is.null(ncol(d)) || ncol(d) == 0)
   {
@@ -59,7 +68,10 @@ get_alternate_ranges <- function(d)
   }
   if(max(d[, 1]) == min(d[, 1]))
   {
-    return(max(d[, 1]) %c% get_alternate_ranges(d[, -1, drop = FALSE]))
+    return(
+      max(d[, 1]) %c% 
+        get_alternate_ranges(d[, -1, drop = FALSE], allow_leading_zeroes)
+    )
   }
   grp <- factor(
     ifelse(
@@ -79,7 +91,15 @@ get_alternate_ranges <- function(d)
     c(
       if(nrow(min) > 0)
       {
-        min[1, 1] %c% get_alternate_ranges(min[, -1, drop = FALSE])
+        prefix <- if(min[1, 1] == "" && allow_leading_zeroes)
+        {
+          optional(0)
+        } else
+        {
+          ""
+        }
+        prefix %c% 
+          get_alternate_ranges(min[, -1, drop = FALSE], allow_leading_zeroes)
       } else 
       {
         NULL
@@ -94,7 +114,8 @@ get_alternate_ranges <- function(d)
       },
       if(nrow(max) > 0)
       {
-        max[1, 1] %c% get_alternate_ranges(max[, -1, drop = FALSE])
+        max[1, 1] %c% 
+          get_alternate_ranges(max[, -1, drop = FALSE], allow_leading_zeroes)
       } else 
       {
         NULL
@@ -103,6 +124,7 @@ get_alternate_ranges <- function(d)
   )
 }
 
+# These next two functions are slow.  Maybe speed up with trickery using strsplit?
 simplify_repeated_digits <- function(x)
 {
   if(length(x) > 1)
@@ -113,7 +135,7 @@ simplify_repeated_digits <- function(x)
   rx <- "(\\[0-9\\]){2,}"
   repeat
   {   
-    m <- regexpr(rx, x, perl = TRUE)
+    m <- regexpr(rx, x)
     if(m == -1) break
     match_len <- attr(m, "match.length")
     n <- match_len / 5
@@ -122,7 +144,24 @@ simplify_repeated_digits <- function(x)
   x
 }
 
-# x <- "x[0-9]x[0-9][0-9]x[0-9][0-9][0-9]x"
-# debugonce(simplify_repeated_digits)
-# simplify_repeated_digits(x)
-
+# @examples
+# x <- "x[0-9]x[0-9][0-9]x[0-9][0-9][0-9]x0?x0?0?x0?0?0?x"
+# simplify_leading_zeroes(x)
+simplify_leading_zeroes <- function(x)
+{
+  if(length(x) > 1)
+  {
+    warning("Only using the first element of x.")
+    x <- x[1]
+  }
+  rx <- "(0\\?){2,}"
+  repeat
+  {   
+    m <- regexpr(rx, x)
+    if(m == -1) break
+    match_len <- attr(m, "match.length")
+    n <- match_len / 2
+    x <- paste0(substring(x, 1, m - 1), repeated("0", 0, n), substring(x, m + match_len))
+  }
+  x
+}
