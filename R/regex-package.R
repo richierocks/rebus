@@ -19,7 +19,7 @@
 #' ### Match a hex colour, like `"#99af01"`
 #' # This reads *Match a hash, followed by six hexadecimal values.*
 #'   
-#'   "#" %c% hex_digit(6)    
+#' "#" %c% hex_digit(6)    
 #' 
 #' # To match only a hex colour and nothing else, you can add anchors to the 
 #' # start and end of the expression.
@@ -31,7 +31,7 @@
 #' # plusses or hyphens. Then match an 'at' symbol. Then match one or more letters, 
 #' # numbers, dots, or hyphens. Then match a dot. Then match two to four letters.*
 #'   
-#'   one_or_more(char_class(ASCII_ALNUM %c% "._%+-")) %c%
+#' one_or_more(char_class(ASCII_ALNUM %c% "._%+-")) %c%
 #'   "@@" %c%
 #'   one_or_more(char_class(ASCII_ALNUM %c% ".-")) %c%
 #'   DOT %c%
@@ -44,29 +44,34 @@
 #' # an optional zero or one followed by an optional digit folowed by a compulsory 
 #' # digit.  Make this a single token, but don't capture it.*
 #' 
-#'     # Using the %|% operator
-#'     ip_element <- group(
-#'       "25" %c% char_range(0, 5) %|%
-#'       "2" %c% char_range(0, 4) %c% ascii_digit() %|%
-#'       optional(char_class("01")) %c% optional(ascii_digit()) %c% ascii_digit()
-#'     )
-#'         
-#'     # The same again, this time using the or function
-#'     ip_element <- or(
-#'       "25" %c% char_range(0, 5),
-#'       "2" %c% char_range(0, 4) %c% ascii_digit(),
-#'       optional(char_class("01")) %c% optional(ascii_digit()) %c% ascii_digit()
-#'     )
+#' # Using the %|% operator
+#' ip_element <- group(
+#'   "25" %c% char_range(0, 5) %|%
+#'   "2" %c% char_range(0, 4) %c% ascii_digit() %|%
+#'   optional(char_class("01")) %c% optional(ascii_digit()) %c% ascii_digit()
+#' )
+#' 
+#' # The same again, this time using the or function
+#' ip_element <- or(
+#'   "25" %c% char_range(0, 5),
+#'   "2" %c% char_range(0, 4) %c% ascii_digit(),
+#'   optional(char_class("01")) %c% optional(ascii_digit()) %c% ascii_digit()
+#' )
+#' 
+#' # It's easier to write using number_range, though leading zeroes aren't 
+#' # yet supported, and it isn't guaranteed to be as optimal as handcrafted 
+#' # regexes.
+#' number_range(0, 255)
 #' 
 #' # Now an IP address consists of 4 of these numbers separated by dots. This 
 #' # reads *Match a word boundary. Then create a token from an `ip_element` 
 #' # followed by a dot, and repeat it three times.  Then match another `ip_element`
 #' # followed by a word boundary.*
 #' 
-#'     BOUNDARY %c% 
-#'       repeated(group(ip_element %c% DOT), 3) %c% 
-#'       ip_element %c%
-#'       BOUNDARY    
+#' BOUNDARY %c% 
+#'   repeated(group(ip_element %c% DOT), 3) %c% 
+#'   ip_element %c%
+#'   BOUNDARY    
 #' @author Richard Cotton \email{richierocks@@gmail.com}
 #' @include constants.R
 #' @include class-groups.R

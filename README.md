@@ -67,6 +67,11 @@ digit.  Make this a single token, but don't capture it.*
       optional(char_class("01")) %c% optional(ascii_digit()) %c% ascii_digit()
     )
 
+    # It's easier to write using number_range, though leading zeroes aren't 
+    # yet supported, and it isn't guaranteed to be as optimal as handcrafted 
+    # regexes.
+    number_range(0, 255)
+    
 Now an IP address consists of 4 of these numbers separated by dots. This 
 reads *Match a word boundary. Then create a token from an `ip_element` 
 followed by a dot, and repeat it three times.  Then match another `ip_element`
