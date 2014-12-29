@@ -30,6 +30,7 @@ Collate:
     'escape_special.R'
     'datetime.R'
     'lookaround.R'
+    'number_range.R'
     'regex-package.R'
     'unicode-groups.R'
     'unicode.R'
