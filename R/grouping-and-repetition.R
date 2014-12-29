@@ -39,18 +39,24 @@ negate_and_group <- function(x)
 #' @return A character vector representing part or all of a regular expression.
 #' @references \url{http://www.regular-expressions.info/repeat.html}
 #' @examples
-#' x <- char_class(graph())
+#' x <- graph()
 #' optional(x)
 #' zero_or_more(x)
 #' repeated(x, 0, Inf) # same
 #' one_or_more(x)
 #' repeated(x, 1, Inf) # same
+#' repeated(x, 0)
+#' repeated(x, 1)
 #' repeated(x, 3)
 #' repeated(x, 3, 5)
 #' @export
 repeated <- function(x, lo, hi)
 {
   lo <- as.integer(lo)
+  if(missing(hi))
+  {
+    hi <- lo
+  }
   if(is.na(lo))
   {
     stop("lo is missing.")
@@ -59,7 +65,7 @@ repeated <- function(x, lo, hi)
   {
     stop("lo must be non-negative.")
   }
-  if(missing(hi) || !is.finite(hi))
+  if(!is.finite(hi))
   {
     if(lo == 0)
     {
@@ -69,7 +75,6 @@ repeated <- function(x, lo, hi)
     {
       return(one_or_more(x))
     }
-    return(regex(x, "{", lo, "}"))
   }
   hi <- as.integer(hi)
   
@@ -77,10 +82,18 @@ repeated <- function(x, lo, hi)
   {
     stop("hi is missing.")
   }
-  if(hi <= lo)
+  if(hi < lo)
   {
-    stop("hi must be greater than lo.")
+    stop("hi must be greater than or equal to lo.")
   }
+  if(hi == lo)
+  {
+    if(hi == 1)
+    {
+      return(regex(x))
+    }
+    return(regex(x, "{", lo, "}"))
+  }  
   if(hi == 1)
   {
     # Implicitly lo == 0
