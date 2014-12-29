@@ -266,11 +266,18 @@ roman <- function(lo, hi, char_class = TRUE)
 
 #' @rdname ClassGroups
 #' @export
-char_range <- function(lo, hi, char_class = TRUE)
+char_range <- function(lo, hi, char_class = lo != hi)
 {
   lo <- get_first_char(lo)
   hi <- get_first_char(hi)
-  x <- regex(lo, "-", hi)
+  
+  x <- if(lo == hi)
+  {
+    regex(lo)
+  } else
+  {
+    regex(lo, "-", hi)
+  }
   if(char_class)
   {
     x <- char_class(x)
