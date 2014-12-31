@@ -415,6 +415,6 @@ datetime <- function(x, locale = NULL)
   x <- gsub("%O?y", YEAR2, x)
   x <- gsub("%Y", YEAR4, x)
   x <- gsub("%z", TIMEZONE_OFFSET, x)
-#   x <- gsub("%Z", TIMEZONE, x)
+  x <- gsub("%Z", TIMEZONE, x)
   x
 }
