@@ -10,8 +10,18 @@
 #' digits correctly. See 
 #' \url{https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=16098}
 #' @references \url{http://www.unicode.org/charts} 
-#' @seealso \code{\link{ClassGroups}} 
+#' @seealso \code{\link{ClassGroups}}
+#' @include regex-methods.R
 #' @name Unicode
+#' @examples
+#' latin()
+#' greek_and_coptic()
+#' cyrillic()
+#' arabic()
+#' hebrew()
+#' hiragana()
+#' katakana()
+#' cjk_unified_ideographs()
 NULL
 
 #' @rdname Unicode
