@@ -42,6 +42,8 @@ regex <- function(...)
 #' @param ... Passed from other format methods.  Currently ignored.
 #' @return \code{format.regex} returns a character vector. \code{print.regex}
 #' is invoked for the side effect of printing the regex object.
+#' @note Backslashes are escaped by the print method so it looks like what the 
+#' regular expression engine sees.
 #' @export
 format.regex = function(x, ...)
 {
