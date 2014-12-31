@@ -2,1096 +2,1096 @@
 # European Scripts
 #' @rdname Unicode
 #' @export
-ARMENIAN <- "\u0530-\u058F"
+ARMENIAN <- regex("\u0530-\u058F")
 
 #' @rdname Unicode
 #' @export
-ARMENIAN_LIGATURES <- "\uFB00-\uFB4F"
+ARMENIAN_LIGATURES <- regex("\uFB00-\uFB4F")
 
 #' @rdname Unicode
 #' @export
-CAUCASIAN_ALBANIAN <- "\U10530-\U1056F"
+CAUCASIAN_ALBANIAN <- regex("\U10530-\U1056F")
 
 #' @rdname Unicode
 #' @export
-CYPRIOT_SYLLABARY <- "\U10800-\U1083F"
+CYPRIOT_SYLLABARY <- regex("\U10800-\U1083F")
 
 #' @rdname Unicode
 #' @export
-CYRILLIC <- "\u0400-\u04FF"
+CYRILLIC <- regex("\u0400-\u04FF")
 
 #' @rdname Unicode
 #' @export
-CYRILLIC_SUPPLEMENT <- "\u0500-\u052F"
+CYRILLIC_SUPPLEMENT <- regex("\u0500-\u052F")
 
 #' @rdname Unicode
 #' @export
-CYRILLIC_EXTENDED_A <- "\u2DE0-\u2DFF"
+CYRILLIC_EXTENDED_A <- regex("\u2DE0-\u2DFF")
 
 #' @rdname Unicode
 #' @export
-CYRILLIC_EXTENDED_B <- "\uA640-\uA69F"
+CYRILLIC_EXTENDED_B <- regex("\uA640-\uA69F")
 
 #' @rdname Unicode
 #' @export
-ELBASAN <- "\U10500-\U1052F"
+ELBASAN <- regex("\U10500-\U1052F")
 
 #' @rdname Unicode
 #' @export
-GEORGIAN <- "\u10A0-\u10FF"
+GEORGIAN <- regex("\u10A0-\u10FF")
 
 #' @rdname Unicode
 #' @export
-GEORGIAN_SUPPLEMENT <- "\u2D00-\u2D2F"
+GEORGIAN_SUPPLEMENT <- regex("\u2D00-\u2D2F")
 
 #' @rdname Unicode
 #' @export
-GLAGOLITIC <- "\u2C00-\u2C5F"
+GLAGOLITIC <- regex("\u2C00-\u2C5F")
 
 #' @rdname Unicode
 #' @export
-GOTHIC <- "\U10330-\U1034F"
+GOTHIC <- regex("\U10330-\U1034F")
 
 #' @rdname Unicode
 #' @export
-GREEK_AND_COPTIC <- "\u0370-\u03FF"
+GREEK_AND_COPTIC <- regex("\u0370-\u03FF")
 
 #' @rdname Unicode
 #' @export
-GREEK_EXTENDED <- "\u1F00-\u1FFF"
+GREEK_EXTENDED <- regex("\u1F00-\u1FFF")
 
 #' @rdname Unicode
 #' @export
-LATIN <- "\u0020-\u007F" #This includes punctuation and space, not control chars.
+LATIN <- regex("\u0020-\u007F") #This includes punctuation and space, not control chars.
 
 #' @rdname Unicode
 #' @export
-LATIN_1_SUPPLEMENT <- "\u0080-\u00FF"
+LATIN_1_SUPPLEMENT <- regex("\u0080-\u00FF")
 
 #' @rdname Unicode
 #' @export
-LATIN_EXTENDED_A <- "\u0100-\u017F"
+LATIN_EXTENDED_A <- regex("\u0100-\u017F")
 
 #' @rdname Unicode
 #' @export
-LATIN_EXTENDED_B <- "\u0180-\u024F"
+LATIN_EXTENDED_B <- regex("\u0180-\u024F")
 
 #' @rdname Unicode
 #' @export
-LATIN_EXTENDED_C <- "\u2C60-\u2C7F"
+LATIN_EXTENDED_C <- regex("\u2C60-\u2C7F")
 
 #' @rdname Unicode
 #' @export
-LATIN_EXTENDED_D <- "\uA720-\uA7FF"
+LATIN_EXTENDED_D <- regex("\uA720-\uA7FF")
 
 #' @rdname Unicode
 #' @export
-LATIN_EXTENDED_E <- "\uAB30-\uAB6F"
+LATIN_EXTENDED_E <- regex("\uAB30-\uAB6F")
 
 #' @rdname Unicode
 #' @export
-LATIN_EXTENDED_ADDITIONAL <- "\u1E00-\u1EFF"
+LATIN_EXTENDED_ADDITIONAL <- regex("\u1E00-\u1EFF")
 
 #' @rdname Unicode
 #' @export
-LATIN_LIGATURES <- "\uFB00-\uFB4F"
+LATIN_LIGATURES <- regex("\uFB00-\uFB4F")
 
 #' @rdname Unicode
 #' @export
-LINEAR_A <- "\U10600-\U1077F"
+LINEAR_A <- regex("\U10600-\U1077F")
 
 #' @rdname Unicode
 #' @export
-LINEAR_B_SYLLABARY <- "\U10000-\U1007F"
+LINEAR_B_SYLLABARY <- regex("\U10000-\U1007F")
 
 #' @rdname Unicode
 #' @export
-LINEAR_B_IDEOGRAMS <- "\U10080-\U100FF"
+LINEAR_B_IDEOGRAMS <- regex("\U10080-\U100FF")
 
 #' @rdname Unicode
 #' @export
-OGHAM <- "\u1680-\u169F"
+OGHAM <- regex("\u1680-\u169F")
 
 #' @rdname Unicode
 #' @export
-OLD_ITALIC <- "\U10300-\U1032F"
+OLD_ITALIC <- regex("\U10300-\U1032F")
 
 #' @rdname Unicode
 #' @export
-OLD_PERMIC <- "\U10350-\U1037F"
+OLD_PERMIC <- regex("\U10350-\U1037F")
 
 #' @rdname Unicode
 #' @export
-PHAISTOS_DISC <- "\U101D0-\U101FF"
+PHAISTOS_DISC <- regex("\U101D0-\U101FF")
 
 #' @rdname Unicode
 #' @export
-RUNIC <- "\u16A0-\u16FF"
+RUNIC <- regex("\u16A0-\u16FF")
 
 #' @rdname Unicode
 #' @export
-SHAVIAN <- "\U10450-\U1047F"
+SHAVIAN <- regex("\U10450-\U1047F")
 
 
 # Phonetic & Shorthand Symbols
 #' @rdname Unicode
 #' @export
-DUPLOYAN <- "\U1BC00-\U1BC9F"
+DUPLOYAN <- regex("\U1BC00-\U1BC9F")
 
 #' @rdname Unicode
 #' @export
-SHORTHAND_FORMAT_CONTROLS <- "\U1BCA0-\U1BCAF"
+SHORTHAND_FORMAT_CONTROLS <- regex("\U1BCA0-\U1BCAF")
 
 #' @rdname Unicode
 #' @export
-IPA_EXTENSIONS <- "\u0250-\u02AF"
+IPA_EXTENSIONS <- regex("\u0250-\u02AF")
 
 #' @rdname Unicode
 #' @export
-PHONETIC_EXTENSIONS <- "\u1D00-\u1D7F"
+PHONETIC_EXTENSIONS <- regex("\u1D00-\u1D7F")
 
 #' @rdname Unicode
 #' @export
-PHONETIC_EXTENSIONS_SUPPLEMENT <- "\u1D80-\u1DBF"
+PHONETIC_EXTENSIONS_SUPPLEMENT <- regex("\u1D80-\u1DBF")
 
 #' @rdname Unicode
 #' @export
-MODIFIER_TONE_LETTERS <- "\uA700-\uA71F"
+MODIFIER_TONE_LETTERS <- regex("\uA700-\uA71F")
 
 #' @rdname Unicode
 #' @export
-SPACING_MODIFIER_LETTERS <- "\u02B0-\u02FF"
+SPACING_MODIFIER_LETTERS <- regex("\u02B0-\u02FF")
 
 #' @rdname Unicode
 #' @export
-SUPERSCRIPTS_AND_SUBSCRIPTS <- "\u2070-\u209F"
+SUPERSCRIPTS_AND_SUBSCRIPTS <- regex("\u2070-\u209F")
 
 
 # Combining Diacritics
 #' @rdname Unicode
 #' @export
-COMBINING_DIACRITIC_MARKS <- "\u0300-\u036F"
+COMBINING_DIACRITIC_MARKS <- regex("\u0300-\u036F")
 
 #' @rdname Unicode
 #' @export
-COMBINING_DIACRITIC_SUPPLEMENT <- "\u1DC0-\u1DFF"
+COMBINING_DIACRITIC_SUPPLEMENT <- regex("\u1DC0-\u1DFF")
 
 #' @rdname Unicode
 #' @export
-COMBINING_DIACRITIC_EXTENDED <- "\u1AB0-\u1AFF"
+COMBINING_DIACRITIC_EXTENDED <- regex("\u1AB0-\u1AFF")
 
 #' @rdname Unicode
 #' @export
-COMBINING_HALF_MARKS <- "\uFE20-\uFE2F"
+COMBINING_HALF_MARKS <- regex("\uFE20-\uFE2F")
 
 
 #African Scripts
 #' @rdname Unicode
 #' @export
-BAMUN <- "\uA6A0-\uA6FF"
+BAMUN <- regex("\uA6A0-\uA6FF")
 
 #' @rdname Unicode
 #' @export
-BAMUN_SUPPLEMENT <- "\U16800-\U16A3F"
+BAMUN_SUPPLEMENT <- regex("\U16800-\U16A3F")
 
 #' @rdname Unicode
 #' @export
-BASSA_VAH <- "\U16AD0-\U16AFF"
+BASSA_VAH <- regex("\U16AD0-\U16AFF")
 
 #' @rdname Unicode
 #' @export
-COPTIC <- "\u2C80-\u2CFF"
+COPTIC <- regex("\u2C80-\u2CFF")
 
 #' @rdname Unicode
 #' @export
-COPTIC_EPACT_NUMBERS <- "\U102E0-\U102FF"
+COPTIC_EPACT_NUMBERS <- regex("\U102E0-\U102FF")
 
 #' @rdname Unicode
 #' @export
-EGYPTIAN_HIEROGLYPHS <- "\U13000-\U1342F"
+EGYPTIAN_HIEROGLYPHS <- regex("\U13000-\U1342F")
 
 #' @rdname Unicode
 #' @export
-ETHIOPIC <- "\u1200-\u137F"
+ETHIOPIC <- regex("\u1200-\u137F")
 
 #' @rdname Unicode
 #' @export
-ETHIOPIC_SUPPLEMENT <- "\u1380-\u139F"
+ETHIOPIC_SUPPLEMENT <- regex("\u1380-\u139F")
 
 #' @rdname Unicode
 #' @export
-ETHIOPIC_EXTENDED <- "\u2D80-\u2DDF"
+ETHIOPIC_EXTENDED <- regex("\u2D80-\u2DDF")
 
 #' @rdname Unicode
 #' @export
-ETHIOPIC_EXTENDED_A <- "\uAB00-\uAB2F"
+ETHIOPIC_EXTENDED_A <- regex("\uAB00-\uAB2F")
 
 #' @rdname Unicode
 #' @export
-MENDE_KIKAKUI <- "\U1E800-\U1E8DF"
+MENDE_KIKAKUI <- regex("\U1E800-\U1E8DF")
 
 #' @rdname Unicode
 #' @export
-MEROITIC_CURSIVE <- "\U109A0-\U109FF"
+MEROITIC_CURSIVE <- regex("\U109A0-\U109FF")
 
 #' @rdname Unicode
 #' @export
-MEROITIC_HIEROGLYPHS <- "\U10980-\U1099F"
+MEROITIC_HIEROGLYPHS <- regex("\U10980-\U1099F")
 
 #' @rdname Unicode
 #' @export
-NKO <- "\u07C0-\u07FF"
+NKO <- regex("\u07C0-\u07FF")
 
 #' @rdname Unicode
 #' @export
-OSMANYA <- "\U10480-\U104AF"
+OSMANYA <- regex("\U10480-\U104AF")
 
 #' @rdname Unicode
 #' @export
-TIFINAGH <- "\u2D30-\u2D7F"
+TIFINAGH <- regex("\u2D30-\u2D7F")
 
 #' @rdname Unicode
 #' @export
-VAI <- "\uA500-\uA63F"
+VAI <- regex("\uA500-\uA63F")
 
 
 # Middle Eastern Scripts
 #' @rdname Unicode
 #' @export
-ARABIC <- "\u0600-\u06FF"
+ARABIC <- regex("\u0600-\u06FF")
 
 #' @rdname Unicode
 #' @export
-ARABIC_SUPPLEMENT <- "\u0750-\u077F"
+ARABIC_SUPPLEMENT <- regex("\u0750-\u077F")
 
 #' @rdname Unicode
 #' @export
-ARABIC_EXTENDED_A <- "\u08A0-\u08FF"
+ARABIC_EXTENDED_A <- regex("\u08A0-\u08FF")
 
 #' @rdname Unicode
 #' @export
-ARABIC_PRESENTATION_FORMS_A <- "\uFB50-\uFDFF"
+ARABIC_PRESENTATION_FORMS_A <- regex("\uFB50-\uFDFF")
 
 #' @rdname Unicode
 #' @export
-ARABIC_PRESENTATION_FORMS_B <- "\uFE70-\uFEFF"
+ARABIC_PRESENTATION_FORMS_B <- regex("\uFE70-\uFEFF")
 
 #' @rdname Unicode
 #' @export
-IMPERIAL_ARAMAIC <- "\U10840-\U1085F"
+IMPERIAL_ARAMAIC <- regex("\U10840-\U1085F")
 
 #' @rdname Unicode
 #' @export
-AVESTAN <- "\U10B00-\U10B3F"
+AVESTAN <- regex("\U10B00-\U10B3F")
 
 #' @rdname Unicode
 #' @export
-CARIAN <- "\U102A0-\U102DF"
+CARIAN <- regex("\U102A0-\U102DF")
 
 #' @rdname Unicode
 #' @export
-CUNEIFORM <- "\U12000-\U123FF"
+CUNEIFORM <- regex("\U12000-\U123FF")
 
 #' @rdname Unicode
 #' @export
-CUNEIFORM_NUMBERS_AND_PUNCTUATION <- "\U12400-\U1247F"
+CUNEIFORM_NUMBERS_AND_PUNCTUATION <- regex("\U12400-\U1247F")
 
 #' @rdname Unicode
 #' @export
-OLD_PERSIAN <- "\U103A0-\U103DF"
+OLD_PERSIAN <- regex("\U103A0-\U103DF")
 
 #' @rdname Unicode
 #' @export
-UGARITIC <- "\U10380-\U1039F"
+UGARITIC <- regex("\U10380-\U1039F")
 
 #' @rdname Unicode
 #' @export
-HEBREW <- "\u0590-\u05FF"
+HEBREW <- regex("\u0590-\u05FF")
 
 #' @rdname Unicode
 #' @export
-LYCIAN <- "\U10280-\U1029F"
+LYCIAN <- regex("\U10280-\U1029F")
 
 #' @rdname Unicode
 #' @export
-LYDIAN <- "\U10920-\U1093F"
+LYDIAN <- regex("\U10920-\U1093F")
 
 #' @rdname Unicode
 #' @export
-MANDAIC <- "\u0840-\u085F"
+MANDAIC <- regex("\u0840-\u085F")
 
 #' @rdname Unicode
 #' @export
-NABATAEAN <- "\U10880-\U108AF"
+NABATAEAN <- regex("\U10880-\U108AF")
 
 #' @rdname Unicode
 #' @export
-OLD_NORTH_ARABIAN <- "\U10A80-\U10A9F"
+OLD_NORTH_ARABIAN <- regex("\U10A80-\U10A9F")
 
 #' @rdname Unicode
 #' @export
-OLD_SOUTH_ARABIAN <- "\U10A60-\U10A7F"
+OLD_SOUTH_ARABIAN <- regex("\U10A60-\U10A7F")
 
 #' @rdname Unicode
 #' @export
-PAHLAVI_INSCRIPTIONAL <- "\U10B60-\U10B7F"
+PAHLAVI_INSCRIPTIONAL <- regex("\U10B60-\U10B7F")
 
 #' @rdname Unicode
 #' @export
-PAHLAVI_PSALTER <- "\U10B80-\U10BAF"
+PAHLAVI_PSALTER <- regex("\U10B80-\U10BAF")
 
 #' @rdname Unicode
 #' @export
-PALMYRENE <- "\U10860-\U1087F"
+PALMYRENE <- regex("\U10860-\U1087F")
 
 #' @rdname Unicode
 #' @export
-PHOENICIAN <- "\U10900-\U1091F"
+PHOENICIAN <- regex("\U10900-\U1091F")
 
 #' @rdname Unicode
 #' @export
-SAMARITAN <- "\u0800-\u083F"
+SAMARITAN <- regex("\u0800-\u083F")
 
 #' @rdname Unicode
 #' @export
-SYRIAC <- "\u0700-\u074F"
+SYRIAC <- regex("\u0700-\u074F")
 
 
 # Central Asian Scripts
 #' @rdname Unicode
 #' @export
-MANICHAEAN <- "\U10AC0-\U10AFF"
+MANICHAEAN <- regex("\U10AC0-\U10AFF")
 
 #' @rdname Unicode
 #' @export
-MONGOLIAN <- "\u1800-\u18AF"
+MONGOLIAN <- regex("\u1800-\u18AF")
 
 #' @rdname Unicode
 #' @export
-OLD_TURKIC <- "\U10C00-\U10C4F"
+OLD_TURKIC <- regex("\U10C00-\U10C4F")
 
 #' @rdname Unicode
 #' @export
-PHAGS_PA <- "\uA840-\uA87F"
+PHAGS_PA <- regex("\uA840-\uA87F")
 
 #' @rdname Unicode
 #' @export
-TIBETAN <- "\u0F00-\u0FFF"
+TIBETAN <- regex("\u0F00-\u0FFF")
 
 
 # South Asian Scripts
 #' @rdname Unicode
 #' @export
-BENGALI_AND_ASSAMESE <- "\u0980-\u09FF"
+BENGALI_AND_ASSAMESE <- regex("\u0980-\u09FF")
 
 #' @rdname Unicode
 #' @export
-BRAHMI <- "\U11000-\U1107F"
+BRAHMI <- regex("\U11000-\U1107F")
 
 #' @rdname Unicode
 #' @export
-CHAKMA <- "\U11100-\U1114F"
+CHAKMA <- regex("\U11100-\U1114F")
 
 #' @rdname Unicode
 #' @export
-DEVANAGARI <- "\u0900-\u097F"
+DEVANAGARI <- regex("\u0900-\u097F")
 
 #' @rdname Unicode
 #' @export
-DEVANAGARI_EXTENDED <- "\uA8E0-\uA8FF"
+DEVANAGARI_EXTENDED <- regex("\uA8E0-\uA8FF")
 
 #' @rdname Unicode
 #' @export
-GRANTHA <- "\U11300-\U1137F"
+GRANTHA <- regex("\U11300-\U1137F")
 
 #' @rdname Unicode
 #' @export
-GUJARATI <- "\u0A80-\u0AFF"
+GUJARATI <- regex("\u0A80-\u0AFF")
 
 #' @rdname Unicode
 #' @export
-GURMUKHI <- "\u0A00-\u0A7F"
+GURMUKHI <- regex("\u0A00-\u0A7F")
 
 #' @rdname Unicode
 #' @export
-KAITHI <- "\U11080-\U110CF"
+KAITHI <- regex("\U11080-\U110CF")
 
 #' @rdname Unicode
 #' @export
-KANNADA <- "\u0C80-\u0CFF"
+KANNADA <- regex("\u0C80-\u0CFF")
 
 #' @rdname Unicode
 #' @export
-KHAROSHTHI <- "\U10A00-\U10A5F"
+KHAROSHTHI <- regex("\U10A00-\U10A5F")
 
 #' @rdname Unicode
 #' @export
-KHOJKI <- "\U11200-\U1124F"
+KHOJKI <- regex("\U11200-\U1124F")
 
 #' @rdname Unicode
 #' @export
-KHUDAWADI <- "\U112B0-\U112FF"
+KHUDAWADI <- regex("\U112B0-\U112FF")
 
 #' @rdname Unicode
 #' @export
-LEPCHA <- "\u1C00-\u1C4F"
+LEPCHA <- regex("\u1C00-\u1C4F")
 
 #' @rdname Unicode
 #' @export
-LIMBU <- "\u1900-\u194F"
+LIMBU <- regex("\u1900-\u194F")
 
 #' @rdname Unicode
 #' @export
-MAHAJANI <- "\U11150-\U1117F"
+MAHAJANI <- regex("\U11150-\U1117F")
 
 #' @rdname Unicode
 #' @export
-MALAYALAM <- "\u0D00-\u0D7F"
+MALAYALAM <- regex("\u0D00-\u0D7F")
 
 #' @rdname Unicode
 #' @export
-MEETEI_MAYEK <- "\uABC0-\uABFF"
+MEETEI_MAYEK <- regex("\uABC0-\uABFF")
 
 #' @rdname Unicode
 #' @export
-MEETEI_MAYEK_EXTENSIONS <- "\uAAE0-\uAAFF"
+MEETEI_MAYEK_EXTENSIONS <- regex("\uAAE0-\uAAFF")
 
 #' @rdname Unicode
 #' @export
-MODI <- "\U11600-\U1165F"
+MODI <- regex("\U11600-\U1165F")
 
 #' @rdname Unicode
 #' @export
-MRO <- "\U16A40-\U16A6F"
+MRO <- regex("\U16A40-\U16A6F")
 
 #' @rdname Unicode
 #' @export
-OL_CHIKI <- "\u1C50-\u1C7F"
+OL_CHIKI <- regex("\u1C50-\u1C7F")
 
 #' @rdname Unicode
 #' @export
-ORIYA <- "\u0B00-\u0B7F"
+ORIYA <- regex("\u0B00-\u0B7F")
 
 #' @rdname Unicode
 #' @export
-SAURASHTRA <- "\uA880-\uA8DF"
+SAURASHTRA <- regex("\uA880-\uA8DF")
 
 #' @rdname Unicode
 #' @export
-SHARADA <- "\U11180-\U111DF"
+SHARADA <- regex("\U11180-\U111DF")
 
 #' @rdname Unicode
 #' @export
-SIDDHAM <- "\U11580-\U115FF"
+SIDDHAM <- regex("\U11580-\U115FF")
 
 #' @rdname Unicode
 #' @export
-SINHALA <- "\u0D80-\u0DFF"
+SINHALA <- regex("\u0D80-\u0DFF")
 
 #' @rdname Unicode
 #' @export
-SINHALA_ARCHAIC_NUMBERS <- "\U111E0-\U111FF"
+SINHALA_ARCHAIC_NUMBERS <- regex("\U111E0-\U111FF")
 
 #' @rdname Unicode
 #' @export
-SORA_SOMPENG <- "\U110D0-\U110FF"
+SORA_SOMPENG <- regex("\U110D0-\U110FF")
 
 #' @rdname Unicode
 #' @export
-SYLOTI_NAGRI <- "\uA800-\uA82F"
+SYLOTI_NAGRI <- regex("\uA800-\uA82F")
 
 #' @rdname Unicode
 #' @export
-TAKRI <- "\U11680-\U116CF"
+TAKRI <- regex("\U11680-\U116CF")
 
 #' @rdname Unicode
 #' @export
-TAMIL <- "\u0B80-\u0BFF"
+TAMIL <- regex("\u0B80-\u0BFF")
 
 #' @rdname Unicode
 #' @export
-TELUGU <- "\u0C00-\u0C7F"
+TELUGU <- regex("\u0C00-\u0C7F")
 
 #' @rdname Unicode
 #' @export
-THAANA <- "\u0780-\u07BF"
+THAANA <- regex("\u0780-\u07BF")
 
 #' @rdname Unicode
 #' @export
-TIRHUTA <- "\U11480-\U114DF"
+TIRHUTA <- regex("\U11480-\U114DF")
 
 #' @rdname Unicode
 #' @export
-VEDIC_EXTENSIONS <- "\u1CD0-\u1CFF"
+VEDIC_EXTENSIONS <- regex("\u1CD0-\u1CFF")
 
 #' @rdname Unicode
 #' @export
-WARANG_CITI <- "\U118A0-\U118FF"
+WARANG_CITI <- regex("\U118A0-\U118FF")
 
 
 # Southeast Asian Scripts
 #' @rdname Unicode
 #' @export
-CHAM <- "\uAA00-\uAA5F"
+CHAM <- regex("\uAA00-\uAA5F")
 
 #' @rdname Unicode
 #' @export
-KAYAH_LI <- "\uA900-\uA92F"
+KAYAH_LI <- regex("\uA900-\uA92F")
 
 #' @rdname Unicode
 #' @export
-KHMER <- "\u1780-\u17FF"
+KHMER <- regex("\u1780-\u17FF")
 
 #' @rdname Unicode
 #' @export
-KHMER_SYMBOLS <- "\u19E0-\u19FF"
+KHMER_SYMBOLS <- regex("\u19E0-\u19FF")
 
 #' @rdname Unicode
 #' @export
-LAO <- "\u0E80-\u0EFF"
+LAO <- regex("\u0E80-\u0EFF")
 
 #' @rdname Unicode
 #' @export
-MYANMAR <- "\u1000-\u109F"
+MYANMAR <- regex("\u1000-\u109F")
 
 #' @rdname Unicode
 #' @export
-MYANMAR_EXTENDED_A <- "\uAA60-\uAA7F"
+MYANMAR_EXTENDED_A <- regex("\uAA60-\uAA7F")
 
 #' @rdname Unicode
 #' @export
-MYANMAR_EXTENDED_B <- "\uA9E0-\uA9FF"
+MYANMAR_EXTENDED_B <- regex("\uA9E0-\uA9FF")
 
 #' @rdname Unicode
 #' @export
-NEW_TAI_LUE <- "\u1980-\u19DF"
+NEW_TAI_LUE <- regex("\u1980-\u19DF")
 
 #' @rdname Unicode
 #' @export
-PAHAWH_HMONG <- "\U16B00-\U16B8F"
+PAHAWH_HMONG <- regex("\U16B00-\U16B8F")
 
 #' @rdname Unicode
 #' @export
-PAU_CIN_HAU <- "\U11AC0-\U11AFF"
+PAU_CIN_HAU <- regex("\U11AC0-\U11AFF")
 
 #' @rdname Unicode
 #' @export
-TAI_LE <- "\u1950-\u197F"
+TAI_LE <- regex("\u1950-\u197F")
 
 #' @rdname Unicode
 #' @export
-TAI_THAM <- "\u1A20-\u1AAF"
+TAI_THAM <- regex("\u1A20-\u1AAF")
 
 #' @rdname Unicode
 #' @export
-TAI_VIET <- "\uAA80-\uAADF"
+TAI_VIET <- regex("\uAA80-\uAADF")
 
 #' @rdname Unicode
 #' @export
-THAI <- "\u0E00-\u0E7F"
+THAI <- regex("\u0E00-\u0E7F")
 
 
 # Indonesia & Oceania Scripts
 #' @rdname Unicode
 #' @export
-BALINESE <- "\u1B00-\u1B7F"
+BALINESE <- regex("\u1B00-\u1B7F")
 
 #' @rdname Unicode
 #' @export
-BATAK <- "\u1BC0-\u1BFF"
+BATAK <- regex("\u1BC0-\u1BFF")
 
 #' @rdname Unicode
 #' @export
-BUGINESE <- "\u1A00-\u1A1F"
+BUGINESE <- regex("\u1A00-\u1A1F")
 
 #' @rdname Unicode
 #' @export
-BUHID <- "\u1740-\u175F"
+BUHID <- regex("\u1740-\u175F")
 
 #' @rdname Unicode
 #' @export
-HANUNOO <- "\u1720-\u173F"
+HANUNOO <- regex("\u1720-\u173F")
 
 #' @rdname Unicode
 #' @export
-JAVANESE <- "\uA980-\uA9DF"
+JAVANESE <- regex("\uA980-\uA9DF")
 
 #' @rdname Unicode
 #' @export
-REJANG <- "\uA930-\uA95F"
+REJANG <- regex("\uA930-\uA95F")
 
 #' @rdname Unicode
 #' @export
-SUNDANESE <- "\u1B80-\u1BBF"
+SUNDANESE <- regex("\u1B80-\u1BBF")
 
 #' @rdname Unicode
 #' @export
-SUNDANESE_SUPPLEMENT <- "\u1CC0-\u1CCF"
+SUNDANESE_SUPPLEMENT <- regex("\u1CC0-\u1CCF")
 
 #' @rdname Unicode
 #' @export
-TAGALOG <- "\u1700-\u171F"
+TAGALOG <- regex("\u1700-\u171F")
 
 #' @rdname Unicode
 #' @export
-TAGBANWA <- "\u1760-\u177F"
+TAGBANWA <- regex("\u1760-\u177F")
 
 
 # East Asian Scripts
 #' @rdname Unicode
 #' @export
-BOPOMOFO <- "\u3100-\u312F"
+BOPOMOFO <- regex("\u3100-\u312F")
 
 #' @rdname Unicode
 #' @export
-BOPOMOFO_EXTENDED <- "\u31A0-\u31BF"
+BOPOMOFO_EXTENDED <- regex("\u31A0-\u31BF")
 
 #' @rdname Unicode
 #' @export
-CJK_UNIFIED_IDEOGRAPHS <- "\u4E00-\u9FCC"
+CJK_UNIFIED_IDEOGRAPHS <- regex("\u4E00-\u9FCC")
 
 #' @rdname Unicode
 #' @export
-CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A <- "\u3400-\u4DB5"
+CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A <- regex("\u3400-\u4DB5")
 
 #' @rdname Unicode
 #' @export
-CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B <- "\U20000-\U2A6D6"
+CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B <- regex("\U20000-\U2A6D6")
 
 #' @rdname Unicode
 #' @export
-CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C <- "\U2A700-\U2B734"
+CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C <- regex("\U2A700-\U2B734")
 
 #' @rdname Unicode
 #' @export
-CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D <- "\U2B740-\U2B81D"
+CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D <- regex("\U2B740-\U2B81D")
 
 #' @rdname Unicode
 #' @export
-CJK_COMPATIBILITY_IDEOGRAPHS <- "\uF900-\uFAFF"
+CJK_COMPATIBILITY_IDEOGRAPHS <- regex("\uF900-\uFAFF")
 
 #' @rdname Unicode
 #' @export
-CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT <- "\U2F800-\U2FA1F"
+CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT <- regex("\U2F800-\U2FA1F")
 
 #' @rdname Unicode
 #' @export
-KANGXI_RADICALS <- "\u2F00-\u2FDF"
+KANGXI_RADICALS <- regex("\u2F00-\u2FDF")
 
 #' @rdname Unicode
 #' @export
-KANGXI_RADICALS_SUPPLEMENT <- "\u2E80-\u2EFF"
+KANGXI_RADICALS_SUPPLEMENT <- regex("\u2E80-\u2EFF")
 
 #' @rdname Unicode
 #' @export
-CJK_STROKES <- "\u31C0-\u31EF"
+CJK_STROKES <- regex("\u31C0-\u31EF")
 
 #' @rdname Unicode
 #' @export
-CJK_IDEOGRAPHIC_DESCRIPTION_CHARACTERS <- "\u2FF0-\u2FFF"
+CJK_IDEOGRAPHIC_DESCRIPTION_CHARACTERS <- regex("\u2FF0-\u2FFF")
 
 #' @rdname Unicode
 #' @export
-HANGUL_JAMO <- "\u1100-\u11FF"
+HANGUL_JAMO <- regex("\u1100-\u11FF")
 
 #' @rdname Unicode
 #' @export
-HANGUL_JAMO_EXTENDED_A <- "\uA960-\uA97F"
+HANGUL_JAMO_EXTENDED_A <- regex("\uA960-\uA97F")
 
 #' @rdname Unicode
 #' @export
-HANGUL_JAMO_EXTENDED_B <- "\uD7B0-\uD7FF"
+HANGUL_JAMO_EXTENDED_B <- regex("\uD7B0-\uD7FF")
 
 #' @rdname Unicode
 #' @export
-HANGUL_COMPATIBILITY_JAMO <- "\u3130-\u318F"
+HANGUL_COMPATIBILITY_JAMO <- regex("\u3130-\u318F")
 
 #' @rdname Unicode
 #' @export
-HANGUL_SYLLABLES <- "\uAC00-\uD7AF"
+HANGUL_SYLLABLES <- regex("\uAC00-\uD7AF")
 
 #' @rdname Unicode
 #' @export
-HIRAGANA <- "\u3040-\u309F"
+HIRAGANA <- regex("\u3040-\u309F")
 
 #' @rdname Unicode
 #' @export
-KATAKANA <- "\u30A0-\u30FF"
+KATAKANA <- regex("\u30A0-\u30FF")
 
 #' @rdname Unicode
 #' @export
-KATAKANA_PHONETIC_EXTENSIONS <- "\u31F0-\u31FF"
+KATAKANA_PHONETIC_EXTENSIONS <- regex("\u31F0-\u31FF")
 
 #' @rdname Unicode
 #' @export
-KANA_SUPPLEMENT <- "\U1B000-\U1B0FF"
+KANA_SUPPLEMENT <- regex("\U1B000-\U1B0FF")
 
 #' @rdname Unicode
 #' @export
-KANBUN <- "\u3190-\u319F"
+KANBUN <- regex("\u3190-\u319F")
 
 #' @rdname Unicode
 #' @export
-LISU <- "\uA4D0-\uA4FF"
+LISU <- regex("\uA4D0-\uA4FF")
 
 #' @rdname Unicode
 #' @export
-MIAO <- "\U16F00-\U16F9F"
+MIAO <- regex("\U16F00-\U16F9F")
 
 #' @rdname Unicode
 #' @export
-YI_SYLLABLES <- "\uA000-\uA48F"
+YI_SYLLABLES <- regex("\uA000-\uA48F")
 
 #' @rdname Unicode
 #' @export
-YI_RADICALS <- "\uA490-\uA4CF"
+YI_RADICALS <- regex("\uA490-\uA4CF")
 
 
 # American Scripts
 #' @rdname Unicode
 #' @export
-CHEROKEE <- "\u13A0-\u13FF"
+CHEROKEE <- regex("\u13A0-\u13FF")
 
 #' @rdname Unicode
 #' @export
-DESERET <- "\U10400-\U1044F"
+DESERET <- regex("\U10400-\U1044F")
 
 #' @rdname Unicode
 #' @export
-UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS <- "\u1400-\u167F"
+UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS <- regex("\u1400-\u167F")
 
 #' @rdname Unicode
 #' @export
-UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED <- "\u18B0-\u18FF"
+UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED <- regex("\u18B0-\u18FF")
 
 
 # Other
 #' @rdname Unicode
 #' @export
-ALPHABETIC_PRESENTATION_FORMS <- "\uFB00-\uFB4F"
+ALPHABETIC_PRESENTATION_FORMS <- regex("\uFB00-\uFB4F")
 
 #' @rdname Unicode
 #' @export
-HALFWIDTH_AND_FULLWIDTH_FORMS <- "\uFF00-\uFFEF"
+HALFWIDTH_AND_FULLWIDTH_FORMS <- regex("\uFF00-\uFFEF")
 
 
 # Punctuation
 #' @rdname Unicode
 #' @export
-GENERAL_PUNCTUATION <- "\u2000-\u206F"
+GENERAL_PUNCTUATION <- regex("\u2000-\u206F")
 
 #' @rdname Unicode
 #' @export
-LATIN_1_PUNCTUATION <- "\u00A1-00BF"
+LATIN_1_PUNCTUATION <- regex("\u00A1-00BF")
 
 #' @rdname Unicode
 #' @export
-SMALL_FORM_VARIANTS <- "\uFE50-\uFE6F"
+SMALL_FORM_VARIANTS <- regex("\uFE50-\uFE6F")
 
 #' @rdname Unicode
 #' @export
-SUPPLEMENTAL_PUNCTUATION <- "\u2E00-\u2E7F"
+SUPPLEMENTAL_PUNCTUATION <- regex("\u2E00-\u2E7F")
 
 #' @rdname Unicode
 #' @export
-CJK_SYMBOLS_AND_PUNCTUATION <- "\u3000-\u303F"
+CJK_SYMBOLS_AND_PUNCTUATION <- regex("\u3000-\u303F")
 
 #' @rdname Unicode
 #' @export
-CJK_COMPATIBILITY_FORMS <- "\uFE30-\uFE4F"
+CJK_COMPATIBILITY_FORMS <- regex("\uFE30-\uFE4F")
 
 #' @rdname Unicode
 #' @export
-FULLWIDTH_ASCII_PUNCTUATION <- "\uFF01-\uFF60"
+FULLWIDTH_ASCII_PUNCTUATION <- regex("\uFF01-\uFF60")
 
 #' @rdname Unicode
 #' @export
-VERTICAL_FORMS <- "\uFE10-\uFE1F"
+VERTICAL_FORMS <- regex("\uFE10-\uFE1F")
 
 
 # Alphanumeric Symbols
 #' @rdname Unicode
 #' @export
-LETTERLIKE_SYMBOLS <- "\u2100-\u214F"
+LETTERLIKE_SYMBOLS <- regex("\u2100-\u214F")
 
 #' @rdname Unicode
 #' @export
-ANCIENT_SYMBOLS <- "\U10190-\U101CF"
+ANCIENT_SYMBOLS <- regex("\U10190-\U101CF")
 
 #' @rdname Unicode
 #' @export
-MATHEMATICAL_ALPHANUMERIC_SYMBOLS <- "\U1D400-\U1D7FF"
+MATHEMATICAL_ALPHANUMERIC_SYMBOLS <- regex("\U1D400-\U1D7FF")
 
 #' @rdname Unicode
 #' @export
-ARABIC_MATHEMATICAL_ALPHANUMERIC_SYMBOLS <- "\U1EE00-\U1EEFF"
+ARABIC_MATHEMATICAL_ALPHANUMERIC_SYMBOLS <- regex("\U1EE00-\U1EEFF")
 
 #' @rdname Unicode
 #' @export
-ENCLOSED_ALPHANUMERICS <- "\u2460-\u24FF"
+ENCLOSED_ALPHANUMERICS <- regex("\u2460-\u24FF")
 
 #' @rdname Unicode
 #' @export
-ENCLOSED_ALPHANUMERIC_SUPPLEMENT <- "\U1F100-\U1F1FF"
+ENCLOSED_ALPHANUMERIC_SUPPLEMENT <- regex("\U1F100-\U1F1FF")
 
 #' @rdname Unicode
 #' @export
-ENCLOSED_CJK_LETTERS_AND_MONTHS <- "\u3200-\u32FF"
+ENCLOSED_CJK_LETTERS_AND_MONTHS <- regex("\u3200-\u32FF")
 
 #' @rdname Unicode
 #' @export
-ENCLOSED_IDEOGRAPHIC_SUPPLEMENT <- "\U1F200-\U1F2FF"
+ENCLOSED_IDEOGRAPHIC_SUPPLEMENT <- regex("\U1F200-\U1F2FF")
 
 #' @rdname Unicode
 #' @export
-CJK_COMPATIBILITY <- "\u3300-\u33FF"
+CJK_COMPATIBILITY <- regex("\u3300-\u33FF")
 
 
 # Technical Symbols
 #' @rdname Unicode
 #' @export
-MISCELLANEOUS_TECHNICAL <- "\u2300-\u23FF"
+MISCELLANEOUS_TECHNICAL <- regex("\u2300-\u23FF")
 
 #' @rdname Unicode
 #' @export
-CONTROL_PICTURES <- "\u2400-\u243F"
+CONTROL_PICTURES <- regex("\u2400-\u243F")
 
 #' @rdname Unicode
 #' @export
-OPTICAL_CHARACTER_RECOGNITION <- "\u2440-\u245F"
+OPTICAL_CHARACTER_RECOGNITION <- regex("\u2440-\u245F")
 
 
 # Combining Diacritics
 #' @rdname Unicode
 #' @export
-COMBINING_DIACRITIC_MARKS_FOR_SYMBOLS <- "\u20D0-\u20FF"
+COMBINING_DIACRITIC_MARKS_FOR_SYMBOLS <- regex("\u20D0-\u20FF")
 
 
 # Numbers and Digits
 #' @rdname Unicode
 #' @export
-AEGEAN_NUMBERS <- "\U10100-\U1013F"
+AEGEAN_NUMBERS <- regex("\U10100-\U1013F")
 
 #' @rdname Unicode
 #' @export
-ANCIENT_GREEK_NUMBERS <- "\U10140-\U1018F"
+ANCIENT_GREEK_NUMBERS <- regex("\U10140-\U1018F")
 
 #' @rdname Unicode
 #' @export
-FULLWIDTH_ASCII_DIGITS <- "\uFF10-\uFF19"
+FULLWIDTH_ASCII_DIGITS <- regex("\uFF10-\uFF19")
 
 #' @rdname Unicode
 #' @export
-COMMON_INDIC_NUMBER_FORMS <- "\uA830-\uA83F"
+COMMON_INDIC_NUMBER_FORMS <- regex("\uA830-\uA83F")
 
 #' @rdname Unicode
 #' @export
-COPTIC_EPACT_NUMBERS <- "\U102E0-\U102FF"
+COPTIC_EPACT_NUMBERS <- regex("\U102E0-\U102FF")
 
 #' @rdname Unicode
 #' @export
-COUNTING_ROD_NUMERALS <- "\U1D360-\U1D37F"
+COUNTING_ROD_NUMERALS <- regex("\U1D360-\U1D37F")
 
 #' @rdname Unicode
 #' @export
-NUMBER_FORMS <- "\u2150-\u218F"
+NUMBER_FORMS <- regex("\u2150-\u218F")
 
 #' @rdname Unicode
 #' @export
-RUMI_NUMERAL_SYMBOLS <- "\U10E60-\U10E7F"
+RUMI_NUMERAL_SYMBOLS <- regex("\U10E60-\U10E7F")
 
 #' @rdname Unicode
 #' @export
-SINHALA_ARCHAIC_NUMBERS <- "\U111E0-\U111FF"
+SINHALA_ARCHAIC_NUMBERS <- regex("\U111E0-\U111FF")
 
 
 # Mathematical Symbols
 #' @rdname Unicode
 #' @export
-MATH_ARROWS <- "\u2190-\u21FF"
+MATH_ARROWS <- regex("\u2190-\u21FF")
 
 #' @rdname Unicode
 #' @export
-SUPPLEMENTAL_ARROWS_A <- "\u27F0-\u27FF"
+SUPPLEMENTAL_ARROWS_A <- regex("\u27F0-\u27FF")
 
 #' @rdname Unicode
 #' @export
-SUPPLEMENTAL_ARROWS_A <- "\u2900-\u297F"
+SUPPLEMENTAL_ARROWS_A <- regex("\u2900-\u297F")
 
 #' @rdname Unicode
 #' @export
-SUPPLEMENTAL_ARROWS_A <- "\U1F800-\U1F8FF"
+SUPPLEMENTAL_ARROWS_A <- regex("\U1F800-\U1F8FF")
 
 #' @rdname Unicode
 #' @export
-ADDITIONAL_ARROWS <- "\u2B00-\u2BFF"
+ADDITIONAL_ARROWS <- regex("\u2B00-\u2BFF")
 
 
 # Mathematical Operators
 #' @rdname Unicode
 #' @export
-SUPPLEMENTAL_MATHEMATICAL_OPERATORS <- "\u2A00-\u2AFF"
+SUPPLEMENTAL_MATHEMATICAL_OPERATORS <- regex("\u2A00-\u2AFF")
 
 #' @rdname Unicode
 #' @export
-MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A <- "\u27C0-\u27EF"
+MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A <- regex("\u27C0-\u27EF")
 
 #' @rdname Unicode
 #' @export
-MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B <- "\u2980-\u29FF"
+MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B <- regex("\u2980-\u29FF")
 
 #' @rdname Unicode
 #' @export
-FLOORS_AND_CEILINGS <- "\u2308-\u230B"
+FLOORS_AND_CEILINGS <- regex("\u2308-\u230B")
 
 #' @rdname Unicode
 #' @export
-INVISIBLE_OPERATORS <- "\u2061-\u2064"
+INVISIBLE_OPERATORS <- regex("\u2061-\u2064")
 
 #' @rdname Unicode
 #' @export
-GEOMETRIC_SHAPES <- "\u25A0-\u25FF"
+GEOMETRIC_SHAPES <- regex("\u25A0-\u25FF")
 
 #' @rdname Unicode
 #' @export
-BOX_DRAWING <- "\u2500-\u257F"
+BOX_DRAWING <- regex("\u2500-\u257F")
 
 #' @rdname Unicode
 #' @export
-BLOCK_ELEMENTS <- "\u2580-\u259F"
+BLOCK_ELEMENTS <- regex("\u2580-\u259F")
 
 #' @rdname Unicode
 #' @export
-GEOMETRIC_SHAPES_EXTENDED <- "\U1F780-\U1F7FF"
+GEOMETRIC_SHAPES_EXTENDED <- regex("\U1F780-\U1F7FF")
 
 
 # Other Symbols
 #' @rdname Unicode
 #' @export
-ALCHEMICAL_SYMBOLS <- "\U1F700-\U1F77F"
+ALCHEMICAL_SYMBOLS <- regex("\U1F700-\U1F77F")
 
 #' @rdname Unicode
 #' @export
-BRAILLE_PATTERNS <- "\u2800-\u28FF"
+BRAILLE_PATTERNS <- regex("\u2800-\u28FF")
 
 #' @rdname Unicode
 #' @export
-CURRENCY_SYMBOLS <- "\u20A0-\u20CF"
+CURRENCY_SYMBOLS <- regex("\u20A0-\u20CF")
 
 
 # Dingbats
 #' @rdname Unicode
 #' @export
-DINGBATS <- "\u2700-\u27BF"
+DINGBATS <- regex("\u2700-\u27BF")
 
 #' @rdname Unicode
 #' @export
-ORNAMENTAL_DINGBATS <- "\U1F650-\u1F67"
+ORNAMENTAL_DINGBATS <- regex("\U1F650-\u1F67")
 
 
 # Emoticons
 #' @rdname Unicode
 #' @export
-EMOTICONS <- "\U1F600-\U1F64F"
+EMOTICONS <- regex("\U1F600-\U1F64F")
 
 
 # Game Symbols
 #' @rdname Unicode
 #' @export
-CHESS_CHECKERS_DRAUGHTS <- "\u2654-\u265F\u26C0-\u26C3"
+CHESS_CHECKERS_DRAUGHTS <- regex("\u2654-\u265F\u26C0-\u26C3")
 
 #' @rdname Unicode
 #' @export
-DOMINO_TILES <- "\U1F030-\U1F09F"
+DOMINO_TILES <- regex("\U1F030-\U1F09F")
 
 #' @rdname Unicode
 #' @export
-JAPANESE_CHESS <- "\u2616-\u2617"
+JAPANESE_CHESS <- regex("\u2616-\u2617")
 
 #' @rdname Unicode
 #' @export
-MAHJONG_TILES <- "\U1F000-\U1F02F"
+MAHJONG_TILES <- regex("\U1F000-\U1F02F")
 
 #' @rdname Unicode
 #' @export
-PLAYING_CARDS <- "\U1F0A0-\U1F0FF"
+PLAYING_CARDS <- regex("\U1F0A0-\U1F0FF")
 
 #' @rdname Unicode
 #' @export
-CARD_SUITS <- "\u2660-\u2667"
+CARD_SUITS <- regex("\u2660-\u2667")
 
 
 # Miscellanous Symbols
 #' @rdname Unicode
 #' @export
-MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS <- "\U1F300-\U1F5FF"
+MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS <- regex("\U1F300-\U1F5FF")
 
 
 # Musical Symbols
 #' @rdname Unicode
 #' @export
-MUSICAL_SYMBOLS <- "\U1D100-\U1D1FF"
+MUSICAL_SYMBOLS <- regex("\U1D100-\U1D1FF")
 
 #' @rdname Unicode
 #' @export
-ANCIENT_GREEK_MUSICAL_NOTATION <- "\U1D200-\U1D24F"
+ANCIENT_GREEK_MUSICAL_NOTATION <- regex("\U1D200-\U1D24F")
 
 #' @rdname Unicode
 #' @export
-BYZANTINE_MUSICAL_SYMBOLS <- "\U1D000-\U1D0FF"
+BYZANTINE_MUSICAL_SYMBOLS <- regex("\U1D000-\U1D0FF")
 
 
 # Transport and Map Symbols
 #' @rdname Unicode
 #' @export
-TRANSPORT_AND_MAP_SYMBOLS <- "\U1F680-\U1F6FF"
+TRANSPORT_AND_MAP_SYMBOLS <- regex("\U1F680-\U1F6FF")
 
 
 # Yijing Symbols
 #' @rdname Unicode
 #' @export
-YIJING_MONO_DI_AND_TRIGRAMS <- "\u268A-\u268F\u2630-\u2637"
+YIJING_MONO_DI_AND_TRIGRAMS <- regex("\u268A-\u268F\u2630-\u2637")
 
 #' @rdname Unicode
 #' @export
-YIJING_HEXAGRAM_SYMBOLS <- "\u4DC0-\u4DFF"
+YIJING_HEXAGRAM_SYMBOLS <- regex("\u4DC0-\u4DFF")
 
 #' @rdname Unicode
 #' @export
-TAI_XUAN_JING_SYMBOLS <- "\U1D300-\U1D35F"
+TAI_XUAN_JING_SYMBOLS <- regex("\U1D300-\U1D35F")
 
 
 # Specials
 #' @rdname Unicode
 #' @export
-SPECIALS <- "\uFFF0-\uFFFD"  #roxygen chokes on the non-characters \uFFFE and \uFFFF
+SPECIALS <- regex("\uFFF0-\uFFFD")  #roxygen chokes on the non-characters \uFFFE and \uFFFF
 
 
 # Tags
 #' @rdname Unicode
 #' @export
-TAGS <- "\UE0000-\UE007F"
+TAGS <- regex("\UE0000-\UE007F")
 
 
 # Variation Selectors
 #' @rdname Unicode
 #' @export
-VARIATION_SELECTORS <- "\uFE00-\uFE0F"
+VARIATION_SELECTORS <- regex("\uFE00-\uFE0F")
 
 #' @rdname Unicode
 #' @export
-VARIATION_SELECTORS_SUPPLEMENT <- "\UE0100-\UE01EF"
+VARIATION_SELECTORS_SUPPLEMENT <- regex("\UE0100-\UE01EF")
 
 
 # Private Use
 #' @rdname Unicode
 #' @export
-PRIVATE_USE_AREA <- "\uE000-\uF8FF"
+PRIVATE_USE_AREA <- regex("\uE000-\uF8FF")
 
 #' @rdname Unicode
 #' @export
-SUPPLEMENTARY_PRIVATE_USE_AREA_A <- "\UF0000-\UFFFFF"
+SUPPLEMENTARY_PRIVATE_USE_AREA_A <- regex("\UF0000-\UFFFFF")
 
 #' @rdname Unicode
 #' @export
-SUPPLEMENTARY_PRIVATE_USE_AREA_B <- "\U100000-\U10FFFD"
+SUPPLEMENTARY_PRIVATE_USE_AREA_B <- regex("\U100000-\U10FFFD")
