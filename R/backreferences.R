@@ -8,6 +8,7 @@
 #' # and so on, up to
 #' REF9
 #' @name Backreferences
+#' @include regex-methods
 #' @export
 REF1 <- regex("\\1")
 
@@ -50,9 +51,7 @@ REF9 <- regex("\\9")
 #' @return A character vector representing part or all of a regular expression.
 #' @references \url{http://www.regular-expressions.info/recurse.html}
 #' @examples
-#' 
-#' 
-#' 
+#' recursive("a")
 #' @export
 recursive <- function(x)
 {
