@@ -1,15 +1,26 @@
 #' Combine strings together
 #' 
-#' Operator equivalent of \code{paste0} without \code{collapse}.
+#' Operator equivalent of \code{regex}.
 #' 
 #' @param x A character vector.
 #' @param y A character vector.
 #' @return A character vector representing part or all of a regular expression.
-#' @seealso \code{\link[base]{paste}}
+#' @note \code{%%c%%} was the original operator for this ('c' for
+#' 'concatenate').  This is hard work to type on a QWERTY keyboard
+#' though, so \code{%%R%%} is now preferred.
+#' @seealso \code{\link{regex}}, \code{\link[base]{paste}}
 #' @examples
+#' letters %R% LETTERS
 #' letters %c% LETTERS
+#' @alias Concatenation
 #' @export
 `%c%` <- function(x, y)
+{
+  # .Deprecated("%R%")
+  regex(x, y)
+}
+
+`%R%` <- function(x, y)
 {
   regex(x, y)
 }
