@@ -1,25 +1,23 @@
 #' A range or char_class of characters.
 #' 
 #' Match a range or char_class of characters.
-#' @param x A character vector.
+#' @param ... Character vectors.
 #' @return A character vector representing part or all of a regular expression.
 #' @references \url{http://www.regular-expressions.info/charclass.html}
 #' @examples
-#' char_range("e", "t")
-#' char_range(3, 5)
-#' char_class(LOWER)
-#' negated_char_class(LOWER)
+#' char_class(LOWER, "._")
+#' negated_char_class(LOWER, "._")
 #' @export
-char_class <- function(x)
+char_class <- function(...)
 {
-  regex("[", x, "]")
+  regex("[", ..., "]")
 }
 
 #' @rdname char_class
 #' @export
-negated_char_class <- function(x)
+negated_char_class <- function(...)
 {
-  regex("[^", x, "]")
+  regex("[^", ..., "]")
 }
 
 #' @rdname char_class
