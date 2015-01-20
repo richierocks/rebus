@@ -22,10 +22,10 @@ negated_char_class <- function(...)
 
 #' @rdname char_class
 #' @export
-negate_and_group <- function(x)
+negate_and_group <- function(...)
 {
   .Deprecated("negated_char_class")
-  negated_char_class(x)
+  negated_char_class(...)
 }
 
 #' Repeat values
@@ -34,6 +34,8 @@ negate_and_group <- function(x)
 #' @param x A character vector.
 #' @param lo A non-negative integer. Minimum number of repeats, when grouped.
 #' @param hi positive integer. Maximum number of repeats, when grouped.
+#' @param lazy A logical value.  Should repetition be matched lazily or 
+#' greedily?
 #' @return A character vector representing part or all of a regular expression.
 #' @references \url{http://www.regular-expressions.info/repeat.html}
 #' @examples
