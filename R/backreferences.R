@@ -8,7 +8,7 @@
 #' # and so on, up to
 #' REF9
 #' @name Backreferences
-#' @include regex-methods
+#' @include regex-methods.R
 #' @export
 REF1 <- regex("\\1")
 
