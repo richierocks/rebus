@@ -232,39 +232,39 @@ YEAR4 <- ascii_digit(4)
 #' @rdname DateTime
 #' @export
 MONTH <- group(
-  "1" %c% char_range(0, 2) %|% 
-    optional("0") %c% char_range(1, 9)
+  "1" %R% char_range(0, 2) %|% 
+    optional("0") %R% char_range(1, 9)
 )
 
 #' @rdname DateTime
 #' @export
 WEEK_OF_YEAR <- group(
-  "5" %c% char_range(0, 3) %|%
-    char_range(0, 4) %c% ascii_digit()
+  "5" %R% char_range(0, 3) %|%
+    char_range(0, 4) %R% ascii_digit()
 )
 
 #' @rdname DateTime
 #' @export
 DAY <- group(
-  "0" %c% char_range(1, 9) %|% 
-    char_class("12") %c% ascii_digit() %|% 
-    "3" %c% char_class("01")
+  "0" %R% char_range(1, 9) %|% 
+    char_class("12") %R% ascii_digit() %|% 
+    "3" %R% char_class("01")
 )
 
 #' @rdname DateTime
 #' @export
 DAY_SINGLE <- group(
-  " " %c% char_range(1, 9) %|% 
-    char_class("12") %c% ascii_digit() %|% 
-    "3" %c% char_class("01")
+  " " %R% char_range(1, 9) %|% 
+    char_class("12") %R% ascii_digit() %|% 
+    "3" %R% char_class("01")
 )
 
 #' @rdname DateTime
 #' @export
 DAY_OF_YEAR <- group(
-  "36" %c% char_range(0, 6) %|%
-    "3" %c% char_range(0, 5) %c% ascii_digit() %|%
-    optional(char_range(0, 2)) %c% optional(ascii_digit()) %c% ascii_digit()
+  "36" %R% char_range(0, 6) %|%
+    "3" %R% char_range(0, 5) %R% ascii_digit() %|%
+    optional(char_range(0, 2)) %R% optional(ascii_digit()) %R% ascii_digit()
 )
 
 #' @rdname DateTime
@@ -278,42 +278,42 @@ WEEKDAY0 <- char_range(0, 6)
 #' @rdname DateTime
 #' @export
 HOUR24 <- group(
-  char_class("01") %c% ascii_digit() %|% "2" %c% char_range("0", "3") 
+  char_class("01") %R% ascii_digit() %|% "2" %R% char_range("0", "3") 
 )
 
 #' @rdname DateTime
 #' @export
 HOUR12 <- group(
-  "0" %c% ascii_digit() %|% "1" %c% char_range("0", "2") 
+  "0" %R% ascii_digit() %|% "1" %R% char_range("0", "2") 
 )
 
 #' @rdname DateTime
 #' @export
 HOUR24_SINGLE <- group(
-  optional(char_class(" 1")) %c% ascii_digit() %|% "2" %c% char_range("0", "3") 
+  optional(char_class(" 1")) %R% ascii_digit() %|% "2" %R% char_range("0", "3") 
 )
 
 #' @rdname DateTime
 #' @export
 HOUR12_SINGLE <- group(
-  optional(" ") %c% ascii_digit() %|% "1" %c% char_range("0", "2") 
+  optional(" ") %R% ascii_digit() %|% "1" %R% char_range("0", "2") 
 )
 
 #' @rdname DateTime
 #' @export
-MINUTE <- char_range(0, 5) %c% ascii_digit()
+MINUTE <- char_range(0, 5) %R% ascii_digit()
 
 #' @rdname DateTime
 #' @export
 SECOND <- group(
-  char_range(0, 5) %c% ascii_digit() %|%
-  "6" %c% char_class("01") #leap seconds
+  char_range(0, 5) %R% ascii_digit() %|%
+  "6" %R% char_class("01") #leap seconds
 )
 
 #' @rdname DateTime
 #' @export
-FRACTIONAL_SECOND <- SECOND %c% 
-  optional(group(char_class(".,") %c% ascii_digit(1, 6)))
+FRACTIONAL_SECOND <- SECOND %R% 
+  optional(group(char_class(".,") %R% ascii_digit(1, 6)))
 
 #' @rdname DateTime
 #' @export
@@ -321,7 +321,7 @@ AM_PM <- group("am" %|% "AM" %|% "pm" %|% "PM")
 
 #' @rdname DateTime
 #' @export
-TIMEZONE_OFFSET <- optional(char_class("-+")) %c% ascii_digit(4)
+TIMEZONE_OFFSET <- optional(char_class("-+")) %R% ascii_digit(4)
 
 #' @rdname DateTime
 #' @include escape_special.R
@@ -331,52 +331,52 @@ TIMEZONE <- or1(escape_special(OlsonNames()))
 
 #' @rdname DateTime
 #' @export
-ISO_DATE <- YEAR4 %c% "-" %c% MONTH %c% "-" %c% DAY
+ISO_DATE <- YEAR4 %R% "-" %R% MONTH %R% "-" %R% DAY
 
 #' @rdname DateTime
 #' @export
-ISO_TIME <- HOUR24 %c%  ":" %c% MINUTE %c%  ":" %c% SECOND
+ISO_TIME <- HOUR24 %R%  ":" %R% MINUTE %R%  ":" %R% SECOND
 
 #' @rdname DateTime
 #' @export
-ISO_DATETIME <- ISO_DATE %c% char_class(" T") %c% ISO_TIME
+ISO_DATETIME <- ISO_DATE %R% char_class(" T") %R% ISO_TIME
 
 
 #' @rdname DateTime
 #' @export
-YMD <- YEAR %c% MONTH %c% DTSEP %c% DAY %c% DTSEP
+YMD <- YEAR %R% MONTH %R% DTSEP %R% DAY %R% DTSEP
 
 #' @rdname DateTime
 #' @export
-YDM <- YEAR %c% DAY %c% DTSEP %c% MONTH %c% DTSEP
+YDM <- YEAR %R% DAY %R% DTSEP %R% MONTH %R% DTSEP
 
 #' @rdname DateTime
 #' @export
-MYD <- MONTH %c% DTSEP %c% YEAR %c% DTSEP %c% DAY
+MYD <- MONTH %R% DTSEP %R% YEAR %R% DTSEP %R% DAY
 
 #' @rdname DateTime
 #' @export
-MDY <- MONTH %c% DTSEP %c% DAY %c% DTSEP %c% YEAR
+MDY <- MONTH %R% DTSEP %R% DAY %R% DTSEP %R% YEAR
 
 #' @rdname DateTime
 #' @export
-DYM <- DAY %c% DTSEP %c% YEAR %c% DTSEP %c% MONTH
+DYM <- DAY %R% DTSEP %R% YEAR %R% DTSEP %R% MONTH
 
 #' @rdname DateTime
 #' @export
-DMY <- DAY %c% DTSEP %c% MONTH %c% DTSEP %c% YEAR
+DMY <- DAY %R% DTSEP %R% MONTH %R% DTSEP %R% YEAR
 
 #' @rdname DateTime
 #' @export
-HMS <- HOUR24 %c% DTSEP %c% MINUTE %c% DTSEP %c% SECOND
+HMS <- HOUR24 %R% DTSEP %R% MINUTE %R% DTSEP %R% SECOND
 
 #' @rdname DateTime
 #' @export
-HM <- HOUR24 %c% DTSEP %c% MINUTE
+HM <- HOUR24 %R% DTSEP %R% MINUTE
 
 #' @rdname DateTime
 #' @export
-MS <- MINUTE %c% DTSEP %c% SECOND
+MS <- MINUTE %R% DTSEP %R% SECOND
 
 
 #' @rdname DateTime
@@ -391,7 +391,7 @@ datetime <- function(x, locale = NULL)
   x <- gsub("%B", get_months(locale = locale), x)
   x <- gsub("%C", CENTURY, x)
   x <- gsub("%O?d", DAY, x)
-  x <- gsub("%D", MONTH %c% "/" %c% DAY %c% "/" %c% YEAR2, x)
+  x <- gsub("%D", MONTH %R% "/" %R% DAY %R% "/" %R% YEAR2, x)
   x <- gsub("%e", DAY_SINGLE, x)
   x <- gsub("%F", ISO_DATE, x)
   x <- gsub("%O?H", HOUR24, x)
@@ -404,14 +404,14 @@ datetime <- function(x, locale = NULL)
   x <- gsub("%[nt]", space(0), x)
   x <- gsub("%OS", FRACTIONAL_SECOND, x)
   x <- gsub("%[pP]", AM_PM, x)
-  x <- gsub("%R", HOUR24 %c% ":" %c% MINUTE, x)
+  x <- gsub("%R", HOUR24 %R% ":" %R% MINUTE, x)
   x <- gsub("%s", ascii_digit(1, 17), x)
   x <- gsub("%S", SECOND, x)
   x <- gsub("%[TX]", ISO_TIME, x)
   x <- gsub("%u", WEEKDAY1, x)
   x <- gsub("%O?[gGUVW]", WEEK_OF_YEAR, x)
   x <- gsub("%O?w", WEEKDAY0, x)
-  x <- gsub("%x", YEAR2 %c% "/" %c% MONTH %c% "/" %c% DAY, x)
+  x <- gsub("%x", YEAR2 %R% "/" %R% MONTH %R% "/" %R% DAY, x)
   x <- gsub("%O?y", YEAR2, x)
   x <- gsub("%Y", YEAR4, x)
   x <- gsub("%z", TIMEZONE_OFFSET, x)

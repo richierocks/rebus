@@ -30,7 +30,7 @@ number_range <- function(lo, hi, allow_leading_zeroes = FALSE, capture = FALSE)
   }
   if(lo < 0L && hi < 0L)
   {
-    return("-" %c% number_range(-hi, -lo, allow_leading_zeroes, capture))
+    return("-" %R% number_range(-hi, -lo, allow_leading_zeroes, capture))
   }
   if(lo < 0L && hi > 0L)
   {
@@ -69,7 +69,7 @@ get_alternate_ranges <- function(d, allow_leading_zeroes)
   if(max(d[, 1]) == min(d[, 1]))
   {
     return(
-      max(d[, 1]) %c% 
+      max(d[, 1]) %R% 
         get_alternate_ranges(d[, -1, drop = FALSE], allow_leading_zeroes)
     )
   }
@@ -98,7 +98,7 @@ get_alternate_ranges <- function(d, allow_leading_zeroes)
         {
           ""
         }
-        prefix %c% 
+        prefix %R% 
           get_alternate_ranges(min[, -1, drop = FALSE], allow_leading_zeroes)
       } else 
       {
@@ -106,7 +106,7 @@ get_alternate_ranges <- function(d, allow_leading_zeroes)
       },
       if(nrow(middle) > 0)
       {
-        char_range(middle[1, 1], middle[nrow(middle), 1]) %c% 
+        char_range(middle[1, 1], middle[nrow(middle), 1]) %R% 
           ascii_digit(ncol(d) - 1, ncol(d) - 1)
       } else 
       {
@@ -114,7 +114,7 @@ get_alternate_ranges <- function(d, allow_leading_zeroes)
       },
       if(nrow(max) > 0)
       {
-        max[1, 1] %c% 
+        max[1, 1] %R% 
           get_alternate_ranges(max[, -1, drop = FALSE], allow_leading_zeroes)
       } else 
       {

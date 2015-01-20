@@ -226,14 +226,14 @@ ascii_upper <- function(lo, hi, char_class = TRUE)
 #' @export
 ascii_alpha <- function(lo, hi, char_class = TRUE)
 {
-  repeat_in_class(ASCII_LOWER %c% ASCII_UPPER, lo, hi, char_class)
+  repeat_in_class(ASCII_LOWER %R% ASCII_UPPER, lo, hi, char_class)
 }
 
 #' @rdname ClassGroups
 #' @export
 ascii_alnum <- function(lo, hi, char_class = TRUE)
 {
-  repeat_in_class(ASCII_ALPHA %c% ASCII_DIGIT, lo, hi, char_class)
+  repeat_in_class(ASCII_ALPHA %R% ASCII_DIGIT, lo, hi, char_class)
 }
 
 #' @rdname ClassGroups

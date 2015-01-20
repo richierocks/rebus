@@ -3,20 +3,20 @@
 #' @include concatenation.R
 #' @include class-groups.R
 #' @export
-ASCII_ALPHA <- ASCII_LOWER %c% ASCII_UPPER
+ASCII_ALPHA <- ASCII_LOWER %R% ASCII_UPPER
 
 #' @rdname CharacterClasses
 #' @export
-ASCII_ALNUM <- ASCII_ALPHA %c% ASCII_DIGIT
+ASCII_ALNUM <- ASCII_ALPHA %R% ASCII_DIGIT
 
 #' @rdname CharacterClasses
 #' @importFrom utils as.roman
 #' @export
-ROMAN <- repeated("M", 0, 3) %c% 
-  optional(or1(as.character(as.roman(seq.int(100, 900, 100))))) %c% 
-  optional(or1(as.character(as.roman(seq.int(10, 90, 10))))) %c% 
+ROMAN <- repeated("M", 0, 3) %R% 
+  optional(or1(as.character(as.roman(seq.int(100, 900, 100))))) %R% 
+  optional(or1(as.character(as.roman(seq.int(10, 90, 10))))) %R% 
   optional(or1(as.character(as.roman(1:9))))
 
 #' @rdname CharacterClasses
 #' @export
-UNMATCHABLE <- END %c%  "a"
+UNMATCHABLE <- END %R% "a"
