@@ -6,6 +6,7 @@
 #' @return A character vector representing part or all of a regular expression.
 #' @examples
 #' exactly("#" %R% hex_digit(6))
+#' @export
 exactly <- function(x)
 {
   regex(START, x, END)
@@ -18,6 +19,7 @@ exactly <- function(x)
 #' @return A character vector representing part or all of a regular expression.
 #' @examples
 #' literal(digit(1, 3))
+#' @export
 literal <- function(x)
 {
   regex("\\Q", x, "\\E")  
