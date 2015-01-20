@@ -10,6 +10,7 @@ ASCII_ALPHA <- ASCII_LOWER %c% ASCII_UPPER
 ASCII_ALNUM <- ASCII_ALPHA %c% ASCII_DIGIT
 
 #' @rdname CharacterClasses
+#' @importFrom utils as.roman
 #' @export
 ROMAN <- repeated("M", 0, 3) %c% 
   optional(or1(as.character(as.roman(seq.int(100, 900, 100))))) %c% 
