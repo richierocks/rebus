@@ -49,57 +49,56 @@ negate_and_group <- function(...)
 #' repeated(x, 1)
 #' repeated(x, 3)
 #' repeated(x, 3, 5)
+#' @include internal.R
 #' @export
-repeated <- function(x, lo, hi)
+repeated <- function(x, lo, hi, lazy = FALSE)
 {
   lo <- as.integer(lo)
   if(missing(hi))
   {
     hi <- lo
   }
-  if(is.na(lo))
-  {
-    stop("lo is missing.")
-  }
-  if(lo < 0)
-  {
-    stop("lo must be non-negative.")
-  }
-  if(!is.finite(hi))
-  {
-    if(lo == 0)
+  args <- recycle(x, lo, hi, lazy)
+  with(
+    args,
     {
-      return(zero_or_more(x))
+      hi <- ifelse(is.na(hi), lo, floor(hi))
+      if(!all(is.finite(lo)))
+      {
+        stop("lo has missing or infinite values.")
+      }
+      if(any(lo < 0))
+      {
+        stop("lo has negative values.")
+      }
+      if(any(hi < lo))
+      {
+        stop("hi has values that are less than the corresponding values in lo.")
+      }
+      if(any(is.na(lazy)))
+      {
+        stop("lazy has missing values.")
+      }
+      rx <- regex(x, "{", lo, ",", hi, "}")
+      
+      # Special cases
+      i <- lo == 0 & hi == 1
+      rx[i] <- optional(x[i])
+      i <- lo == 1 & hi == 1
+      rx[i] <- x[i]
+      i <- lo == 0 & is.infinite(hi)
+      rx[i] <- zero_or_more(x[i])
+      i <- lo == 1 & is.infinite(hi)
+      rx[i] <- one_or_more(x[i])
+      i <- lo > 1 & is.infinite(hi)
+      rx[i] <- regex(x[i], "{", lo[i], ",", "}")
+      i <- lo != 1 & lo == hi
+      rx[i] <- regex(x[i], "{", lo[i], "}")
+      
+      rx[lazy] <- optional(rx[lazy])
+      rx
     }
-    if(lo == 1)
-    {
-      return(one_or_more(x))
-    }
-  }
-  hi <- as.integer(hi)
-  
-  if(is.na(hi))
-  {
-    stop("hi is missing.")
-  }
-  if(hi < lo)
-  {
-    stop("hi must be greater than or equal to lo.")
-  }
-  if(hi == lo)
-  {
-    if(hi == 1)
-    {
-      return(regex(x))
-    }
-    return(regex(x, "{", lo, "}"))
-  }  
-  if(hi == 1)
-  {
-    # Implicitly lo == 0
-    return(optional(x))
-  }
-  regex(x, "{", lo, ",", hi, "}")
+  )   
 }
 
 #' @rdname repeated
