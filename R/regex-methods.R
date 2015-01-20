@@ -9,7 +9,7 @@
 #' \code{is.regex} returns \code{TRUE} when the input inherits from class 
 #' \code{"regex"} and \code{FALSE} otherwise.
 #' Similarly \code{as.perl_regex} gives the input object a class of
-#' \code{c("perl-regex", "regex", "character")}.  For compatibility with
+#' \code{c("perl_regex", "regex", "character")}.  For compatibility with
 #' the \code{stringr} package it also sets the attribute \code{perl = TRUE}.
 #' @examples
 #' x <- as.regex("month.abb")
@@ -36,6 +36,7 @@ is.regex <- function(x)
 #' Create a regex
 #' 
 #' Creates a regex object.  
+#' @param x A regex.
 #' @param ... Passed to \code{paste0}.
 #' @return An object of class \code{regex}.
 #' @note This works like \code{paste0}, but the returns value has class
@@ -84,7 +85,7 @@ as.perl_regex <- function(x)
   }
   structure(
     x, 
-    class = c("perl-regex", "regex", "character"), 
+    class = c("perl_regex", "regex", "character"), 
     perl  = TRUE
   )
 }
@@ -93,7 +94,7 @@ as.perl_regex <- function(x)
 #' @export
 is.perl_regex <- function(x)
 {
-  inherits(x, "perl-regex")
+  inherits(x, "perl_regex")
 }
 
 #' @rdname regex
@@ -105,7 +106,7 @@ perl_regex <- function(...)
 
 #' @rdname regex
 #' @export
-`format.perl-regex` <- function(x, ...)
+format.perl_regex <- function(x, ...)
 {
-  paste0("<perl-regex> ", x) 
+  paste0("<perl_regex> ", x) 
 }
