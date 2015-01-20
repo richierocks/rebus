@@ -1,8 +1,8 @@
 Package: regex
 Type: Package
 Title: Build Regular Expressions in a Human Readable Way
-Version: 0.0-3
-Date: 2014-12-29
+Version: 0.0-4
+Date: 2015-01-20
 Author: Richard Cotton [aut, cre]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
@@ -10,6 +10,8 @@ Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
 Description: Build regular expressions piece by piece using human readable code.
 Depends:
     R (>= 3.1.0)
+Suggests:
+    testthat
 License: Unlimited
 LazyLoad: yes
 LazyData: yes
@@ -20,9 +22,11 @@ Acknowledgments: Development of this package was partially funded by the
     Research Program' funds, a program funded by Qatar Foundation.
 Collate:
     'alternation.R'
-    'capture.R'
-    'grouping-and-repetition.R'
     'regex-methods.R'
+    'backreferences.R'
+    'capture.R'
+    'internal.R'
+    'grouping-and-repetition.R'
     'constants.R'
     'class-groups.R'
     'concatenation.R'
@@ -30,6 +34,7 @@ Collate:
     'escape_special.R'
     'datetime.R'
     'lookaround.R'
+    'misc.R'
     'number_range.R'
     'regex-package.R'
     'unicode-groups.R'
