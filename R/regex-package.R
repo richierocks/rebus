@@ -1,4 +1,6 @@
-#' Build regular expressions in a human readable way
+#' rebus: Regular Expression Builder, Um, Something
+#' 
+#' Build regular expressions in a human readable way.
 #' 
 #' Regular expressions are a very powerful tool, but the syntax is terse enough 
 #' to be difficult to read. This makes bugs easy to introduce, and hard to 

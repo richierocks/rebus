@@ -1,4 +1,4 @@
 library(testthat)
-library(regex)
+library(rebus)
 
-test_package("regex")
+test_package("rebus")

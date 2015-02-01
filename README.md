@@ -1,5 +1,4 @@
-regex
-=====
+# rebus: Regular Expression Builder, Um, Something
 
 ## Build regular expressions in a human readable way
 

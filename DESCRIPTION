@@ -1,4 +1,4 @@
-Package: regex
+Package: rebus
 Type: Package
 Title: Build Regular Expressions in a Human Readable Way
 Version: 0.0-4
