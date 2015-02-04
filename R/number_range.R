@@ -106,7 +106,8 @@ get_alternate_ranges <- function(d, allow_leading_zeroes)
       },
       if(nrow(middle) > 0)
       {
-        char_range(middle[1, 1], middle[nrow(middle), 1]) %R% 
+        m <- if(middle[1, 1] == "") "0" else middle[1, 1]
+        char_range(m, middle[nrow(middle), 1]) %R% 
           ascii_digit(ncol(d) - 1, ncol(d) - 1)
       } else 
       {
@@ -132,7 +133,7 @@ simplify_repeated_digits <- function(x)
     warning("Only using the first element of x.")
     x <- x[1]
   }
-  rx <- "(\\[0-9\\]){2,}"
+  rx <- "(\\Q[0-9]\\E){2,}"
   repeat
   {   
     m <- regexpr(rx, x)
@@ -140,6 +141,21 @@ simplify_repeated_digits <- function(x)
     match_len <- attr(m, "match.length")
     n <- match_len / 5
     x <- paste0(substring(x, 1, m - 1), ascii_digit(n), substring(x, m + match_len))
+  }
+  rx <- "\\Q[0-9]\\E(\\{[0-9]\\}){2}"
+  repeat
+  {   
+    m <- regexpr(rx, x)
+    if(m == -1) break
+    match_len <- attr(m, "match.length")
+    n <- (match_len - 5) / 3
+    x <- paste0(
+      substring(x, 1, m - 1), 
+      "[0-9]{",
+      as.integer(substring(x, m + 6, m + 6)) + as.integer(substring(x, m + 9, m + 9)) - 1,
+      "}",
+      substring(x, m + match_len)
+    )
   }
   x
 }
