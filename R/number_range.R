@@ -7,6 +7,8 @@
 #' bulk the match up to the length of the number with the most digits?
 #' @param capture A logical value. See \code{\link{or}} for details.
 #' @return A character vector representing part or all of a regular expression.
+#' @references There's a similar online utility for this at
+#' \url{http://utilitymill.com/utility/Regex_For_Range}
 #' @examples
 #' number_range(0, 255)
 #' number_range(0, 255, allow_leading_zeroes = TRUE)
