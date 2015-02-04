@@ -75,10 +75,10 @@ get_alternate_ranges <- function(d, allow_leading_zeroes)
   }
   grp <- factor(
     ifelse(
-      d[, 1] == min(d[, 1]) & d[1, 1] != "0",
+      d[, 1] == min(d[, 1]) & (!all(d[1, -1] %in% c("", "0"))),
       "min",
       ifelse(
-        d[, 1] == max(d[, 1]) & d[nrow(d), 1] < "9",
+        d[, 1] == max(d[, 1]) & any(d[nrow(d), -1] != "9"),
         "max",
         "middle"
       )
@@ -96,7 +96,7 @@ get_alternate_ranges <- function(d, allow_leading_zeroes)
           optional(0)
         } else
         {
-          ""
+          min[1, 1]
         }
         prefix %R% 
           get_alternate_ranges(min[, -1, drop = FALSE], allow_leading_zeroes)
