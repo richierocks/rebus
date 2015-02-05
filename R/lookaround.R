@@ -34,5 +34,5 @@ lookbehind <- function(x)
 #' @export
 negative_lookbehind <- function(x)
 {
-  perl_regex("(<!", x, ")")  
+  perl_regex("(?<!", x, ")")  
 }
