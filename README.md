@@ -20,7 +20,7 @@ capturing and all the basic regex functionality (`char_class`, `repeated`,
 Each of the class constants has a corresponding function that groups the class
 and allows repetition (`alnum(3, 5)`).
 
-There are operators for concatenation (`%c%`) and alternation (`%|%`).
+There are operators for concatenation (`%R%` or `%c%`) and alternation (`%|%`).
 
 ## Examples
 
