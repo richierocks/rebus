@@ -82,12 +82,23 @@ followed by a word boundary.*
 
 ## See also
 
-The `stringr` and `stringi` packages provide tools for matching regular 
-expressions and nicely complement this package.
+The [`stringr`](https://github.com/hadley/stringr/) and 
+[`stringi`](https://github.com/Rexamine/stringi) packages provide tools for 
+matching regular expressions and nicely complement this package.
 
-http://www.regular-expressions.info has good advice on using
-regular expression in R.  In particular, see 
-http://www.regular-expressions.info/rlanguage.html and
-http://www.regular-expressions.info/examples.html.
+The [`rex`](https://github.com/kevinushey/rex) package does quite a good 
+imitation of this package.
 
-https://www.debuggex.com is a visual regex debugging and testing site.
+[regular-expressions.info](http://www.regular-expressions.info) has good advice 
+on using regular expression in R.  In particular, see the 
+[R language page](http://www.regular-expressions.info/rlanguage.html) and the 
+[examples page](http://www.regular-expressions.info/examples.html).
+
+[debuggex.com](https://www.debuggex.com) is a visual regex debugging and testing 
+site.
+
+## TODO
+
+More high-level regexes for complex data types (phone numbers, post codes,
+car licenses, whatever).
+
