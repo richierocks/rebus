@@ -86,8 +86,9 @@ The [`stringr`](https://github.com/hadley/stringr/) and
 [`stringi`](https://github.com/Rexamine/stringi) packages provide tools for 
 matching regular expressions and nicely complement this package.
 
-The [`rex`](https://github.com/kevinushey/rex) package does quite a good 
-imitation of this package.
+The [`rex`](https://github.com/kevinushey/rex) and 
+[`Regularity`](https://github.com/andrewberls/regularity) packages are very 
+similar to this package.
 
 [regular-expressions.info](http://www.regular-expressions.info) has good advice 
 on using regular expression in R.  In particular, see the 
