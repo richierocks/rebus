@@ -87,7 +87,7 @@ The [`stringr`](https://github.com/hadley/stringr/) and
 matching regular expressions and nicely complement this package.
 
 The [`rex`](https://github.com/kevinushey/rex) and 
-[`Regularity`](https://github.com/andrewberls/regularity) packages are very 
+[`Regularity`](https://github.com/martineastwood/Regularity) packages are very 
 similar to this package.
 
 [regular-expressions.info](http://www.regular-expressions.info) has good advice 
