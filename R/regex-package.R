@@ -7,8 +7,8 @@
 #' find. This package contains functions to make building regular expressions
 #' easier.
 #' @docType package
-#' @name regex
-#' @aliases regex regex-package
+#' @name rebus
+#' @aliases rebus rebus-package
 #' @seealso \code{\link[base]{regex}} and \code{\link[base]{regexpr}}
 #' The `stringr` and `stringi` packages provide tools for matching 
 #' regular expressions and nicely complement this package.
