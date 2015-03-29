@@ -1,8 +1,8 @@
 Package: rebus
 Type: Package
 Title: Build Regular Expressions in a Human Readable Way
-Version: 0.0-5
-Date: 2015-02-04
+Version: 0.0-6
+Date: 2015-03-29
 Author: Richard Cotton [aut, cre]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
