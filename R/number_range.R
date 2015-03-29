@@ -24,7 +24,8 @@ number_range <- function(lo, hi, allow_leading_zeroes = FALSE, capture = FALSE)
   hi <- as.integer(hi[1])
   if(hi < lo)
   {
-    stop("hi must be greater than lo.")
+    warning("hi is greater than lo.")
+    return(UNMATCHABLE)
   }
   if(hi == lo)
   {
