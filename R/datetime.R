@@ -189,7 +189,7 @@ get_months_windows <- function(abbreviate = FALSE, locale = NULL)
     Sys.setlocale("LC_TIME", locale)
   }
   # 20 months is likely overkill, but there may be weird locales with long years.
-  days <- seq(Sys.Date(), by = "1 month", length.out = 20)
+  days <- seq(Sys.Date(), by = "28 days", length.out = 20)
   month_names <- months(days, abbreviate)
   current_codepage <- as.character(l10n_info()$codepage)
   unique(
@@ -205,7 +205,7 @@ get_months_posix <- function(abbreviate = FALSE, locale = NULL)
     on.exit(Sys.setlocale("LC_TIME", lc_time), add = TRUE)
     Sys.setlocale("LC_TIME", locale)
   }
-  days <- seq(Sys.Date(), by = "1 month", length.out = 20)
+  days <- seq(Sys.Date(), by = "28 days", length.out = 20)
   unique(months(days, abbreviate))
 }
 
