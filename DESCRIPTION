@@ -35,6 +35,7 @@ Collate:
     'datetime.R'
     'lookaround.R'
     'misc.R'
+    'mode-modifiers.R'
     'number_range.R'
     'regex-package.R'
     'unicode-groups.R'
