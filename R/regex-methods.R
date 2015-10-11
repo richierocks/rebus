@@ -14,11 +14,8 @@
 #' @export
 as.regex <- function(x)
 {
-  if(is.regex(x))
-  {
-    return(x)
-  }
-  structure(x, class = c("regex", "character"))
+  class(x) <- c("regex", "character")
+  x
 }
 
 #' @rdname as.regex
