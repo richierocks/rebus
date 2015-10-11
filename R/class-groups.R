@@ -53,9 +53,6 @@
 #' iso_time()
 #' iso_datetime()
 #' 
-#' # Roman numerals
-#' roman()
-#' 
 #' #Grouping and repetition
 #' digit(char_class = FALSE)
 #' digit(3)
@@ -63,6 +60,13 @@
 #' digit(0)
 #' digit(1)
 #' digit(0, 1)
+#' 
+#' # Roman numerals
+#' roman()
+#' 
+#' x <- c("MMMDCCCXLVIII", "MMMCMDCCCXLVIIV")
+#' rx <- exactly(roman())
+#' grepl(rx, x)
 #' @include constants.R
 #' @include grouping-and-repetition.R
 #' @name ClassGroups
