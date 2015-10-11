@@ -55,5 +55,5 @@ REF9 <- regex("\\9")
 #' @export
 recursive <- function(x)
 {
-  perl_regex(x, "(?R)")
+  regex(x, "(?R)")
 }

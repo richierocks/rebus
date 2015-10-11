@@ -8,14 +8,9 @@
 #' \code{c("regex", "character")}.
 #' \code{is.regex} returns \code{TRUE} when the input inherits from class 
 #' \code{"regex"} and \code{FALSE} otherwise.
-#' Similarly \code{as.perl_regex} gives the input object a class of
-#' \code{c("perl_regex", "regex", "character")}.  For compatibility with
-#' the \code{stringr} package it also sets the attribute \code{perl = TRUE}.
 #' @examples
 #' x <- as.regex("month.abb")
 #' is.regex(x)
-#' as.perl_regex("month.abb")
-#' is.perl_regex(lookahead("a"))
 #' @export
 as.regex <- function(x)
 {
@@ -44,8 +39,6 @@ is.regex <- function(x)
 #' @seealso \code{\link[base]{paste0}}
 #' as.regex(month.abb)
 #' regex(letters[1:5], "?")
-#' as.perl_regex(month.abb)
-#' perl_regex(letters[1:5], "?")
 #' @export
 regex <- function(...)
 {
@@ -73,40 +66,4 @@ format.regex <- function(x, ...)
 print.regex <- function(x, ...)
 {
   cat(format(x, ...), sep = "\n")
-}
-
-#' @rdname as.regex
-#' @export
-as.perl_regex <- function(x)
-{
-  if(is.perl_regex(x))
-  {
-    return(x)
-  }
-  structure(
-    x, 
-    class = c("perl_regex", "regex", "character"), 
-    perl  = TRUE
-  )
-}
-
-#' @rdname as.regex
-#' @export
-is.perl_regex <- function(x)
-{
-  inherits(x, "perl_regex")
-}
-
-#' @rdname regex
-#' @export
-perl_regex <- function(...)
-{
-  as.perl_regex(paste0(...))
-}
-
-#' @rdname regex
-#' @export
-format.perl_regex <- function(x, ...)
-{
-  paste0("<perl_regex> ", x) 
 }
