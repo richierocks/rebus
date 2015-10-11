@@ -49,9 +49,19 @@ REF9 <- regex("\\9")
 #' Makes the regular expression (or part of it) recursive.
 #' @param x A character vector.
 #' @return A character vector representing part or all of a regular expression.
-#' @references \url{http://www.regular-expressions.info/recurse.html}
+#' @note Recursion is not supported by R's internal regex engine or 
+#' \code{stringi}'s ICU engine.
+#' @references \url{http://www.regular-expressions.info/recurse.html} and 
+#' \url{http://www.rexegg.com/regex-recursion.html}
 #' @examples
 #' recursive("a")
+#' 
+#' # Recursion isn't supported by R's internal regex engine
+#' x <- c("ab222z", "ababz", "ab", "abab")
+#' rx <- "ab(?R)?z"
+#' grepl(rx, x, perl = TRUE)
+#' try(grepl(rx, x))
+#' try(stri_detect_regex(x, rx))
 #' @export
 recursive <- function(x)
 {
