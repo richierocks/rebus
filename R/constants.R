@@ -16,6 +16,11 @@
 #' CLOSE_PAREN
 #' OPEN_BRACKET
 #' OPEN_BRACE
+#' 
+#' x <- "\\^$."
+#' rx <- BACKSLASH %R% CARET %R% DOLLAR %R% DOT
+#' grepl(rx, x)
+#' grepl(x, x) # no escapes - these chars have special meaning inside regex
 #' @name SpecialCharacters
 #' @include regex-methods.R
 NULL
@@ -72,10 +77,20 @@ OPEN_BRACE <- regex("\\{")
 #' 
 #' Match the start or end of a string.
 #' @return A character vector representing part or all of a regular expression.
-#' @references \url{http://www.regular-expressions.info/anchors.html}
+#' @references \url{http://www.regular-expressions.info/anchors.html} and
+#' \url{http://www.rexegg.com/regex-anchors.html}
+#' @note Caret and dollar are used as start/end delimiters, since \code{\\A} and 
+#' \code{\\Z} are not supported by R's internal PRCE engine or \code{stringi}'s
+#' ICU engine.
 #' @examples
 #' START
 #' END
+#' 
+#' x <- c("catfish", "tomcat")
+#' rx <- START %R% "cat"
+#' rx2 <- "cat" %R% END
+#' grepl(rx, x)
+#' grepl(rx2, x)
 #' @name Anchors
 NULL
 
@@ -118,6 +133,10 @@ END <- regex("$")
 #' ASCII_ALNUM
 #' ROMAN
 #' UNMATCHABLE
+#' 
+#' x <- c("a1 A", "a1 a")
+#' rx <- LOWER %R% DIGIT %R% SPACE %R% UPPER
+#' grepl(rx, x)
 #' @name CharacterClasses
 NULL
 
@@ -212,11 +231,16 @@ ASCII_UPPER <- regex("A-Z")
 #' Word boundaries
 #' 
 #' Match a word boundary.
-#' @references \url{http://www.regular-expressions.info/wordboundaries.html}
+#' @references \url{http://www.regular-expressions.info/wordboundaries.html} and
+#' \url{http://www.rexegg.com/regex-boundaries.html}
 #' @seealso \code{\link{ALPHA}}, \code{\link{BACKSLASH}}, \code{\link{START}}
 #' @examples
 #' BOUNDARY
 #' NOT_BOUNDARY
+#' 
+#' x <- c("catfish", "tomcat")
+#' rx <- BOUNDARY %R% "cat"
+#' grepl(rx, x)
 #' @name WordBoundaries
 NULL
 

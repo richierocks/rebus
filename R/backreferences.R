@@ -1,12 +1,15 @@
 #' Backreferences
 #' 
 #' Backreferences for replacement operations.
-#' @references \url{http://www.regular-expressions.info/backref.html}
+#' @references \url{http://www.regular-expressions.info/backref.html} and
+#' \url{http://www.rexegg.com/regex-capture.html}
 #' @examples
 #' REF1
 #' REF2
 #' # and so on, up to
 #' REF9
+#' 
+#' sub("a(b)c(d)", REF1 %R% REF2, "abcd")
 #' @name Backreferences
 #' @include regex-methods.R
 #' @export
@@ -49,14 +52,14 @@ REF9 <- regex("\\9")
 #' Makes the regular expression (or part of it) recursive.
 #' @param x A character vector.
 #' @return A character vector representing part or all of a regular expression.
-#' @note Recursion is not supported by R's internal regex engine or 
+#' @note Recursion is not supported by R's internal PRCE engine or 
 #' \code{stringi}'s ICU engine.
 #' @references \url{http://www.regular-expressions.info/recurse.html} and 
 #' \url{http://www.rexegg.com/regex-recursion.html}
 #' @examples
 #' recursive("a")
 #' 
-#' # Recursion isn't supported by R's internal regex engine
+#' # Recursion isn't supported by R's internal PRCE engine
 #' x <- c("ab222z", "ababz", "ab", "abab")
 #' rx <- "ab(?R)?z"
 #' grepl(rx, x, perl = TRUE)

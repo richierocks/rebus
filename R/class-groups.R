@@ -15,7 +15,8 @@
 #' characters, and the vagaries of the underlying regular expression engine.
 #' I suggest reading the \code{\link[base]{regex}} help page and doing lots of
 #' testing.
-#' @references \url{http://www.regular-expressions.info/shorthand.html}
+#' @references \url{http://www.regular-expressions.info/shorthand.html} and
+#' \url{http://www.rexegg.com/regex-quickstart.html#posix}
 #' @seealso \code{\link[base]{regex}}, \code{\link{Unicode}}
 #' @examples
 #' # R character classes
@@ -263,9 +264,9 @@ iso_datetime <- function(lo, hi, char_class = TRUE)
 
 #' @rdname ClassGroups
 #' @export
-roman <- function(lo, hi, char_class = TRUE)
+roman <- function(lo, hi)
 {
-  repeat_in_class(ROMAN, lo, hi, char_class)
+  repeat_in_class(ROMAN, lo, hi, FALSE)
 }
 
 #' @rdname ClassGroups

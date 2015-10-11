@@ -30,8 +30,7 @@ is.regex <- function(x)
 
 #' Create a regex
 #' 
-#' Creates a regex object.  
-#' @param x A regex.
+#' Creates a regex object. 
 #' @param ... Passed to \code{paste0}.
 #' @return An object of class \code{regex}.
 #' @note This works like \code{paste0}, but the returns value has class

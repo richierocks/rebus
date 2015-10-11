@@ -4,7 +4,7 @@
 #' characters.
 #' @param x A character vector.
 #' @param escape_brace A logical value indicating if opening braces should be 
-#' escaped.  If using R's internal regex engine or \code{stringi}'s ICU engine, 
+#' escaped.  If using R's internal PRCE engine or \code{stringi}'s ICU engine, 
 #' you want this.  If using the perl engine, you don't.
 #' @return A character vector, with regex meta-characters escaped.
 #' @note Special characters inside character classes (except caret, hypen and 

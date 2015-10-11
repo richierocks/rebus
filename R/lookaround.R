@@ -3,7 +3,8 @@
 #' Zero length matching.
 #' @param x A character vector.
 #' @return A character vector representing part or all of a regular expression.
-#' @references \url{http://www.regular-expressions.info/lookaround.html}
+#' @references \url{http://www.regular-expressions.info/lookaround.html} and
+#' \url{http://www.rexegg.com/regex-lookarounds.html}
 #' @examples
 #' x <- "foo"
 #' lookahead(x)

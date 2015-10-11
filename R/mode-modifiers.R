@@ -4,7 +4,8 @@
 #' @param x A character vector.
 #' @param modes A character vector of mode modifiers.
 #' @return A character vector representing part or all of a regular expression.
-#' @references \url{http://www.regular-expressions.info/modifiers.html}
+#' @references \url{http://www.regular-expressions.info/modifiers.html} and
+#' \url{http://www.rexegg.com/regex-modifiers.html}
 #' @examples
 #' x <- "foo"
 #' case_insensitive(x)

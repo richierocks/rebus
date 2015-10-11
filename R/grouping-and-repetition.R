@@ -37,7 +37,9 @@ negate_and_group <- function(...)
 #' @param lazy A logical value.  Should repetition be matched lazily or 
 #' greedily?
 #' @return A character vector representing part or all of a regular expression.
-#' @references \url{http://www.regular-expressions.info/repeat.html}
+#' @references \url{http://www.regular-expressions.info/repeat.html} and
+#' \url{http://www.rexegg.com/regex-quantifiers.html} and
+#' \url{http://www.rexegg.com/regex-anchors.html}
 #' @examples
 #' x <- graph()
 #' optional(x)
