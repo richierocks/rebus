@@ -142,10 +142,10 @@ repeat_in_class <- function(x, lo, hi, char_class)
   if(char_class)
   {
     x <- char_class(x)
-    if(!missing(lo))
-    {
-      x <- repeated(x, lo, hi)
-    }
+  }
+  if(!missing(lo))
+  {
+    x <- repeated(x, lo, hi)
   }
   x
 }

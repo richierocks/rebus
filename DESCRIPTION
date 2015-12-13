@@ -41,3 +41,4 @@ Collate:
     'unicode-groups.R'
     'unicode.R'
     'zzz.R'
+RoxygenNote: 5.0.1
