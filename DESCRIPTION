@@ -1,15 +1,22 @@
 Package: rebus
 Type: Package
 Title: Build Regular Expressions in a Human Readable Way
-Version: 0.0-6
-Date: 2015-03-29
+Version: 0.1-0
+Date: 2015-12-16
 Author: Richard Cotton [aut, cre]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
     "richierocks@gmail.com")
 Description: Build regular expressions piece by piece using human readable code.
+    This package is designed for interactive use.  For package development, use
+    the rebus.* dependencies.
 Depends:
     R (>= 3.1.0)
+Imports:
+    rebus.base,
+    rebus.datetimes,
+    rebus.numbers,
+    rebus.unicode
 Suggests:
     testthat
 License: Unlimited
@@ -20,17 +27,11 @@ Acknowledgments: Development of this package was partially funded by the
     Proteomics Core at Weill Cornell Medical College in Qatar
     <http://qatar-weill.cornell.edu>.  The Core is supported by 'Biomedical
     Research Program' funds, a program funded by Qatar Foundation.
-Collate:
-    'escape_special.R'
-    'datetime.R'
-    'export-base.R'
-    'imports.R'
-    'number_range.R'
-    'grouping-and-repetition.R'
-    'class-groups.R'
-    'constants.R'
-    'regex-package.R'
-    'regex-methods.R'
-    'unicode-groups.R'
-    'unicode.R'
 RoxygenNote: 5.0.1
+Collate:
+    'export-base.R'
+    'export-datetimes.R'
+    'export-numbers.R'
+    'export-unicode.R'
+    'imports.R'
+    'regex-package.R'

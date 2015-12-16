@@ -74,7 +74,5 @@
 #'   ip_element %R%
 #'   BOUNDARY    
 #' @author Richard Cotton \email{richierocks@@gmail.com}
-#' @include constants.R
-#' @include class-groups.R
-#' @include grouping-and-repetition.R
+#' @include imports.R
 NULL

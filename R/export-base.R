@@ -201,6 +201,7 @@ NULL
 #' See \code{\link[rebus.base]{repeated}}.
 #' @name repeated
 #' @aliases optional lazy zero_or_more one_or_more
+#' @export repeated
 #' @export optional
 #' @export lazy
 #' @export zero_or_more
@@ -279,6 +280,4 @@ NULL
 #' See \code{\link[rebus.base]{format.regex}}.
 #' @name format.regex
 #' @aliases print.regex
-#' @export format.regex
-#' @export print.regex
 NULL 

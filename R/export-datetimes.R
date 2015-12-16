@@ -67,7 +67,7 @@ NULL
 
 #' Get the days of the week or months of the year
 #' 
-#' See \code{\link[rebus.datetimes]{}}.
+#' See \code{\link[rebus.datetimes]{get_weekdays}}.
 #' @name get_weekdays
 #' @aliases get_months
 #' @export get_weekdays
