@@ -1,8 +1,8 @@
 Package: rebus
 Type: Package
 Title: Build Regular Expressions in a Human Readable Way
-Version: 0.1-0
-Date: 2015-12-16
+Version: 0.1-1
+Date: 2015-12-28
 Author: Richard Cotton [aut, cre]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
@@ -13,7 +13,7 @@ Description: Build regular expressions piece by piece using human readable code.
 Depends:
     R (>= 3.1.0)
 Imports:
-    rebus.base,
+    rebus.base (>= 0.0-2),
     rebus.datetimes,
     rebus.numbers,
     rebus.unicode
