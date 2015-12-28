@@ -10,7 +10,7 @@ This release outsources core functionality to the *rebus.base*,
 
 ## R CMD check results
 
-There were no ERRORs.
+There were no ERRORs or WARNINGS.
 
 ## Downstream dependencies
 
