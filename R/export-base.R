@@ -232,6 +232,13 @@ NULL
 #' @export exactly
 NULL 
 
+#' Match a whole word
+#' 
+#' See \code{\link[rebus.base]{whole_word}}.
+#' @name whole_word
+#' @export whole_word
+NULL 
+
 #' Treat part of a regular expression literally
 #' 
 #' See \code{\link[rebus.base]{literal}}.
