@@ -1,6 +1,11 @@
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 [![Is the package on CRAN?](http://www.r-pkg.org/badges/version/rebus)](http://www.r-pkg.org/pkg/rebus)
 [![Build Status](https://semaphoreci.com/api/v1/projects/b2bc4ad6-9e0e-49e6-b6ca-cb3ceec56180/636923/badge.svg)](https://semaphoreci.com/richierocks/rebus)
+[![Build status](https://ci.appveyor.com/api/projects/status/vsn767xf7hywodmx?svg=true)](https://ci.appveyor.com/project/richierocks/rebus)
+
+
+
+
 
 # rebus: Regular Expression Builder, Um, Something
 
