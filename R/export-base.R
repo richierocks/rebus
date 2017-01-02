@@ -52,10 +52,11 @@ NULL
 #' 
 #' See \code{\link[rebus.base]{capture}}.
 #' @name capture
-#' @aliases capture group engroup
+#' @aliases capture group engroup token
 #' @export capture
 #' @export group
 #' @export engroup
+#' @export token
 NULL 
 
 
@@ -100,7 +101,7 @@ NULL
 #' 
 #' See \code{\link[rebus.base]{SpecialCharacters}}.
 #' @name SpecialCharacters
-#' @aliases BACKSLASH CARET DOLLAR DOT PIPE QUESTION STAR PLUS OPEN_PAREN CLOSE_PAREN OPEN_BRACKET OPEN_BRACE
+#' @aliases BACKSLASH CARET DOLLAR DOT PIPE QUESTION STAR PLUS OPEN_PAREN CLOSE_PAREN OPEN_BRACKET CLOSE_BRACKET OPEN_BRACE
 #' @export BACKSLASH
 #' @export CARET
 #' @export DOLLAR
@@ -112,6 +113,7 @@ NULL
 #' @export OPEN_PAREN
 #' @export CLOSE_PAREN
 #' @export OPEN_BRACKET
+#' @export CLOSE_BRACKET
 #' @export OPEN_BRACE
 NULL 
 
@@ -191,9 +193,10 @@ NULL
 #' 
 #' See \code{\link[rebus.base]{char_class}}.
 #' @name char_class
-#' @aliases negated_char_class
+#' @aliases negated_char_class negate_and_group
 #' @export char_class
 #' @export negated_char_class
+#' @export negate_and_group
 NULL 
 
 #' Repeat values

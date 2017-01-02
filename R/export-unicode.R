@@ -1,4 +1,4 @@
-# From rebus.unicode
+# From rebus.unicode unicode-classes.R
 
 #' Unicode classes
 #' 
@@ -516,3 +516,182 @@
 #' @export yijing_hexagram_symbols
 #' @export yijing_mono_di_and_trigrams
 NULL 
+
+# From rebus.unicode unicode-general-category-classes.R, unicode-general-category-constants.R
+
+#' Unicode General Categories
+#' 
+#' See \code{\link[rebus.unicode]{UnicodeGeneralCategory}}.
+#' @name UnicodeGeneralCategory
+#' @aliases ugc_cased_letter UGC_CASED_LETTER ugc_close_punctuation UGC_CLOSE_PUNCTUATION ugc_connector_punctuation UGC_CONNECTOR_PUNCTUATION ugc_control UGC_CONTROL ugc_currency_symbol UGC_CURRENCY_SYMBOL ugc_dash_punctuation UGC_DASH_PUNCTUATION ugc_decimal_number UGC_DECIMAL_NUMBER ugc_enclosing_mark UGC_ENCLOSING_MARK ugc_final_punctuation UGC_FINAL_PUNCTUATION ugc_format_control UGC_FORMAT_CONTROL ugc_initial_punctuation UGC_INITIAL_PUNCTUATION ugc_letter UGC_LETTER ugc_letter_number UGC_LETTER_NUMBER ugc_line_separator UGC_LINE_SEPARATOR ugc_lowercase_letter UGC_LOWERCASE_LETTER ugc_mark UGC_MARK ugc_math_symbol UGC_MATH_SYMBOL ugc_modifier_letter UGC_MODIFIER_LETTER ugc_modifier_symbol UGC_MODIFIER_SYMBOL ugc_nonspacing_mark UGC_NONSPACING_MARK ugc_number UGC_NUMBER ugc_open_punctuation UGC_OPEN_PUNCTUATION ugc_other UGC_OTHER ugc_other_letter UGC_OTHER_LETTER ugc_other_number UGC_OTHER_NUMBER ugc_other_punctuation UGC_OTHER_PUNCTUATION ugc_other_symbol UGC_OTHER_SYMBOL ugc_paragraph_separator UGC_PARAGRAPH_SEPARATOR ugc_private_use_control UGC_PRIVATE_USE_CONTROL ugc_punctuation UGC_PUNCTUATION ugc_separator UGC_SEPARATOR ugc_space_separator UGC_SPACE_SEPARATOR ugc_spacing_mark UGC_SPACING_MARK ugc_surrogate_control UGC_SURROGATE_CONTROL ugc_symbol UGC_SYMBOL ugc_titlecase_letter UGC_TITLECASE_LETTER ugc_unassigned_control UGC_UNASSIGNED_CONTROL ugc_uppercase_letter UGC_UPPERCASE_LETTER
+#' @export ugc_cased_letter
+#' @export UGC_CASED_LETTER
+#' @export ugc_close_punctuation
+#' @export UGC_CLOSE_PUNCTUATION
+#' @export ugc_connector_punctuation
+#' @export UGC_CONNECTOR_PUNCTUATION
+#' @export ugc_control
+#' @export UGC_CONTROL
+#' @export ugc_currency_symbol
+#' @export UGC_CURRENCY_SYMBOL
+#' @export ugc_dash_punctuation
+#' @export UGC_DASH_PUNCTUATION
+#' @export ugc_decimal_number
+#' @export UGC_DECIMAL_NUMBER
+#' @export ugc_enclosing_mark
+#' @export UGC_ENCLOSING_MARK
+#' @export ugc_final_punctuation
+#' @export UGC_FINAL_PUNCTUATION
+#' @export ugc_format_control
+#' @export UGC_FORMAT_CONTROL
+#' @export ugc_initial_punctuation
+#' @export UGC_INITIAL_PUNCTUATION
+#' @export ugc_letter
+#' @export UGC_LETTER
+#' @export ugc_letter_number
+#' @export UGC_LETTER_NUMBER
+#' @export ugc_line_separator
+#' @export UGC_LINE_SEPARATOR
+#' @export ugc_lowercase_letter
+#' @export UGC_LOWERCASE_LETTER
+#' @export ugc_mark
+#' @export UGC_MARK
+#' @export ugc_math_symbol
+#' @export UGC_MATH_SYMBOL
+#' @export ugc_modifier_letter
+#' @export UGC_MODIFIER_LETTER
+#' @export ugc_modifier_symbol
+#' @export UGC_MODIFIER_SYMBOL
+#' @export ugc_nonspacing_mark
+#' @export UGC_NONSPACING_MARK
+#' @export ugc_number
+#' @export UGC_NUMBER
+#' @export ugc_open_punctuation
+#' @export UGC_OPEN_PUNCTUATION
+#' @export ugc_other
+#' @export UGC_OTHER
+#' @export ugc_other_letter
+#' @export UGC_OTHER_LETTER
+#' @export ugc_other_number
+#' @export UGC_OTHER_NUMBER
+#' @export ugc_other_punctuation
+#' @export UGC_OTHER_PUNCTUATION
+#' @export ugc_other_symbol
+#' @export UGC_OTHER_SYMBOL
+#' @export ugc_paragraph_separator
+#' @export UGC_PARAGRAPH_SEPARATOR
+#' @export ugc_private_use_control
+#' @export UGC_PRIVATE_USE_CONTROL
+#' @export ugc_punctuation
+#' @export UGC_PUNCTUATION
+#' @export ugc_separator
+#' @export UGC_SEPARATOR
+#' @export ugc_space_separator
+#' @export UGC_SPACE_SEPARATOR
+#' @export ugc_spacing_mark
+#' @export UGC_SPACING_MARK
+#' @export ugc_surrogate_control
+#' @export UGC_SURROGATE_CONTROL
+#' @export ugc_symbol
+#' @export UGC_SYMBOL
+#' @export ugc_titlecase_letter
+#' @export UGC_TITLECASE_LETTER
+#' @export ugc_unassigned_control
+#' @export UGC_UNASSIGNED_CONTROL
+#' @export ugc_uppercase_letter
+#' @export UGC_UPPERCASE_LETTER
+NULL 
+
+# From rebus.unicode unicode-general-category-classes.R, unicode-general-category-constants.R
+
+#' Unicode Properties
+#' 
+#' See \code{\link[rebus.unicode]{UnicodeProperty}}.
+#' @name UnicodeProperty
+#' @aliases up_alphabetic UP_ALPHABETIC up_ascii_hex_digit UP_ASCII_HEX_DIGIT up_bidi_control UP_BIDI_CONTROL up_bidi_mirrored UP_BIDI_MIRRORED up_case_ignorable UP_CASE_IGNORABLE up_case_sensitive UP_CASE_SENSITIVE up_cased UP_CASED up_changes_when_casefolded UP_CHANGES_WHEN_CASEFOLDED up_changes_when_casemapped UP_CHANGES_WHEN_CASEMAPPED up_changes_when_lowercased UP_CHANGES_WHEN_LOWERCASED up_changes_when_nfkc_casefolded UP_CHANGES_WHEN_NFKC_CASEFOLDED up_changes_when_titlecased UP_CHANGES_WHEN_TITLECASED up_changes_when_uppercased UP_CHANGES_WHEN_UPPERCASED up_dash UP_DASH up_default_ignorable_code_point UP_DEFAULT_IGNORABLE_CODE_POINT up_deprecated UP_DEPRECATED up_diacritic UP_DIACRITIC up_extender UP_EXTENDER up_hex_digit UP_HEX_DIGIT up_hyphen UP_HYPHEN up_id_continue UP_ID_CONTINUE up_id_start UP_ID_START up_ideographic UP_IDEOGRAPHIC up_lowercase UP_LOWERCASE up_math UP_MATH up_noncharacter_code_point UP_NONCHARACTER_CODE_POINT up_posix_alnum UP_POSIX_ALNUM up_posix_blank UP_POSIX_BLANK up_posix_graph UP_POSIX_GRAPH up_posix_print UP_POSIX_PRINT up_posix_xdigit UP_POSIX_XDIGIT up_quotation_mark UP_QUOTATION_MARK up_soft_dotted UP_SOFT_DOTTED up_terminal_punctuation UP_TERMINAL_PUNCTUATION up_uppercase UP_UPPERCASE up_white_space UP_WHITE_SPACE
+#' @export up_alphabetic
+#' @export UP_ALPHABETIC
+#' @export up_ascii_hex_digit
+#' @export UP_ASCII_HEX_DIGIT
+#' @export up_bidi_control
+#' @export UP_BIDI_CONTROL
+#' @export up_bidi_mirrored
+#' @export UP_BIDI_MIRRORED
+#' @export up_case_ignorable
+#' @export UP_CASE_IGNORABLE
+#' @export up_case_sensitive
+#' @export UP_CASE_SENSITIVE
+#' @export up_cased
+#' @export UP_CASED
+#' @export up_changes_when_casefolded
+#' @export UP_CHANGES_WHEN_CASEFOLDED
+#' @export up_changes_when_casemapped
+#' @export UP_CHANGES_WHEN_CASEMAPPED
+#' @export up_changes_when_lowercased
+#' @export UP_CHANGES_WHEN_LOWERCASED
+#' @export up_changes_when_nfkc_casefolded
+#' @export UP_CHANGES_WHEN_NFKC_CASEFOLDED
+#' @export up_changes_when_titlecased
+#' @export UP_CHANGES_WHEN_TITLECASED
+#' @export up_changes_when_uppercased
+#' @export UP_CHANGES_WHEN_UPPERCASED
+#' @export up_dash
+#' @export UP_DASH
+#' @export up_default_ignorable_code_point
+#' @export UP_DEFAULT_IGNORABLE_CODE_POINT
+#' @export up_deprecated
+#' @export UP_DEPRECATED
+#' @export up_diacritic
+#' @export UP_DIACRITIC
+#' @export up_extender
+#' @export UP_EXTENDER
+#' @export up_hex_digit
+#' @export UP_HEX_DIGIT
+#' @export up_hyphen
+#' @export UP_HYPHEN
+#' @export up_id_continue
+#' @export UP_ID_CONTINUE
+#' @export up_id_start
+#' @export UP_ID_START
+#' @export up_ideographic
+#' @export UP_IDEOGRAPHIC
+#' @export up_lowercase
+#' @export UP_LOWERCASE
+#' @export up_math
+#' @export UP_MATH
+#' @export up_noncharacter_code_point
+#' @export UP_NONCHARACTER_CODE_POINT
+#' @export up_posix_alnum
+#' @export UP_POSIX_ALNUM
+#' @export up_posix_blank
+#' @export UP_POSIX_BLANK
+#' @export up_posix_graph
+#' @export UP_POSIX_GRAPH
+#' @export up_posix_print
+#' @export UP_POSIX_PRINT
+#' @export up_posix_xdigit
+#' @export UP_POSIX_XDIGIT
+#' @export up_quotation_mark
+#' @export UP_QUOTATION_MARK
+#' @export up_soft_dotted
+#' @export UP_SOFT_DOTTED
+#' @export up_terminal_punctuation
+#' @export UP_TERMINAL_PUNCTUATION
+#' @export up_uppercase
+#' @export UP_UPPERCASE
+#' @export up_white_space
+#' @export UP_WHITE_SPACE
+NULL
+
+# From rebus.unicode unicode-operators.R
+
+#' Unicode Operators
+#' 
+#' See \code{\link[rebus.unicode]{UnicodeOperators}}.
+#' @name UnicodeOperators
+#' @aliases unicode_intersect unicode_inverse unicode_setdiff unicode_union
+#' @export unicode_intersect
+#' @export unicode_inverse
+#' @export unicode_setdiff
+#' @export unicode_union
+NULL
