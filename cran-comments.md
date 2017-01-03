@@ -1,7 +1,6 @@
 ## Release Summary
 
-This release outsources core functionality to the *rebus.base*, 
-*rebus.datetimes*, *rebus.numbers*, and *rebus.unicode* packages.
+This release incorporates the latest functionality from *rebus.base* and *rebus.unicode*.
 
 ## Test Environments
 
