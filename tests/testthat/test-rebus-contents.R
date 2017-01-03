@@ -17,7 +17,7 @@ test_that(
           }
         )
       )
-    library(assertive)
+    library(rebus)
     y <- ls("package:rebus")
     
     should_be_exported_but_isnt <- setdiff(x, y)
