@@ -66,7 +66,7 @@ NULL
 #' 
 #' See \code{\link[rebus.base]{ClassGroups}}.
 #' @name ClassGroups
-#' @aliases alnum alpha blank cntrl digit graph lower printable punct space upper hex_digit any_char dgt wrd spc not_dgt not_wrd not_spc ascii_digit ascii_lower ascii_upper ascii_alpha ascii_alnum char_range
+#' @aliases alnum alpha blank cntrl digit graph lower printable punct space upper hex_digit any_char grapheme dgt wrd spc not_dgt not_wrd not_spc ascii_digit ascii_lower ascii_upper ascii_alpha ascii_alnum char_range
 #' @export alnum
 #' @export alpha
 #' @export blank
@@ -80,6 +80,7 @@ NULL
 #' @export upper
 #' @export hex_digit
 #' @export any_char
+#' @export grapheme
 #' @export dgt
 #' @export wrd
 #' @export spc
@@ -130,7 +131,7 @@ NULL
 #' 
 #' See \code{\link[rebus.base]{CharacterClasses}}.
 #' @name CharacterClasses
-#' @aliases ALNUM ALPHA BLANK CNTRL DIGIT GRAPH LOWER PRINT PUNCT SPACE UPPER HEX_DIGIT ANY_CHAR DGT WRD SPC NOT_DGT NOT_WRD NOT_SPC ASCII_DIGIT ASCII_LOWER ASCII_UPPER ASCII_ALPHA ASCII_ALNUM UNMATCHABLE
+#' @aliases ALNUM ALPHA BLANK CNTRL DIGIT GRAPH LOWER PRINT PUNCT SPACE UPPER HEX_DIGIT ANY_CHAR GRAPHEME DGT WRD SPC NOT_DGT NOT_WRD NOT_SPC ASCII_DIGIT ASCII_LOWER ASCII_UPPER ASCII_ALPHA ASCII_ALNUM UNMATCHABLE
 #' @export ALNUM
 #' @export ALPHA
 #' @export BLANK
@@ -144,6 +145,7 @@ NULL
 #' @export UPPER
 #' @export HEX_DIGIT
 #' @export ANY_CHAR
+#' @export GRAPHEME
 #' @export DGT
 #' @export WRD
 #' @export SPC
