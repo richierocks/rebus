@@ -1,6 +1,6 @@
 ## Release Summary
 
-This release incorporates the latest functionality from *rebus.base* and *rebus.unicode*.
+This release re-exports the latest functionality from *rebus.base*.
 
 ## Test Environments
 
